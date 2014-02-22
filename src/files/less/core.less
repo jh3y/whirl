@@ -1,0 +1,127 @@
+body {
+	overflow-y: scroll;
+}
+div.demo {
+	height: 100px;
+	width: 100px;
+	position: relative;
+}
+
+div.csspinner:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: #999;
+	opacity: 0.6;
+}
+div.csspinner:after {
+	content: "";
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 48%;
+	left: 48%;
+	transition: all .5s ease 0s;
+	-webkit-transition: all .5s ease 0s;
+	border-radius: 100%;
+	border-top: 4px solid black;
+	animation: standard .5s infinite linear;
+	-webkit-animation: standard .5s infinite linear;
+}
+@-webkit-keyframes standard {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes standard {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.csspinner.shadow:after {
+	animation: spin-shadow .25s infinite linear;
+	-webkit-animation: spin-shadow .25s infinite linear;
+	border-radius: 100%;
+	border: none;
+
+}
+.csspinner.oval.left:after, .csspinner.oval:after {
+	animation: spin-shadow .25s infinite linear;
+	-webkit-animation: spin-shadow .25s infinite linear;
+	border-radius: 100%;
+	border: none;
+	border-radius: 30% 100%;
+}
+.csspinner.shadow.oval.right:after {
+	animation: spin-shadow .25s infinite linear;
+	-webkit-animation: spin-shadow .25s infinite linear;
+	border-radius: 100%;
+	border: none;
+	border-radius: 100% 30%;
+}
+@-webkit-keyframes spin-shadow {
+	0% {
+		box-shadow: inset 5px 5px 5px rgba(255,0,0,.5);
+	}
+	25% {
+		box-shadow: inset -5px 5px 5px rgba(255,0,0,.5);
+	}
+	50% {
+		box-shadow: inset -5px -5px 5px rgba(255,0,0,.5);
+	}
+	100% {
+		box-shadow: inset 5px -5px 5px rgba(255,0,0,.5);
+	}
+}
+@keyframes spin-shadow {
+	0% {
+		box-shadow: inset 5px 5px 5px rgba(255,0,0,.5);
+	}
+	25% {
+		box-shadow: inset -5px 5px 5px rgba(255,0,0,.5);
+	}
+	50% {
+		box-shadow: inset -5px -5px 5px rgba(255,0,0,.5);
+	}
+	100% {
+		box-shadow: inset 5px -5px 5px rgba(255,0,0,.5);
+	}
+}
+.csspinner.sphere.horizontal:after, .csspinner.sphere:after {
+	border-radius: 100%;
+	animation: sphere .5s infinite;
+	-webkit-animation: sphere .5s infinite;
+	border: none;
+}
+@-webkit-keyframes sphere {
+	from {
+		box-shadow: inset 45px 0px 10px rgba(255,0,0,.5);
+	}
+	to {
+		box-shadow: inset -45px 0px 10px rgba(255,0,0,.5);
+	}
+}
+@keyframes sphere {
+	0% {
+		box-shadow: inset 45px 5px 10px rgba(255,0,0,.5);
+	}
+	25% {
+		box-shadow: inset -45px 5px 10px rgba(255,0,0,.5);
+	}
+	50% {
+		box-shadow: inset -45px 5px 10px rgba(255,0,0,.5);
+	}
+	100% {
+		box-shadow: inset 45px 5px 10px rgba(255,0,0,.5);
+	}
+}
