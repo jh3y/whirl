@@ -1,13 +1,13 @@
 body {
 	overflow-y: scroll;
 }
-div.demo {
+.demo {
 	height: 100px;
 	width: 100px;
 	position: relative;
 }
 
-div.csspinner:before {
+.csspinner:before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -18,7 +18,7 @@ div.csspinner:before {
 	background-color: #999;
 	opacity: 0.6;
 }
-div.csspinner:after {
+.csspinner:after {
 	content: "";
 	height: 40px;
 	width: 40px;
@@ -28,9 +28,94 @@ div.csspinner:after {
 	transition: all .5s ease 0s;
 	-webkit-transition: all .5s ease 0s;
 	border-radius: 100%;
-	border-top: 4px solid black;
+	border-top: 4px solid #555;
 	animation: standard .5s infinite linear;
 	-webkit-animation: standard .5s infinite linear;
+}
+.csspinner.line:after {
+	height: 20px;
+	border-radius: 0;
+	border: none;
+	box-shadow: inset -10px 0px 0px rgba(0,0,0,.5);
+	animation: line .5s infinite linear;
+	-webkit-animation: line .5s infinite linear;
+}
+@-webkit-keyframes line {
+	from {
+		width: 10px;
+	}
+	to {
+		width: 50px;
+	}
+}
+@keyframes line {
+	from {
+		width: 10px;
+	}
+	to {
+		width: 50px;
+	}
+}
+.csspinner.line.back-and-fourth:after {
+	animation: line-back-and-fourth 1s infinite linear;
+	-webkit-animation: line-back-and-fourth 1s infinite linear;	
+}
+@-webkit-keyframes line-back-and-fourth {
+	0% {
+		width: 10px;
+	}
+	50% {
+		width: 50px;
+	}
+	100% {
+		width: 10px;
+	}
+}
+@keyframes line-back-and-fourth {
+	0% {
+		width: 10px;
+	}
+	50% {
+		width: 50px;
+	}
+	100% {
+		width: 10px;
+	}
+}	
+.csspinner.bar:after {
+	height: 20px;
+	border-radius: 0;
+	border: none;
+	animation: bar .5s infinite linear;
+	-webkit-animation: bar .5s infinite linear;
+}
+@-webkit-keyframes bar {
+	from {
+		box-shadow: inset 0px 0px 0px rgba(0, 0, 0, .5);
+	}
+	to {
+		box-shadow: inset 80px 0px 0px rgba(0, 0, 0, .5);
+	}
+}
+@keyframes bar {
+	from {
+		box-shadow: inset 0px 0px 0px rgba(0, 0, 0, .5);
+	}
+	to {
+		box-shadow: inset 80px 0px 0px rgba(0, 0, 0, .5);
+	}
+}
+.csspinner.traditional:after {
+	border-right: 4px solid #555;
+	border-top: 4px solid #777;
+	border-left: 4px solid #999;
+	border-bottom: 4px solid #BBB;
+}
+.csspinner.warning:after {
+	border-right: 4px solid #000;
+	border-left: 4px solid #000;
+	border-top: 4px solid yellow;
+	border-bottom: 4px solid yellow;
 }
 @-webkit-keyframes standard {
 	from {
@@ -71,30 +156,30 @@ div.csspinner:after {
 }
 @-webkit-keyframes spin-shadow {
 	0% {
-		box-shadow: inset 5px 5px 5px rgba(255,0,0,.5);
+		box-shadow: inset 5px 5px 5px rgba(0,0,0,.5);
 	}
 	25% {
-		box-shadow: inset -5px 5px 5px rgba(255,0,0,.5);
+		box-shadow: inset -5px 5px 5px rgba(0,0,0,.5);
 	}
 	50% {
-		box-shadow: inset -5px -5px 5px rgba(255,0,0,.5);
+		box-shadow: inset -5px -5px 5px rgba(0,0,0,.5);
 	}
 	100% {
-		box-shadow: inset 5px -5px 5px rgba(255,0,0,.5);
+		box-shadow: inset 5px -5px 5px rgba(0,0,0,.5);
 	}
 }
 @keyframes spin-shadow {
 	0% {
-		box-shadow: inset 5px 5px 5px rgba(255,0,0,.5);
+		box-shadow: inset 5px 5px 5px rgba(0,0,0,.5);
 	}
 	25% {
-		box-shadow: inset -5px 5px 5px rgba(255,0,0,.5);
+		box-shadow: inset -5px 5px 5px rgba(0,0,0,.5);
 	}
 	50% {
-		box-shadow: inset -5px -5px 5px rgba(255,0,0,.5);
+		box-shadow: inset -5px -5px 5px rgba(0,0,0,.5);
 	}
 	100% {
-		box-shadow: inset 5px -5px 5px rgba(255,0,0,.5);
+		box-shadow: inset 5px -5px 5px rgba(0,0,0,.5);
 	}
 }
 .csspinner.sphere.horizontal:after, .csspinner.sphere:after {
@@ -103,25 +188,41 @@ div.csspinner:after {
 	-webkit-animation: sphere .5s infinite;
 	border: none;
 }
+.csspinner.sphere.vertical:after {
+	border-radius: 100%;
+	animation: sphere-v .5s infinite;
+	-webkit-animation: sphere-v .5s infinite;
+	border: none;
+}
 @-webkit-keyframes sphere {
 	from {
-		box-shadow: inset 45px 0px 10px rgba(255,0,0,.5);
+		box-shadow: inset 45px 0px 10px rgba(0,0,0,.5);
 	}
 	to {
-		box-shadow: inset -45px 0px 10px rgba(255,0,0,.5);
+		box-shadow: inset -45px 0px 10px rgba(0,0,0,.5);
 	}
 }
 @keyframes sphere {
-	0% {
-		box-shadow: inset 45px 5px 10px rgba(255,0,0,.5);
+	from {
+		box-shadow: inset 45px 0px 10px rgba(0,0,0,.5);
 	}
-	25% {
-		box-shadow: inset -45px 5px 10px rgba(255,0,0,.5);
+	to {
+		box-shadow: inset -45px 0px 10px rgba(0,0,0,.5);
 	}
-	50% {
-		box-shadow: inset -45px 5px 10px rgba(255,0,0,.5);
+}
+@-webkit-keyframes sphere-v {
+	from {
+		box-shadow: inset 0px -45px 10px rgba(0,0,0,.5);
 	}
-	100% {
-		box-shadow: inset 45px 5px 10px rgba(255,0,0,.5);
+	to {
+		box-shadow: inset 0px 45px 10px rgba(0,0,0,.5);
+	}
+}
+@keyframes sphere-v {
+	from {
+		box-shadow: inset 0px -45px 10px rgba(0,0,0,.5);
+	}
+	to {
+		box-shadow: inset 0px 45px 10px rgba(0,0,0,.5);
 	}
 }
