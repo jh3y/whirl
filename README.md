@@ -1,37 +1,61 @@
-# [HTML5 Boilerplate](http://html5boilerplate.com/), [Jade](http://jade-lang.com) and [Less](http://lesscss.org) skeleton for [DocPad](https://github.com/bevry/docpad)
-Bare essentials for building a modern website with best practices using jade and less. livereload used to aid development.
+#(cs)spinner
 
 
-## Getting Started
+###Pure CSS loading animations with minimal effort!
 
-1. [Install DocPad](https://github.com/bevry/docpad)
+![alt tag](https://raw.github.com/jh3y/-cs-spinner/master/images/csspinner.gif)
 
-1. Clone the project and run the server
-
-	``` bash
-	git clone git://github.com/jh3y/html5-boilerplate-jade-less-livereload.docpad.git
-	cd html5-boilerplate-jade-less-livereload.docpad
-	npm install
-	docpad run
-	```
-
-1. [Open http://localhost:9778/](http://localhost:9778/)
-
-1. Start hacking away by modifying the `src` directory
+#### Usage
+1. Include the [stylesheet](https://raw2.github.com/jh3y/-cs-spinner/master/csspinner.css)(tweaking where necessary).
+2. Add and remove appropriate classes to your elements when necessary to show loading(using js).
 
 
-## License
+That's it!
 
-This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
+```html
+	<div class="csspinner duo">
+		This content is taking ages to load.
+	</div>
+```
 
-If you are wanting to open-source your website, we suggest using the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) for content and the [MIT License](http://creativecommons.org/licenses/MIT/) for code. In which case you'd probably want to use the following as your license:
+####options
+From using the demo you can work out which classes you need to add to your elements in order to show the loading animation you want.
 
-	Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
+By default, you will always need `csspinner`.
 
-If you are wanting to close-source your website, we'd suggest using the following:
+Then there are;
 
-	Copyright [Your Name](http://your.website). All rights reserved.
+* `traditional`
+* `duo`
+* `double-up`
+* `sphere`
+* `sphere-vertical`
+* `bar`
+* `bar-follow`
+* `line`
+* `line grow`
+* `line back-and-fourth`
+* `shadow`
+* `shadow oval`/`shadow oval left`
+* `shadow oval right`
 
-Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.
+There is also `no-overlay` which will hide the overlay which is added by default. 
 
-Thanks, the DocPad team loves you.
+#### How does this work?
+Not surprisingly it's real simple! :)
+
+(cs)spinner makes use of CSS pseudo elements. It uses `:before` to provide an overlay effect if required and `:after` to show the animated spinner/bar etc.
+
+making use of pseudo elements means that we can add (cs)spinner loading animations to any existing element on our page without being intrusive just by adding some classes as long as the elements pseudo elements aren't currently in use.
+
+#### Contributing
+
+Any suggestions, improvements or issues are welcome. :)
+
+@jh3y
+
+#### License
+
+MIT
+
+Copyright (c) 2014 [@jh3y](https://github.com/jh3y)
