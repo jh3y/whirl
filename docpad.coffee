@@ -12,20 +12,14 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
-
-			# Here are some old site urls that you would like to redirect from
-			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
-			]
+			url: "http://jh3y.github.io/-cs-spinner"
 
 			# The default title of our website
-			title: "Your Website"
+			title: "(cs)spinner | pure CSS loading animations with minimal effort!"
 
 			# The website description (for SEO)
-			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+			description: """ 
+				pure CSS loading animations with minimal effort! developer by jh3y.
 				"""
 
 			# The website keywords (for SEO) separated by commas
@@ -35,16 +29,13 @@ docpadConfig = {
 
 			# The website's styles
 			styles: [
-				'css/style.css'
+            				'//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'
 				'css/vendor/normalize.css'
             				'css/vendor/main.css'
-			]
-
-			# The website's scripts
-			scripts: [
-				'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'
-				'js/plugins.js'
-				'js/main.js'
+            				'css/vendor/flat-ui.css'
+            				'css/vendor/highlight.css'
+				'css/csspinner.css'
+				'css/style.css'
 			]
 
 

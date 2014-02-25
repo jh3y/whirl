@@ -1,31 +1,84 @@
 ---
 layout: default
 ---
-h2
-	|(cs)spinner
-h5
-	|pure CSS spinners with minimal effort!
+header
+	.container
+		.row
+			.col-md-10.col-md-offset-1
+				h2.text-center
+					|(cs)spinner
+				h5.text-center
+					|pure CSS loading animations with minimal effort!
 .page-content
-	ul
-		li
-			.demo.csspinner.shadow
-		li
-			.demo.csspinner.shadow.oval
-		li
-			.demo.csspinner.shadow.oval.right
-		li
-			.demo.csspinner.sphere
-		li
-			.demo.csspinner.sphere.vertical
-		li
-			.demo.csspinner
-		li
-			.demo.csspinner.traditional
-		li
-			.demo.csspinner.warning
-		li
-			.demo.csspinner.bar
-		li
-			.demo.csspinner.line
-		li
-			.demo.csspinner.line.back-and-fourth
+	.container
+		.row
+			.col-md-10.col-md-offset-1.text-center
+				select.text-center
+					option(value = "csspinner")
+						|standard
+					option(value = "csspinner traditional")
+						|traditional
+					option(value = "csspinner double-up")
+						|double-up
+					option(value = "csspinner duo")
+						|duo
+					option(value = "csspinner sphere")
+						|sphere
+					option(value = "csspinner sphere vertical")
+						|sphere-vertical
+					option(value = "csspinner bar")
+						|bar
+					option(value = "csspinner bar follow")
+						|bar follow
+					option(value = "csspinner line")
+						|line
+					option(value = "csspinner line grow")
+						|line grow
+					option(value = "csspinner line back-and-fourth")
+						|line back and fourth
+					option(value = "csspinner line back-and-fourth grow")
+						|line back and fourth grow
+					option(value = "csspinner shadow")
+						|shadow
+					option(value = "csspinner shadow oval")
+						|shadow oval left
+					option(value = "csspinner shadow oval right")
+						|shadow oval right
+					option(value = "csspinner no-overlay")
+						|no overlay
+		.row.btn-holder
+			.col-md-10.col-md-offset-1.text-center
+				button.btn.btn-info
+					|show me
+				script.
+					$('button').on('click', function (event) {
+						$('#demo')[0].className = $('select').val();
+						$('code').text($('select').val());
+					});
+					$('select').on('change', function (event) {
+						$('#demo')[0].className = $('select').val();
+						$('code').text($('select').val());
+					})
+		.row
+			.col-md-6.col-md-offset-3
+				#demo.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis tortor vitae urna varius, vitae adipiscing turpis pulvinar. Mauris ornare nibh vel tristique elementum. Ut porta rutrum consectetur.
+		.row
+			.col-md-10.col-md-offset-1.text-center
+				h5.
+					classes required:
+				code.text-center
+		.row
+			.col-md-10.col-md-offset-1.text-center
+				ul.text-center
+					li.
+						include the stylesheet(tweaking if desired)
+					li.
+						add and remove appropriate classes to your elements when necessary to show loading(using js)
+				h3.text-center.
+					That's it!
+		.row
+			.col-md-10.col-md-offset-1.text-center
+				iframe(src='http://ghbtns.com/github-btn.html?user=jh3y&repo=-cs-spinner&type=watch&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='110', height='20')
+				iframe(src='http://ghbtns.com/github-btn.html?user=jh3y&repo=-cs-spinner&type=fork&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='95', height='20')
+				iframe(src='http://ghbtns.com/github-btn.html?user=jh3y&type=follow&count=true', allowtransparency='true', frameborder='0', scrolling='0', width='165', height='20')

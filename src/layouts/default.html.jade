@@ -11,13 +11,14 @@ head
 	meta(charset="utf-8")
 	meta(http-equiv="X-UA-Compatible", content="IE=edge")
 	title
-		|Your title here.
+		|(cs)spinner | pure CSS loading animations with minimal effort.
 	meta(name="description", content="")
 	meta(name="viewport", content="width=device-width, initial-scale=1")
 	//Place favicon.ico and apple-touch-icon.png in the root directory
 	!= getBlock('meta').add(site.meta).toHTML()
 	!= getBlock("styles").add(site.styles).toHTML()
-	script(src="js/vendor/modernizr-2.6.2.min.js")
+	script(src='//code.jquery.com/jquery-2.1.0.min.js')
+	script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js')
 body
 	//if lt IE 7
 		p.browsehappy
@@ -29,9 +30,6 @@ body
 				|upgrade your browser
 			|to improve your experience.
 	!= content
-	script.
-		window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-	!= getBlock('scripts').add(site.scripts, {defer:false}).toHTML()
 	// Google Analytics: change UA-XXXXX-X to be your sites ID.
 	script.
 		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
