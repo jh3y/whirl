@@ -12,11 +12,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 //VARS
-@height: 40px;
-@width: 40px;
-@border-width: 4px;
-@overlay-color: #999;
-@base-color: #555;
+$height: 40px;
+$width: 40px;
+$border-width: 4px;
+$overlay-color: #999;
+$base-color: #555;
 
 /* BASE */
 .csspinner:before {
@@ -28,21 +28,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	display: block;
 	height: 100%;
 	width: 100%;
-	background-color: @overlay-color;
+	background-color: $overlay-color;
 	opacity: 0.6;
 }
 .csspinner:after {
 	z-index: 2;
 	content: "";
-	height: @height;
-	width: @width;
+	height: $height;
+	width: $width;
 	position: absolute;
 	top: 48%;
 	left: 48%;
 	transition: all .75s ease 0s;
 	-webkit-transition: all .75s ease 0s;
 	border-radius: 100%;
-	border-top: @border-width solid @base-color;
+	border-top: $border-width solid $base-color;
 	animation: standard .75s infinite linear;
 	-webkit-animation: standard .75s infinite linear;
 }
@@ -70,97 +70,97 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 /* TRADITIONAL */
-@traditional-color-one: #777;
-@traditional-color-two: #999;
-@traditional-color-three: #BBB;
+$traditional-color-one: #777;
+$traditional-color-two: #999;
+$traditional-color-three: #BBB;
 
 .csspinner.traditional:after {
-	border-right: @border-width solid @traditional-color-one;
-	border-top: @border-width solid @traditional-color-one;
-	border-left: @border-width solid @traditional-color-two;
-	border-bottom: @border-width solid @traditional-color-three;
+	border-right: $border-width solid $traditional-color-one;
+	border-top: $border-width solid $traditional-color-one;
+	border-left: $border-width solid $traditional-color-two;
+	border-bottom: $border-width solid $traditional-color-three;
 }
 /* DOUBLE UP*/
-@double-up-color-one: #E74C3C;
+$double-up-color-one: #E74C3C;
 
 .csspinner.double-up:after {
-	border-right: @border-width solid @double-up-color-one;
-	border-top: @border-width double @double-up-color-one;
-	border-left: @border-width double @double-up-color-one;
-	border-bottom: @border-width double @double-up-color-one;	
+	border-right: $border-width solid $double-up-color-one;
+	border-top: $border-width double $double-up-color-one;
+	border-left: $border-width double $double-up-color-one;
+	border-bottom: $border-width double $double-up-color-one;	
 }
 
 /* DUO */
-@duo-color-one: #333;
-@duo-color-two: #F1C40F;
+$duo-color-one: #333;
+$duo-color-two: #F1C40F;
 
 .csspinner.duo:after {
-	border-right: @border-width solid @duo-color-one;
-	border-left: @border-width solid @duo-color-one;
-	border-top: @border-width solid @duo-color-two;
-	border-bottom: @border-width solid @duo-color-two;
+	border-right: $border-width solid $duo-color-one;
+	border-left: $border-width solid $duo-color-one;
+	border-top: $border-width solid $duo-color-two;
+	border-bottom: $border-width solid $duo-color-two;
 }
 
 /* SPHERICAL */
-@sphere-color: rgba(0, 0, 0, .5);
-@sphere-height: @height;
-@sphere-width: @width;
+$sphere-color: rgba(0, 0, 0, .5);
+$sphere-height: $height;
+$sphere-width: $width;
 
 .csspinner.sphere.horizontal:after, .csspinner.sphere:after {
 	border-radius: 100%;
 	animation: sphere .5s infinite;
 	-webkit-animation: sphere .5s infinite;
 	border: none;
-	height: @sphere-height;
+	height: $sphere-height;
 }
 .csspinner.sphere.vertical:after {
 	border-radius: 100%;
 	animation: sphere-v .5s infinite;
 	-webkit-animation: sphere-v .5s infinite;
 	border: none;
-	height: @sphere-height;
+	height: $sphere-height;
 }
 @-webkit-keyframes sphere {
 	from {
-		box-shadow: inset (@sphere-width + 5px) 0px @sphere-width/4 @sphere-color;
+		box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color;
 	}
 	to {
-		box-shadow: inset -(@sphere-width + 5px) 0px @sphere-width/4 @sphere-color;
+		box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color;
 	}
 }
 @keyframes sphere {
 	from {
-		box-shadow: inset (@sphere-width + 5px) 0px @sphere-width/4 @sphere-color;
+		box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color;
 	}
 	to {
-		box-shadow: inset -(@sphere-width + 5px) 0px @sphere-width/4 @sphere-color;
+		box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color;
 	}
 }
 @-webkit-keyframes sphere-v {
 	from {
-		box-shadow: inset 0px (@sphere-width + 5px) @sphere-width/4 @sphere-color;
+		box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color;
 	}
 	to {
-		box-shadow: inset 0px -(@sphere-width + 5px) @sphere-width/4 @sphere-color;
+		box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color;
 	}
 }
 @keyframes sphere-v {
 	from {
-		box-shadow: inset 0px (@sphere-width + 5px) @sphere-width/4 @sphere-color;
+		box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color;
 	}
 	to {
-		box-shadow: inset 0px -(@sphere-width + 5px) @sphere-width/4 @sphere-color;
+		box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color;
 	}
 }
 
 /* BAR */
-@bar-height: @height / 2;
-@bar-width: @width;
-@bar-color: rgba(0, 0, 0, .5);
+$bar-height: $height / 2;
+$bar-width: $width;
+$bar-color: rgba(0, 0, 0, .5);
 
 .csspinner.bar:after {
-	height: @bar-height;
-	width: @bar-width;
+	height: $bar-height;
+	width: $bar-width;
 	border-radius: 0;
 	border: none;
 	animation: bar 1s infinite linear;
@@ -168,18 +168,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 @-webkit-keyframes bar {
 	from {
-		box-shadow: inset 0px 0px 0px @bar-color;
+		box-shadow: inset 0px 0px 0px $bar-color;
 	}
 	to {
-		box-shadow: inset (@bar-width * 2) 0px 0px @bar-color;
+		box-shadow: inset ($bar-width * 2) 0px 0px $bar-color;
 	}
 }
 @keyframes bar {
 	from {
-		box-shadow: inset 0px 0px 0px @bar-color;
+		box-shadow: inset 0px 0px 0px $bar-color;
 	}
 	to {
-		box-shadow: inset (@bar-width * 2) 0px 0px @bar-color;
+		box-shadow: inset ($bar-width * 2) 0px 0px $bar-color;
 	}
 }
 .csspinner.bar.follow:after {
@@ -188,30 +188,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 @-webkit-keyframes bar-follow {
 	0% {
-		box-shadow: inset @bar-width 0px 0px @bar-color;
+		box-shadow: inset $bar-width 0px 0px $bar-color;
 	}
 	100% {
-		box-shadow: inset -@bar-width 0px 0px @bar-color;
+		box-shadow: inset -$bar-width 0px 0px $bar-color;
 	}
 }
 @keyframes bar-follow {
 	0% {
-		box-shadow: inset @bar-width 0px 0px @bar-color;
+		box-shadow: inset $bar-width 0px 0px $bar-color;
 	}
 	100% {
-		box-shadow: inset -@bar-width 0px 0px @bar-color;
+		box-shadow: inset -$bar-width 0px 0px $bar-color;
 	}
 }
 /* LINE */
-@line-width: @width;
-@line-height: @height / 2;
-@line-color: rgba(0, 0, 0, .5);
+$line-width: $width;
+$line-height: $height / 2;
+$line-color: rgba(0, 0, 0, .5);
 
 .csspinner.line:after {
-	height: @line-height;
+	height: $line-height;
 	border-radius: 0;
 	border: none;
-	box-shadow: inset -(@line-width / 4) 0px 0px @line-color;
+	box-shadow: inset -($line-width / 4) 0px 0px $line-color;
 	animation: line .75s infinite linear;
 	-webkit-animation: line .75s infinite linear;
 }
@@ -220,7 +220,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		width: 10px;
 	}
 	to {
-		width: @line-width + 10px;
+		width: $line-width + 10px;
 	}
 }
 @keyframes line {
@@ -228,7 +228,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		width: 10px;
 	}
 	to {
-		width: @line-width + 10px;
+		width: $line-width + 10px;
 	}
 }
 
@@ -275,7 +275,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		width: 10px;
 	}
 	50% {
-		width: @line-width + 10px;
+		width: $line-width + 10px;
 	}
 	100% {
 		width: 10px;
@@ -286,7 +286,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		width: 10px;
 	}
 	50% {
-		width: @line-width + 10px;
+		width: $line-width + 10px;
 	}
 	100% {
 		width: 10px;
@@ -342,9 +342,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 /* BOX SHADOWING */
-@box-shadow-height: @height;
-@box-shadow-width: @width;
-@box-shadow-color: rgba(0, 0, 0, .5);
+$box-shadow-height: $height;
+$box-shadow-width: $width;
+$box-shadow-color: rgba(0, 0, 0, .5);
 
 .csspinner.shadow:after {
 	animation: spin-shadow .25s infinite linear;
@@ -369,29 +369,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 @-webkit-keyframes spin-shadow {
 	0% {
-		box-shadow: inset (@box-shadow-width / 8) (@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	25% {
-		box-shadow: inset -(@box-shadow-width / 8) (@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	50% {
-		box-shadow: inset -(@box-shadow-width / 8) -(@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	100% {
-		box-shadow: inset (@box-shadow-width / 8) -(@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 }
 @keyframes spin-shadow {
 	0% {
-		box-shadow: inset (@box-shadow-width / 8) (@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	25% {
-		box-shadow: inset -(@box-shadow-width / 8) (@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	50% {
-		box-shadow: inset -(@box-shadow-width / 8) -(@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 	100% {
-		box-shadow: inset (@box-shadow-width / 8) -(@box-shadow-width / 8) (@box-shadow-width / 8) @box-shadow-color;
+		box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
 	}
 }
