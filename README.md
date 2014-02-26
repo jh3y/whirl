@@ -41,6 +41,11 @@ Then there are;
 
 There is also `no-overlay` which will hide the overlay which is added by default. 
 
+#### Tweaking/Developing
+I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc.
+
+I've provided both LESS and SASS/SCSS versions of the file and have provided variables that can be easily changed where I think makes sense in this first run of creating (cs)spinner. Of course, feel free to submit an issue or send me a message if you feel something could be much better.
+
 #### How does this work?
 Not surprisingly it's real simple! :)
 
