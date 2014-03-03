@@ -5,6 +5,9 @@
 
 ![alt tag](https://raw.github.com/jh3y/-cs-spinner/master/images/csspinner.gif)
 
+#### Demo
+[here](http://jh3y.github.io/-cs-spinner).
+
 #### Usage
 1. Include the [stylesheet](https://raw2.github.com/jh3y/-cs-spinner/master/csspinner.css)(tweaking where necessary).
 2. Add and remove appropriate classes to your elements when necessary to show loading(using js).
