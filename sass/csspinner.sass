@@ -18,6 +18,8 @@ $overlay-color: #999
 $base-color: #555
 
 /* BASE */
+.csspinner
+	position: relative
 .csspinner:before
 	content: ""
 	z-index: 1
@@ -36,8 +38,9 @@ $base-color: #555
 	height: $height
 	width: $width
 	position: absolute
-	top: 48%
-	left: 48%
+	top: 50%
+	left: 50%
+	margin: (-$width / 2) 0 0 (-$width / 2)
 	transition: all .75s ease 0s
 	-webkit-transition: all .75s ease 0s
 	border-radius: 100%
