@@ -3,12 +3,12 @@
 
 ###Pure CSS loading animations with minimal effort!
 
-![alt tag](https://raw.github.com/jh3y/-cs-spinner/master/images/csspinner.gif)
+![alt tag](https://raw.github.com/jh3y/-cs-spinner/master/src/images/csspinner.gif)
 
 #### Demo
 [here](http://jh3y.github.io/-cs-spinner).
 
-#### Usage
+#### Basic usage
 1. Include the [stylesheet](https://raw2.github.com/jh3y/-cs-spinner/master/csspinner.css)(tweaking where necessary).
 2. Add and remove appropriate classes to your elements when necessary to show loading(using js).
 
@@ -45,9 +45,31 @@ Then there are;
 There is also `no-overlay` which will hide the overlay which is added by default. 
 
 #### Tweaking/Developing
-I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc.
+I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc. I have provided both LESS and SCSS versions. There is also an older style SASS syntax file available but it does not benefit from modularity and will need to be built using ruby.
 
-I've provided both LESS and SASS/SCSS versions of the file and have provided variables that can be easily changed where I think makes sense in this first run of creating (cs)spinner. Of course, feel free to submit an issue or send me a message if you feel something could be much better.
+##### Modularity, custom builds and gulp.js
+I have recently re-implemented (cs)spinner to make use of __gulp.js__. 
+
+In order to use the tasks I've put in place it is presumed you will already have `npm` and `gulp` installed.
+
+Then you need to clone the repo
+
+	git clone https://github.com/jh3y/-cs-spinner
+
+And then run 
+
+	npm install
+
+This makes it easier to run custom builds of (cs)spinner. You simply modify the __spinner-config.json__ file setting different spins to either true or false and then run the gulp task for your chosen extension language.
+
+The available tasks are
+
+* `gulp less:build` - will build (cs)spinner using less source files.
+* `gulp scss:build` - will build (cs)spinner using scss source files.
+* `gulp cleanup` - will clean out the build directory.
+* `gulp` - the default task will execute a cleanup followed by a less build.
+
+You can of course tweak the gulpfile to your own needs.
 
 #### How does this work?
 Not surprisingly it's real simple! :)
