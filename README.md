@@ -37,7 +37,7 @@ Then there are;
 * `bar-follow`
 * `line`
 * `line grow`
-* `line back-and-fourth`
+* `line back-and-forth`
 * `shadow`
 * `shadow oval`/`shadow oval left`
 * `shadow oval right`
