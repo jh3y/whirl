@@ -41,6 +41,9 @@ Then there are;
 * `shadow`
 * `shadow oval`/`shadow oval left`
 * `shadow oval right`
+* `ringed`
+* `blade`
+* `helicopter`
 
 There is also `no-overlay` which will hide the overlay which is added by default. 
 
@@ -67,6 +70,7 @@ The available tasks are
 * `gulp less:build` - will build (cs)spinner using less source files.
 * `gulp scss:build` - will build (cs)spinner using scss source files.
 * `gulp cleanup` - will clean out the build directory.
+* `gulp dev` - will set up a static server with livereload at `localhost:1987`. This particular task makes use of `src/jade/index.jade` to output a sandbox demo to develop against.
 * `gulp` - the default task will execute a cleanup followed by a less build.
 
 You can of course tweak the gulpfile to your own needs.
