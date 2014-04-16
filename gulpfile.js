@@ -14,12 +14,15 @@ var gulp = require('gulp'),
 	sources = {
 		docs: "src/jade/index.jade",
 		templates: "src/jade/**/*.jade",
-		less: "src/less/**/*.less"
+		less: "src/less/**/*.less",
+		scss: "src/scss/**/*.scss",
+		buildCss: "build/**/*.css",
+		coreLess: "src/less/core.less",
+		coreScss: "src/scss/core.scss"
 	},
 	destinations = {
 		build: "build/",
-		overwatch: "out/**/*.*",
-		css: "out/css/"
+		overwatch: "build/**/*.*"
 	},
 	gatherSrc = function (sources, path, ext) {
 		for (var source in sources ) {
@@ -40,12 +43,12 @@ gulp.task('serve', function(event) {
 		port: 1987,
 		livereload: true
 	});
-	watch({glob: 'build/**/*.*'})
+	watch({glob: destinations.overwatch})
 		.pipe(connect.reload());
 });
 /*BUILD JADE*/
 gulp.task('jade:build', function(event) {
-	return gulp.src('src/jade/index.jade')
+	return gulp.src(sources.docs)
 		.pipe(plumber())
 		.pipe(jade({
 			pretty: true
@@ -54,12 +57,12 @@ gulp.task('jade:build', function(event) {
 });
 /*WATCH JADE*/
 gulp.task('jade:watch', function(event) {
-	gulp.watch('src/jade/index.jade', ["jade:build"]);
+	gulp.watch(sources.docs, ["jade:build"]);
 });
 /*WATCH LESS*/
 gulp.task('less:watch', function(event) {
-	watch({glob: 'src/less/**/*.less'}, function(files) {
-		return gulp.src('src/less/**/*.less')
+	watch({glob: sources.less}, function(files) {
+		return gulp.src(sources.less)
 			.pipe(plumber())
 			.pipe(concat(pkg.name + '.less'))
 			.pipe(less())
@@ -69,8 +72,8 @@ gulp.task('less:watch', function(event) {
 });
 /*WATCH SCSS*/
 gulp.task('scss:watch', function(event) {
-	watch({glob: 'src/scss/**/*.scss'}, function(files) {
-		return gulp.src('src/scss/**/*.scss')
+	watch({glob: sources.scss}, function(files) {
+		return gulp.src(sources.scss)
 			.pipe(plumber())
 			.pipe(concat(pkg.name + '.scss'))
 			.pipe(sass())
@@ -85,14 +88,14 @@ gulp.task('cleanup', function(event) {
 		.pipe(clean());
 });
 gulp.task('release', function(event) {
-	return gulp.src(["build/**/*.css"])
+	return gulp.src([sources.buildCss])
 		.pipe(gulp.dest(''));
 });
 /*RELEASE BUILD*/
 gulp.task('release:build', ["less:build", "release"]);
 /*BUILD LESS*/
 gulp.task('less:build', function(event) {
-	processSrc = ['src/less/core.less'];
+	processSrc = [sources.coreLess];
 	gatherSrc(config.spins, undefined, 'less');
 	return gulp.src(processSrc)
 		.pipe(plumber())
@@ -104,11 +107,10 @@ gulp.task('less:build', function(event) {
 		.pipe(less({
 			compress: true
 		}))
-		.pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
 		.pipe(gulp.dest(destinations.build));
 });
 gulp.task('scss:build', function(event) {
-	processSrc = ['src/scss/core.scss'];
+	processSrc = [sources.coreScss];
 	gatherSrc(config.spins, undefined, 'scss');
 	return gulp.src(processSrc)
 		.pipe(plumber())
@@ -120,7 +122,6 @@ gulp.task('scss:build', function(event) {
 		.pipe(sass({
 			style: "compressed"
 		}))
-		.pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
 		.pipe(gulp.dest(destinations.build));
 });
 /*DEFAULT TASK*/
