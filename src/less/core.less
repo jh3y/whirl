@@ -27,10 +27,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	z-index: 1;
 	position: absolute;
 	top: 0;
+	right: 0;
+	bottom: 0;
 	left: 0;
-	display: block;
-	height: 100%;
-	width: 100%;
 	background-color: @overlay-color;
 	opacity: 0.6;
 }
@@ -47,6 +46,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	border-radius: 100%;
 	border-top: @border-width solid @base-color;
 	animation: standard .75s infinite linear;
+	transform-origin: center;
 }
 .csspinner.no-overlay:before {
 	content: none;

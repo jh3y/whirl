@@ -19,10 +19,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   z-index: 1;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
   background-color: #999999;
   opacity: 0.6;
 }
@@ -41,6 +40,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-top: 4px solid #555555;
   -webkit-animation: standard .75s infinite linear;
   animation: standard .75s infinite linear;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 .csspinner.no-overlay:before {
   content: none;
@@ -121,6 +123,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
   }
 }
+/* (cs)spinner blade spinner.
+experimental spinner that tries to create a blade effect.*/
+.csspinner.blade:after {
+  height: 20px;
+  width: 20px;
+  margin: -10px 0 0 10px;
+  border-right: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid #e74c3c;
+  opacity: 1;
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+}
 /*(cs)spinner double up - a doubling up standard animation spinner*/
 .csspinner.double-up:after {
   border-right: 4px solid #e74c3c;
@@ -134,6 +151,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-left: 4px solid #333333;
   border-top: 4px solid #f1c40f;
   border-bottom: 4px solid #f1c40f;
+}
+/* (cs)spinner helicopter spinner.*/
+.csspinner.helicopter:after {
+  height: 10px;
+  width: 40px;
+  margin: -10px 0 0 -20px;
+  border: none;
+  border-radius: 0;
+  opacity: 1;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  background-color: #8e44ad;
 }
 /*(cs)spinner line - a simple strafing line animation*/
 .csspinner.line:after {
@@ -269,6 +299,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
+}
+/* (cs)spinner ringed spinner.
+a spinner with a static ring and no overlay.*/
+.csspinner.ringed:after {
+  border-right: 4px solid #e74c3c;
+  border-top: 4px solid #2ecc71;
+  border-left: 4px solid #2ecc71;
+  border-bottom: 4px solid #2ecc71;
+  opacity: 1;
 }
 /* (cs)spinner shadow - makes use of box shadowing effects */
 .csspinner.shadow:after {

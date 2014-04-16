@@ -4,17 +4,26 @@
 			"bar": true,
 			"bar-follow": true
 		},
+		"blade": {
+			"blade": true
+		},
 		"double-up": {
 			"double-up": true
 		},
 		"duo": {
 			"duo": true
 		},
+		"helicopter": {
+			"helicopter": true
+		},
 		"line": {
 			"line": true,
 			"line-grow": true,
 			"line-back-and-forth": true,
 			"line-back-and-forth-grow": true
+		},
+		"ringed": {
+			"ringed": true
 		},
 		"shadow": {
 			"shadow": true,
