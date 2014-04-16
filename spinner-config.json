@@ -1,0 +1,32 @@
+{
+	"spins": {
+		"bar": {
+			"bar": true,
+			"bar-follow": true
+		},
+		"double-up": {
+			"double-up": true
+		},
+		"duo": {
+			"duo": true
+		},
+		"line": {
+			"line": true,
+			"line-grow": true,
+			"line-back-and-forth": true,
+			"line-back-and-forth-grow": true
+		},
+		"shadow": {
+			"shadow": true,
+			"shadow-oval-left": true,
+			"shadow-oval-right": true
+		},
+		"spherical": {
+			"spherical-horizontal": true,
+			"spherical-vertical": true
+		},
+		"traditional": {
+			"traditional": true
+		}
+	}
+}
