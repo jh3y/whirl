@@ -1,0 +1,19 @@
+{
+  "name": "(cs)spinner",
+  "version": "1.0.0",
+  "homepage": "http://jh3y.github.io/-cs-spinner",
+  "authors": [
+    "jh3y <jhey.tompkins@gmail.com>"
+  ],
+  "description": "Pure CSS loading animations with minimal effort!",
+  "main": "csspinner.css",
+  "keywords": [
+    "css",
+    "csspinner",
+    "spinners",
+    "spinner",
+    "animation",
+    "loading"
+  ],
+  "license": "MIT"
+}

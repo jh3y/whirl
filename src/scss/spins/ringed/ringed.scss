@@ -4,9 +4,9 @@ $ring-beam-color: #E74C3C;
 $ring-color: #2ECC71;
 
 .csspinner.ringed:after {
-	border-right: $border-width solid $ring-beam-color;
-	border-top: $border-width solid $ring-color;
-	border-left: $border-width solid $ring-color;
-	border-bottom: $border-width solid $ring-color;
-	opacity: 1;
+  border-right: $border-width solid $ring-beam-color;
+  border-top: $border-width solid $ring-color;
+  border-left: $border-width solid $ring-color;
+  border-bottom: $border-width solid $ring-color;
+  opacity: 1;
 }

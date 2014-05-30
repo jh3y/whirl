@@ -4,17 +4,17 @@
 @line-color: rgba(0, 0, 0, .5);
 
 .csspinner.line:after {
-	height: @line-height;
-	border-radius: 0;
-	border: none;
-	box-shadow: inset -(@line-width / 4) 0px 0px @line-color;
-	animation: line .75s infinite linear;
+  height: @line-height;
+  border-radius: 0;
+  border: none;
+  box-shadow: inset -(@line-width / 4) 0px 0px @line-color;
+  animation: line .75s infinite linear;
 }
 @keyframes line {
-	from {
-		width: 10px;
-	}
-	to {
-		width: @line-width + 10px;
-	}
+  from {
+    width: 10px;
+  }
+  to {
+    width: @line-width + 10px;
+  }
 }

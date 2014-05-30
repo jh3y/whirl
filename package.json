@@ -1,6 +1,6 @@
 {
   "name": "csspinner",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "(cs)spinner - pure CSS loading animations",
   "engines": {
     "node": "0.10",

@@ -1,15 +1,15 @@
 /*
-	(cs)spinner - https://github.com/jh3y/-cs-spinner
-	Licensed under the MIT license
+  (cs)spinner - https://github.com/jh3y/-cs-spinner
+  Licensed under the MIT license
 
-	Jhey Tompkins (c) 2014
+  Jhey Tompkins (c) 2014
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	*/
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  */
 //VARS
 $height: 40px
 $width: 40px
@@ -19,56 +19,56 @@ $base-color: #555
 
 /* BASE */
 .csspinner
-	position: relative
+  position: relative
 .csspinner:before
-	content: ""
-	z-index: 1
-	position: absolute
-	top: 0
-	left: 0
-	display: block
-	height: 100%
-	width: 100%
-	background-color: $overlay-color
-	opacity: 0.6
+  content: ""
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  height: 100%
+  width: 100%
+  background-color: $overlay-color
+  opacity: 0.6
 
 .csspinner:after
-	z-index: 2
-	content: ""
-	height: $height
-	width: $width
-	position: absolute
-	top: 50%
-	left: 50%
-	margin: (-$width / 2) 0 0 (-$width / 2)
-	transition: all .75s ease 0s
-	-webkit-transition: all .75s ease 0s
-	border-radius: 100%
-	border-top: $border-width solid $base-color
-	animation: standard .75s infinite linear
-	-webkit-animation: standard .75s infinite linear
+  z-index: 2
+  content: ""
+  height: $height
+  width: $width
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: (-$width / 2) 0 0 (-$width / 2)
+  transition: all .75s ease 0s
+  -webkit-transition: all .75s ease 0s
+  border-radius: 100%
+  border-top: $border-width solid $base-color
+  animation: standard .75s infinite linear
+  -webkit-animation: standard .75s infinite linear
 
 .csspinner.no-overlay:before
-	content: none
-	display: none
+  content: none
+  display: none
 
 
 /* STANDARD ROTATION ANIMATION */
 @-webkit-keyframes standard
-	from
-		-webkit-transform: rotate(0deg)
-	
-	to
-		-webkit-transform: rotate(360deg)
-	
+  from
+    -webkit-transform: rotate(0deg)
+
+  to
+    -webkit-transform: rotate(360deg)
+
 
 @keyframes standard
-	from
-		transform: rotate(0deg)
-	
-	to
-		transform: rotate(360deg)
-	
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)
+
 
 
 /* TRADITIONAL */
@@ -77,19 +77,19 @@ $traditional-color-two: #999
 $traditional-color-three: #BBB
 
 .csspinner.traditional:after
-	border-right: $border-width solid $traditional-color-one
-	border-top: $border-width solid $traditional-color-one
-	border-left: $border-width solid $traditional-color-two
-	border-bottom: $border-width solid $traditional-color-three
+  border-right: $border-width solid $traditional-color-one
+  border-top: $border-width solid $traditional-color-one
+  border-left: $border-width solid $traditional-color-two
+  border-bottom: $border-width solid $traditional-color-three
 
 /* DOUBLE UP*/
 $double-up-color-one: #E74C3C
 
 .csspinner.double-up:after
-	border-right: $border-width solid $double-up-color-one
-	border-top: $border-width double $double-up-color-one
-	border-left: $border-width double $double-up-color-one
-	border-bottom: $border-width double $double-up-color-one	
+  border-right: $border-width solid $double-up-color-one
+  border-top: $border-width double $double-up-color-one
+  border-left: $border-width double $double-up-color-one
+  border-bottom: $border-width double $double-up-color-one
 
 
 /* DUO */
@@ -97,10 +97,10 @@ $duo-color-one: #333
 $duo-color-two: #F1C40F
 
 .csspinner.duo:after
-	border-right: $border-width solid $duo-color-one
-	border-left: $border-width solid $duo-color-one
-	border-top: $border-width solid $duo-color-two
-	border-bottom: $border-width solid $duo-color-two
+  border-right: $border-width solid $duo-color-one
+  border-left: $border-width solid $duo-color-one
+  border-top: $border-width solid $duo-color-two
+  border-bottom: $border-width solid $duo-color-two
 
 
 /* SPHERICAL */
@@ -109,50 +109,50 @@ $sphere-height: $height
 $sphere-width: $width
 
 .csspinner.sphere.horizontal:after, .csspinner.sphere:after
-	border-radius: 100%
-	animation: sphere .5s infinite
-	-webkit-animation: sphere .5s infinite
-	border: none
-	height: $sphere-height
+  border-radius: 100%
+  animation: sphere .5s infinite
+  -webkit-animation: sphere .5s infinite
+  border: none
+  height: $sphere-height
 
 .csspinner.sphere.vertical:after
-	border-radius: 100%
-	animation: sphere-v .5s infinite
-	-webkit-animation: sphere-v .5s infinite
-	border: none
-	height: $sphere-height
+  border-radius: 100%
+  animation: sphere-v .5s infinite
+  -webkit-animation: sphere-v .5s infinite
+  border: none
+  height: $sphere-height
 
 @-webkit-keyframes sphere
-	from
-		box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
-	
-	to
-		box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
-	
+  from
+    box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
+
+  to
+    box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
+
 
 @keyframes sphere
-	from
-		box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
-	
-	to
-		box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
-	
+  from
+    box-shadow: inset ($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
+
+  to
+    box-shadow: inset -($sphere-width + 5px) 0px $sphere-width/4 $sphere-color
+
 
 @-webkit-keyframes sphere-v
-	from
-		box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color
-	
-	to
-		box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color
-	
+  from
+    box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color
+
+  to
+    box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color
+
 
 @keyframes sphere-v
-	from
-		box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color
-	
-	to
-		box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color
-	
+  from
+    box-shadow: inset 0px ($sphere-width + 5px) $sphere-width/4 $sphere-color
+
+  to
+    box-shadow: inset 0px -($sphere-width + 5px) $sphere-width/4 $sphere-color
+
 
 
 /* BAR */
@@ -161,48 +161,48 @@ $bar-width: $width
 $bar-color: rgba(0, 0, 0, .5)
 
 .csspinner.bar:after
-	height: $bar-height
-	width: $bar-width
-	border-radius: 0
-	border: none
-	animation: bar 1s infinite linear
-	-webkit-animation: bar 1s infinite linear
+  height: $bar-height
+  width: $bar-width
+  border-radius: 0
+  border: none
+  animation: bar 1s infinite linear
+  -webkit-animation: bar 1s infinite linear
 
 @-webkit-keyframes bar
-	from
-		box-shadow: inset 0px 0px 0px $bar-color
-	
-	to
-		box-shadow: inset ($bar-width * 2) 0px 0px $bar-color
-	
+  from
+    box-shadow: inset 0px 0px 0px $bar-color
+
+  to
+    box-shadow: inset ($bar-width * 2) 0px 0px $bar-color
+
 
 @keyframes bar
-	from
-		box-shadow: inset 0px 0px 0px $bar-color
-	
-	to
-		box-shadow: inset ($bar-width * 2) 0px 0px $bar-color
-	
+  from
+    box-shadow: inset 0px 0px 0px $bar-color
+
+  to
+    box-shadow: inset ($bar-width * 2) 0px 0px $bar-color
+
 
 .csspinner.bar.follow:after
-	animation: bar-follow 1s infinite linear
-	-webkit-animation: bar-follow 1s infinite linear
+  animation: bar-follow 1s infinite linear
+  -webkit-animation: bar-follow 1s infinite linear
 
 @-webkit-keyframes bar-follow
-	0%
-		box-shadow: inset $bar-width 0px 0px $bar-color
-	
-	100%
-		box-shadow: inset -$bar-width 0px 0px $bar-color
-	
+  0%
+    box-shadow: inset $bar-width 0px 0px $bar-color
+
+  100%
+    box-shadow: inset -$bar-width 0px 0px $bar-color
+
 
 @keyframes bar-follow
-	0%
-		box-shadow: inset $bar-width 0px 0px $bar-color
-	
-	100%
-		box-shadow: inset -$bar-width 0px 0px $bar-color
-	
+  0%
+    box-shadow: inset $bar-width 0px 0px $bar-color
+
+  100%
+    box-shadow: inset -$bar-width 0px 0px $bar-color
+
 
 /* LINE */
 $line-width: $width
@@ -210,137 +210,137 @@ $line-height: $height / 2
 $line-color: rgba(0, 0, 0, .5)
 
 .csspinner.line:after
-	height: $line-height
-	border-radius: 0
-	border: none
-	box-shadow: inset -($line-width / 4) 0px 0px $line-color
-	animation: line .75s infinite linear
-	-webkit-animation: line .75s infinite linear
+  height: $line-height
+  border-radius: 0
+  border: none
+  box-shadow: inset -($line-width / 4) 0px 0px $line-color
+  animation: line .75s infinite linear
+  -webkit-animation: line .75s infinite linear
 
 @-webkit-keyframes line
-	from
-		width: 10px
-	
-	to
-		width: $line-width + 10px
-	
+  from
+    width: 10px
+
+  to
+    width: $line-width + 10px
+
 
 @keyframes line
-	from
-		width: 10px
-	
-	to
-		width: $line-width + 10px
-	
+  from
+    width: 10px
+
+  to
+    width: $line-width + 10px
+
 
 
 .csspinner.line.grow:after
-	animation: line .75s infinite linear, line-grow .75s infinite linear
-	-webkit-animation: line .75s infinite linear, line-grow .75s infinite linear
+  animation: line .75s infinite linear, line-grow .75s infinite linear
+  -webkit-animation: line .75s infinite linear, line-grow .75s infinite linear
 
 @keyframes line-grow
-	0%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	50%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	100%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
+  0%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  50%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  100%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
 
 @-webkit-keyframes line-grow
-	0%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	50%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	100%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
+  0%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  50%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  100%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
 
 
 /* LINE BACK AND forth */
 .csspinner.line.back-and-forth:after
-	animation: line-back-and-forth 1s infinite linear
-	-webkit-animation: line-back-and-forth 1s infinite linear
+  animation: line-back-and-forth 1s infinite linear
+  -webkit-animation: line-back-and-forth 1s infinite linear
 
 @-webkit-keyframes line-back-and-forth
-	0%
-		width: 10px
-	
-	50%
-		width: $line-width + 10px
-	
-	100%
-		width: 10px
-	
+  0%
+    width: 10px
+
+  50%
+    width: $line-width + 10px
+
+  100%
+    width: 10px
+
 
 @keyframes line-back-and-forth
-	0%
-		width: 10px
-	
-	50%
-		width: $line-width + 10px
-	
-	100%
-		width: 10px
-	
+  0%
+    width: 10px
+
+  50%
+    width: $line-width + 10px
+
+  100%
+    width: 10px
+
 
 .csspinner.line.back-and-forth.grow:after
-	animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
-	-webkit-animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
+  animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
+  -webkit-animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
 
 @keyframes line-back-and-forth-grow
-	0%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	25%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	50%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	75%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	100%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
+  0%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  25%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  50%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  75%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  100%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
 
 @-webkit-keyframes line-back-and-forth-grow
-	0%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	25%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	50%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
-	75%
-		transform: scaleY(2.0)
-		-webkit-transform: scaleY(2.0)
-	
-	100%
-		transform: scaleY(1.0)
-		-webkit-transform: scaleY(1.0)
-	
+  0%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  25%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  50%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
+  75%
+    transform: scaleY(2.0)
+    -webkit-transform: scaleY(2.0)
+
+  100%
+    transform: scaleY(1.0)
+    -webkit-transform: scaleY(1.0)
+
 
 
 /* BOX SHADOWING */
@@ -349,50 +349,49 @@ $box-shadow-width: $width
 $box-shadow-color: rgba(0, 0, 0, .5)
 
 .csspinner.shadow:after
-	animation: spin-shadow .25s infinite linear
-	-webkit-animation: spin-shadow .25s infinite linear
-	border-radius: 100%
-	border: none
+  animation: spin-shadow .25s infinite linear
+  -webkit-animation: spin-shadow .25s infinite linear
+  border-radius: 100%
+  border: none
 
 
 .csspinner.shadow.oval.left:after, .csspinner.shadow.oval:after
-	animation: spin-shadow .25s infinite linear
-	-webkit-animation: spin-shadow .25s infinite linear
-	border-radius: 100%
-	border: none
-	border-radius: 40% 100%
+  animation: spin-shadow .25s infinite linear
+  -webkit-animation: spin-shadow .25s infinite linear
+  border-radius: 100%
+  border: none
+  border-radius: 40% 100%
 
 .csspinner.shadow.oval.right:after
-	animation: spin-shadow .25s infinite linear
-	-webkit-animation: spin-shadow .25s infinite linear
-	border-radius: 100%
-	border: none
-	border-radius: 100% 40%
+  animation: spin-shadow .25s infinite linear
+  -webkit-animation: spin-shadow .25s infinite linear
+  border-radius: 100%
+  border: none
+  border-radius: 100% 40%
 
 @-webkit-keyframes spin-shadow
-	0%
-		box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	25%
-		box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	50%
-		box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	100%
-		box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
+  0%
+    box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  25%
+    box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  50%
+    box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  100%
+    box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
 
 @keyframes spin-shadow
-	0%
-		box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	25%
-		box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	50%
-		box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
-	100%
-		box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
-	
+  0%
+    box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  25%
+    box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  50%
+    box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color
+
+  100%
+    box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color

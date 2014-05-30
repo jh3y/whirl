@@ -4,22 +4,22 @@ $box-shadow-width: $width;
 $box-shadow-color: rgba(0, 0, 0, .5);
 
 .csspinner.shadow:after {
-	animation: spin-shadow .25s infinite linear;
-	border-radius: 100%;
-	border: none;
+  animation: spin-shadow .25s infinite linear;
+  border-radius: 100%;
+  border: none;
 
 }
 @keyframes spin-shadow {
-	0% {
-		box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
-	}
-	25% {
-		box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
-	}
-	50% {
-		box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
-	}
-	100% {
-		box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
-	}
+  0% {
+    box-shadow: inset ($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
+  }
+  25% {
+    box-shadow: inset -($box-shadow-width / 8) ($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
+  }
+  50% {
+    box-shadow: inset -($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
+  }
+  100% {
+    box-shadow: inset ($box-shadow-width / 8) -($box-shadow-width / 8) ($box-shadow-width / 8) $box-shadow-color;
+  }
 }

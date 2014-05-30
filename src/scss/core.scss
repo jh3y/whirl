@@ -20,45 +20,45 @@ $base-color: #555;
 
 /* (cs)spinner base styling */
 .csspinner {
-	position: relative;
+  position: relative;
 }
 .csspinner:before {
-	content: "";
-	z-index: 1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	height: 100%;
-	width: 100%;
-	background-color: $overlay-color;
-	opacity: 0.6;
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: $overlay-color;
+  opacity: 0.6;
 }
 .csspinner:after {
-	z-index: 2;
-	content: "";
-	height: $height;
-	width: $width;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: (-$width / 2) 0 0 (-$width / 2);
-	transition: all .75s ease 0s;
-	border-radius: 100%;
-	border-top: $border-width solid $base-color;
-	animation: standard .75s infinite linear;
+  z-index: 2;
+  content: "";
+  height: $height;
+  width: $width;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: (-$width / 2) 0 0 (-$width / 2);
+  transition: all .75s ease 0s;
+  border-radius: 100%;
+  border-top: $border-width solid $base-color;
+  animation: standard .75s infinite linear;
 }
 .csspinner.no-overlay:before {
-	content: none;
-	display: none;
+  content: none;
+  display: none;
 }
 
 /* (cs)spinner standard rotation animation used for duo, double-up etc. */
 @keyframes standard {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

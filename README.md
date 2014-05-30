@@ -16,9 +16,9 @@
 That's it!
 
 ```html
-	<div class="csspinner duo">
-		This content is taking ages to load.
-	</div>
+  <div class="csspinner duo">
+    This content is taking ages to load.
+  </div>
 ```
 
 ####options
@@ -45,23 +45,23 @@ Then there are;
 * `blade`
 * `helicopter`
 
-There is also `no-overlay` which will hide the overlay which is added by default. 
+There is also `no-overlay` which will hide the overlay which is added by default.
 
 #### Tweaking/Developing
 I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc. I have provided both LESS and SCSS versions. There is also an older style SASS syntax file available but it does not benefit from modularity and will need to be built using ruby.
 
 ##### Modularity, custom builds and gulp.js
-I have recently re-implemented (cs)spinner to make use of __gulp.js__. 
+I have recently re-implemented (cs)spinner to make use of __gulp.js__.
 
 In order to use the tasks I've put in place it is presumed you will already have `npm` and `gulp` installed.
 
 Then you need to clone the repo
 
-	git clone https://github.com/jh3y/-cs-spinner
+  git clone https://github.com/jh3y/-cs-spinner
 
-And then run 
+And then run
 
-	npm install
+  npm install
 
 This makes it easier to run custom builds of (cs)spinner. You simply modify the __spinner-config.json__ file setting different spins to either true or false and then run the gulp task for your chosen extension language.
 
