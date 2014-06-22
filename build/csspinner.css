@@ -69,6 +69,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: rotate(360deg);
   }
 }
+/*(cs)spinner bar follow - a simple strafing bar animation that follows itself*/
+.csspinner.bar.follow:after {
+  -webkit-animation: bar-follow 1s infinite linear;
+  animation: bar-follow 1s infinite linear;
+}
+@-webkit-keyframes bar-follow {
+  0% {
+    -webkit-box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes bar-follow {
+  0% {
+    -webkit-box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
+  }
+}
 /*(cs)spinner bar - a simple strafing bar animation*/
 .csspinner.bar:after {
   height: 20px;
@@ -96,31 +121,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   to {
     -webkit-box-shadow: inset 80px 0px 0px rgba(0, 0, 0, 0.5);
     box-shadow: inset 80px 0px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-/*(cs)spinner bar follow - a simple strafing bar animation that follows itself*/
-.csspinner.bar.follow:after {
-  -webkit-animation: bar-follow 1s infinite linear;
-  animation: bar-follow 1s infinite linear;
-}
-@-webkit-keyframes bar-follow {
-  0% {
-    -webkit-box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    -webkit-box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
-  }
-}
-@keyframes bar-follow {
-  0% {
-    -webkit-box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 40px 0px 0px rgba(0, 0, 0, 0.5);
-  }
-  100% {
-    -webkit-box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: inset -40px 0px 0px rgba(0, 0, 0, 0.5);
   }
 }
 /* (cs)spinner blade spinner.
@@ -164,92 +164,6 @@ experimental spinner that tries to create a blade effect.*/
   -ms-transform-origin: center;
   transform-origin: center;
   background-color: #8e44ad;
-}
-/*(cs)spinner line - a simple strafing line animation*/
-.csspinner.line:after {
-  height: 20px;
-  border-radius: 0;
-  border: none;
-  -webkit-box-shadow: inset -10px 0px 0px rgba(0, 0, 0, 0.5);
-  box-shadow: inset -10px 0px 0px rgba(0, 0, 0, 0.5);
-  -webkit-animation: line .75s infinite linear;
-  animation: line .75s infinite linear;
-}
-@-webkit-keyframes line {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50px;
-  }
-}
-@keyframes line {
-  from {
-    width: 10px;
-  }
-  to {
-    width: 50px;
-  }
-}
-/*(cs)spinner line grow - a simple strafing line animation that grows in the middle*/
-.csspinner.line.grow:after {
-  -webkit-animation: line 0.75s infinite linear, line-grow 0.75s infinite linear;
-  animation: line 0.75s infinite linear, line-grow 0.75s infinite linear;
-}
-@-webkit-keyframes line-grow {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-}
-@keyframes line-grow {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-  50% {
-    -webkit-transform: scaleY(2);
-    transform: scaleY(2);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-}
-/*(cs)spinner line back and forth - a simple strafing line animation that goes back and forth*/
-.csspinner.line.back-and-forth:after {
-  -webkit-animation: line-back-and-forth 1s infinite linear;
-  animation: line-back-and-forth 1s infinite linear;
-}
-@-webkit-keyframes line-back-and-forth {
-  0% {
-    width: 10px;
-  }
-  50% {
-    width: 50px;
-  }
-  100% {
-    width: 10px;
-  }
-}
-@keyframes line-back-and-forth {
-  0% {
-    width: 10px;
-  }
-  50% {
-    width: 50px;
-  }
-  100% {
-    width: 10px;
-  }
 }
 /*(cs)spinner line back and forth grow - a simple strafing line animation that goes back and forth and grows in the middle*/
 .csspinner.line.back-and-forth.grow:after {
@@ -300,6 +214,92 @@ experimental spinner that tries to create a blade effect.*/
     transform: scaleY(1);
   }
 }
+/*(cs)spinner line back and forth - a simple strafing line animation that goes back and forth*/
+.csspinner.line.back-and-forth:after {
+  -webkit-animation: line-back-and-forth 1s infinite linear;
+  animation: line-back-and-forth 1s infinite linear;
+}
+@-webkit-keyframes line-back-and-forth {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 50px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+@keyframes line-back-and-forth {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 50px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+/*(cs)spinner line grow - a simple strafing line animation that grows in the middle*/
+.csspinner.line.grow:after {
+  -webkit-animation: line 0.75s infinite linear, line-grow 0.75s infinite linear;
+  animation: line 0.75s infinite linear, line-grow 0.75s infinite linear;
+}
+@-webkit-keyframes line-grow {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes line-grow {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(2);
+    transform: scaleY(2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+/*(cs)spinner line - a simple strafing line animation*/
+.csspinner.line:after {
+  height: 20px;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: inset -10px 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -10px 0px 0px rgba(0, 0, 0, 0.5);
+  -webkit-animation: line .75s infinite linear;
+  animation: line .75s infinite linear;
+}
+@-webkit-keyframes line {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 50px;
+  }
+}
+@keyframes line {
+  from {
+    width: 10px;
+  }
+  to {
+    width: 50px;
+  }
+}
 /* (cs)spinner ringed spinner.
 a spinner with a static ring and no overlay.*/
 .csspinner.ringed:after {
@@ -309,12 +309,14 @@ a spinner with a static ring and no overlay.*/
   border-bottom: 4px solid #2ecc71;
   opacity: 1;
 }
-/* (cs)spinner shadow - makes use of box shadowing effects */
-.csspinner.shadow:after {
+/* (cs)spinner shadow oval left - makes use of box shadowing effects
+in addition to offsetting the width and the height to angle the shadow*/
+.csspinner.shadow.oval.left:after,
+.csspinner.shadow.oval:after {
   -webkit-animation: spin-shadow 0.25s infinite linear;
   animation: spin-shadow 0.25s infinite linear;
-  border-radius: 100%;
   border: none;
+  border-radius: 40% 100%;
 }
 @-webkit-keyframes spin-shadow {
   0% {
@@ -352,14 +354,13 @@ a spinner with a static ring and no overlay.*/
     box-shadow: inset 5px -5px 5px rgba(0, 0, 0, 0.5);
   }
 }
-/* (cs)spinner shadow oval left - makes use of box shadowing effects
+/* (cs)spinner shadow oval right - makes use of box shadowing effects
 in addition to offsetting the width and the height to angle the shadow*/
-.csspinner.shadow.oval.left:after,
-.csspinner.shadow.oval:after {
+.csspinner.shadow.oval.right:after {
   -webkit-animation: spin-shadow 0.25s infinite linear;
   animation: spin-shadow 0.25s infinite linear;
   border: none;
-  border-radius: 40% 100%;
+  border-radius: 100% 40%;
 }
 @keyframes spin-shadow {
   0% {
@@ -379,13 +380,12 @@ in addition to offsetting the width and the height to angle the shadow*/
     box-shadow: inset 5px -5px 5px rgba(0, 0, 0, 0.5);
   }
 }
-/* (cs)spinner shadow oval right - makes use of box shadowing effects
-in addition to offsetting the width and the height to angle the shadow*/
-.csspinner.shadow.oval.right:after {
+/* (cs)spinner shadow - makes use of box shadowing effects */
+.csspinner.shadow:after {
   -webkit-animation: spin-shadow 0.25s infinite linear;
   animation: spin-shadow 0.25s infinite linear;
+  border-radius: 100%;
   border: none;
-  border-radius: 100% 40%;
 }
 @keyframes spin-shadow {
   0% {
