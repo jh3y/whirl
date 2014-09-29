@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jhey Tompkins - http://jh3y.github.io
+
+
+# TECHNOLOGY COLOPHON
+
+    Bootstrap, jade, less, HTML5, CSS3
+    Normalize.css, jQuery, Modernizr
