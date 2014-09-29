@@ -1,5 +1,5 @@
 /*
-(cs)spinner.css - http://jh3y.github.io/-cs-spinner
+whirl.css - http://jh3y.github.io/-cs-spinner
 Licensed under the MIT license
 
 Jhey Tompkins (c) 2014.
@@ -11,18 +11,18 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-//(cs)spinner base variables
+//whirl base variables
 @height: 40px;
 @width: 40px;
 @border-width: 4px;
 @overlay-color: #999;
 @base-color: #555;
 
-/* (cs)spinner base styling */
-.csspinner {
+/* whirl base styling */
+.whirl {
   position: relative;
 }
-.csspinner:before {
+.whirl:before {
   content: "";
   z-index: 1;
   position: absolute;
@@ -33,7 +33,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   background-color: @overlay-color;
   opacity: 0.6;
 }
-.csspinner:after {
+.whirl:after {
   z-index: 2;
   content: "";
   height: @height;
@@ -48,12 +48,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation: standard .75s infinite linear;
   transform-origin: center;
 }
-.csspinner.no-overlay:before {
+.whirl.no-overlay:before {
   content: none;
   display: none;
 }
 
-/* (cs)spinner standard rotation animation used for duo, double-up etc. */
+/* whirl standard rotation animation used for duo, double-up etc. */
 @keyframes standard {
   from {
     transform: rotate(0deg);

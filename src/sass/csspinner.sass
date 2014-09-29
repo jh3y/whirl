@@ -1,5 +1,5 @@
 /*
-  (cs)spinner - https://github.com/jh3y/-cs-spinner
+  whirl - https://github.com/jh3y/-cs-spinner
   Licensed under the MIT license
 
   Jhey Tompkins (c) 2014
@@ -18,9 +18,9 @@ $overlay-color: #999
 $base-color: #555
 
 /* BASE */
-.csspinner
+.whirl
   position: relative
-.csspinner:before
+.whirl:before
   content: ""
   z-index: 1
   position: absolute
@@ -32,7 +32,7 @@ $base-color: #555
   background-color: $overlay-color
   opacity: 0.6
 
-.csspinner:after
+.whirl:after
   z-index: 2
   content: ""
   height: $height
@@ -48,7 +48,7 @@ $base-color: #555
   animation: standard .75s infinite linear
   -webkit-animation: standard .75s infinite linear
 
-.csspinner.no-overlay:before
+.whirl.no-overlay:before
   content: none
   display: none
 
@@ -76,7 +76,7 @@ $traditional-color-one: #777
 $traditional-color-two: #999
 $traditional-color-three: #BBB
 
-.csspinner.traditional:after
+.whirl.traditional:after
   border-right: $border-width solid $traditional-color-one
   border-top: $border-width solid $traditional-color-one
   border-left: $border-width solid $traditional-color-two
@@ -85,7 +85,7 @@ $traditional-color-three: #BBB
 /* DOUBLE UP*/
 $double-up-color-one: #E74C3C
 
-.csspinner.double-up:after
+.whirl.double-up:after
   border-right: $border-width solid $double-up-color-one
   border-top: $border-width double $double-up-color-one
   border-left: $border-width double $double-up-color-one
@@ -96,7 +96,7 @@ $double-up-color-one: #E74C3C
 $duo-color-one: #333
 $duo-color-two: #F1C40F
 
-.csspinner.duo:after
+.whirl.duo:after
   border-right: $border-width solid $duo-color-one
   border-left: $border-width solid $duo-color-one
   border-top: $border-width solid $duo-color-two
@@ -108,14 +108,14 @@ $sphere-color: rgba(0, 0, 0, .5)
 $sphere-height: $height
 $sphere-width: $width
 
-.csspinner.sphere.horizontal:after, .csspinner.sphere:after
+.whirl.sphere.horizontal:after, .whirl.sphere:after
   border-radius: 100%
   animation: sphere .5s infinite
   -webkit-animation: sphere .5s infinite
   border: none
   height: $sphere-height
 
-.csspinner.sphere.vertical:after
+.whirl.sphere.vertical:after
   border-radius: 100%
   animation: sphere-v .5s infinite
   -webkit-animation: sphere-v .5s infinite
@@ -160,7 +160,7 @@ $bar-height: $height / 2
 $bar-width: $width
 $bar-color: rgba(0, 0, 0, .5)
 
-.csspinner.bar:after
+.whirl.bar:after
   height: $bar-height
   width: $bar-width
   border-radius: 0
@@ -184,7 +184,7 @@ $bar-color: rgba(0, 0, 0, .5)
     box-shadow: inset ($bar-width * 2) 0px 0px $bar-color
 
 
-.csspinner.bar.follow:after
+.whirl.bar.follow:after
   animation: bar-follow 1s infinite linear
   -webkit-animation: bar-follow 1s infinite linear
 
@@ -209,7 +209,7 @@ $line-width: $width
 $line-height: $height / 2
 $line-color: rgba(0, 0, 0, .5)
 
-.csspinner.line:after
+.whirl.line:after
   height: $line-height
   border-radius: 0
   border: none
@@ -234,7 +234,7 @@ $line-color: rgba(0, 0, 0, .5)
 
 
 
-.csspinner.line.grow:after
+.whirl.line.grow:after
   animation: line .75s infinite linear, line-grow .75s infinite linear
   -webkit-animation: line .75s infinite linear, line-grow .75s infinite linear
 
@@ -268,7 +268,7 @@ $line-color: rgba(0, 0, 0, .5)
 
 
 /* LINE BACK AND forth */
-.csspinner.line.back-and-forth:after
+.whirl.line.back-and-forth:after
   animation: line-back-and-forth 1s infinite linear
   -webkit-animation: line-back-and-forth 1s infinite linear
 
@@ -294,7 +294,7 @@ $line-color: rgba(0, 0, 0, .5)
     width: 10px
 
 
-.csspinner.line.back-and-forth.grow:after
+.whirl.line.back-and-forth.grow:after
   animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
   -webkit-animation: line-back-and-forth 1s infinite linear, line-back-and-forth-grow 1s infinite linear
 
@@ -348,21 +348,21 @@ $box-shadow-height: $height
 $box-shadow-width: $width
 $box-shadow-color: rgba(0, 0, 0, .5)
 
-.csspinner.shadow:after
+.whirl.shadow:after
   animation: spin-shadow .25s infinite linear
   -webkit-animation: spin-shadow .25s infinite linear
   border-radius: 100%
   border: none
 
 
-.csspinner.shadow.oval.left:after, .csspinner.shadow.oval:after
+.whirl.shadow.oval.left:after, .whirl.shadow.oval:after
   animation: spin-shadow .25s infinite linear
   -webkit-animation: spin-shadow .25s infinite linear
   border-radius: 100%
   border: none
   border-radius: 40% 100%
 
-.csspinner.shadow.oval.right:after
+.whirl.shadow.oval.right:after
   animation: spin-shadow .25s infinite linear
   -webkit-animation: spin-shadow .25s infinite linear
   border-radius: 100%

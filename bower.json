@@ -1,15 +1,15 @@
 {
-  "name": "-cs-spinner",
-  "version": "1.0.1",
-  "homepage": "http://jh3y.github.io/-cs-spinner",
+  "name": "whirl",
+  "version": "1.0.2",
+  "homepage": "http://jh3y.github.io/whirl",
   "authors": [
     "jh3y <jhey.tompkins@gmail.com>"
   ],
   "description": "Pure CSS loading animations with minimal effort!",
-  "main": "csspinner.css",
+  "main": "whirl.css",
   "keywords": [
     "css",
-    "csspinner",
+    "whirl",
     "spinners",
     "spinner",
     "animation",

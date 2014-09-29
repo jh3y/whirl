@@ -10,14 +10,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
-//whirl base variables
-$height: 40px;
-$width: 40px;
-$border-width: 4px;
-$overlay-color: #999;
-$base-color: #555;
-
 /* whirl base styling */
 .whirl {
   position: relative;
@@ -27,38 +19,53 @@ $base-color: #555;
   z-index: 1;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  display: block;
-  height: 100%;
-  width: 100%;
-  background-color: $overlay-color;
+  background-color: #999999;
   opacity: 0.6;
 }
 .whirl:after {
   z-index: 2;
   content: "";
-  height: $height;
-  width: $width;
+  height: 40px;
+  width: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: (-$width / 2) 0 0 (-$width / 2);
+  margin: -20px 0 0 -20px;
+  -webkit-transition: all .75s ease 0s;
   transition: all .75s ease 0s;
   border-radius: 100%;
-  border-top: $border-width solid $base-color;
+  border-top: 4px solid #555555;
+  -webkit-animation: standard .75s infinite linear;
   animation: standard .75s infinite linear;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
 }
 .whirl.no-overlay:before {
   content: none;
   display: none;
 }
-
 /* whirl standard rotation animation used for duo, double-up etc. */
-@keyframes standard {
+@-webkit-keyframes standard {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes standard {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }

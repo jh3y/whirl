@@ -1,7 +1,7 @@
 {
-  "name": "csspinner",
-  "version": "1.0.1",
-  "description": "(cs)spinner - pure CSS loading animations",
+  "name": "whirl",
+  "version": "1.0.2",
+  "description": "whirl - pure CSS loading animations",
   "engines": {
     "node": "0.10",
     "npm": "1.3"

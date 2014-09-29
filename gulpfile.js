@@ -9,20 +9,21 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   prefix = require('gulp-autoprefixer'),
   pkg = require('./package.json'),
-  config = require('./spinner-config.json'),
+  config = require('./whirl-config.json'),
   processSrc = [],
+  env = 'dist/',
   sources = {
     docs: "src/jade/index.jade",
     templates: "src/jade/**/*.jade",
     less: "src/less/**/*.less",
     scss: "src/scss/**/*.scss",
-    buildCss: "build/**/*.css",
+    buildCss: env + "**/*.css",
     coreLess: "src/less/core.less",
     coreScss: "src/scss/core.scss"
   },
   destinations = {
-    build: "build/",
-    overwatch: "build/**/*.*"
+    build: env,
+    overwatch: env + "**/*.*"
   },
   gatherSrc = function (sources, path, ext) {
     for (var source in sources ) {
@@ -30,7 +31,7 @@ var gulp = require('gulp'),
         var newPath = (path === undefined) ? source + '/' :path + source + '/';
         gatherSrc(sources[source], newPath, ext);
       } else if (sources[source] === true) {
-        processSrc.push('src/' + ext + '/spins/' + path + source + '.' + ext);
+        processSrc.push('src/' + ext + '/whirls/' + path + source + '.' + ext);
       }
     }
   };
