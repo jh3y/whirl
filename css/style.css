@@ -1,15 +1,31 @@
 body {
   overflow-y: scroll;
-  background-color: #FAFAFA;
-  font-weight: 300;
+  background-color: #eee;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .demo {
   height: 100px;
   width: 100px;
   position: relative;
 }
+ul {
+  margin-top: 10px;
+}
+code {
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #FFF;
+  background-color: #63B8EF;
+  font-weight: bold;
+}
 #demo {
-  margin: 1em 1em 1em 1em;
+  background-color: #fff;
+  color: #575757;
+  overflow: hidden;
+  width: 250px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 15px;
   padding: 1em 1em 1em 1em;
   text-align: center;
 }
