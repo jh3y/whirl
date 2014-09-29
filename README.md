@@ -3,14 +3,11 @@
 
 ###Pure CSS loading animations with minimal effort!
 
-![alt tag](https://raw.github.com/jh3y/-cs-spinner/master/src/images/whirl.gif)
-
-#### Demo
-[here](http://jh3y.github.io/-cs-spinner).
+![alt tag](https://raw.github.com/jh3y/pics/master/whirl/whirl.gif)
 
 #### Basic usage
-1. Include the [stylesheet](https://raw2.github.com/jh3y/-cs-spinner/master/whirl.css)(tweaking where necessary).
-2. Add and remove appropriate classes to your elements when necessary to show loading(using js).
+1. Include the [stylesheet](https://raw2.github.com/jh3y/whirl/master/whirl.css) (tweaking where necessary).
+2. Add and remove appropriate classes to your elements when necessary to show loading (using js).
 
 
 That's it!
@@ -21,7 +18,7 @@ That's it!
   </div>
 ```
 
-####options
+####Options
 From using the demo you can work out which classes you need to add to your elements in order to show the loading animation you want.
 
 By default, you will always need `whirl`.
@@ -57,13 +54,13 @@ In order to use the tasks I've put in place it is presumed you will already have
 
 Then you need to clone the repo
 
-  git clone https://github.com/jh3y/-cs-spinner
+    git clone https://github.com/jh3y/-cs-spinner
 
 And then run
 
-  npm install
+    npm install
 
-This makes it easier to run custom builds of whirl. You simply modify the __spinner-config.json__ file setting different spins to either true or false and then run the gulp task for your chosen extension language.
+This makes it easier to run custom builds of whirl. You simply modify the __whirl-config.json__ file setting different spins to either true or false and then run the gulp task for your chosen extension language.
 
 The available tasks are
 
@@ -92,4 +89,4 @@ Any suggestions, improvements or issues are welcome. :)
 
 MIT
 
-Copyright (c) 2014 [@jh3y](https://github.com/jh3y)
+Copyright 2014 [@jh3y](https://github.com/jh3y)
