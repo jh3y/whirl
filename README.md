@@ -54,7 +54,7 @@ In order to use the tasks I've put in place it is presumed you will already have
 
 Then you need to clone the repo
 
-    git clone https://github.com/jh3y/-cs-spinner
+    git clone https://github.com/jh3y/whirl
 
 And then run
 
