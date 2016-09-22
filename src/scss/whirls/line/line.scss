@@ -1,13 +1,13 @@
 /*whirl line - a simple strafing line animation*/
-$line-width: $width;
-$line-height: $height / 2;
-$line-color: rgba(0, 0, 0, .5);
+$whirl-line-width: $whirl-width !default;
+$whirl-line-height: $whirl-height / 2 !default;
+$whirl-line-color: rgba(0, 0, 0, .5) !default;
 
 .whirl.line:after {
-  height: $line-height;
+  height: $whirl-line-height;
   border-radius: 0;
   border: none;
-  box-shadow: inset -($line-width / 4) 0px 0px $line-color;
+  box-shadow: inset -($whirl-line-width / 4) 0px 0px $whirl-line-color;
   animation: line .75s infinite linear;
 }
 @keyframes line {
@@ -15,6 +15,6 @@ $line-color: rgba(0, 0, 0, .5);
     width: 10px;
   }
   to {
-    width: $line-width + 10px;
+    width: $whirl-line-width + 10px;
   }
 }

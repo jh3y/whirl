@@ -1,12 +1,12 @@
 /* whirl ringed spinner.
 a spinner with a static ring and no overlay.*/
-$ring-beam-color: #E74C3C;
-$ring-color: #2ECC71;
+$whirl-ring-beam-color: #E74C3C !default;
+$whirl-ring-color: #2ECC71 !default;
 
 .whirl.ringed:after {
-  border-right: $border-width solid $ring-beam-color;
-  border-top: $border-width solid $ring-color;
-  border-left: $border-width solid $ring-color;
-  border-bottom: $border-width solid $ring-color;
+  border-right: $whirl-border-width solid $whirl-ring-beam-color;
+  border-top: $whirl-border-width solid $whirl-ring-color;
+  border-left: $whirl-border-width solid $whirl-ring-color;
+  border-bottom: $whirl-border-width solid $whirl-ring-color;
   opacity: 1;
 }
