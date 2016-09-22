@@ -1,12 +1,12 @@
 /* whirl traditional spinner.
 Makes use of standard animation spin and minimally extends core.*/
-$traditional-color-one: #777;
-$traditional-color-two: #999;
-$traditional-color-three: #BBB;
+$whirl-traditional-color-one: #777 !default;
+$whirl-traditional-color-two: #999 !default;
+$whirl-traditional-color-three: #BBB !default;
 
 .whirl.traditional:after {
-  border-right: $border-width solid $traditional-color-one;
-  border-top: $border-width solid $traditional-color-one;
-  border-left: $border-width solid $traditional-color-two;
-  border-bottom: $border-width solid $traditional-color-three;
+  border-right: $whirl-border-width solid $whirl-traditional-color-one;
+  border-top: $whirl-border-width solid $whirl-traditional-color-one;
+  border-left: $whirl-border-width solid $whirl-traditional-color-two;
+  border-bottom: $whirl-border-width solid $whirl-traditional-color-three;
 }

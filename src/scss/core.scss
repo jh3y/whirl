@@ -2,7 +2,7 @@
 whirl.css - http://jh3y.github.io/-cs-spinner
 Licensed under the MIT license
 
-Jhey Tompkins (c) 2014.
+Jhey Tompkins (c) 2016.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -12,11 +12,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 
 //whirl base variables
-$height: 40px;
-$width: 40px;
-$border-width: 4px;
-$overlay-color: #999;
-$base-color: #555;
+$whirl-height: 40px !default;
+$whirl-width: 40px !default;
+$whirl-border-width: 4px !default;
+$whirl-overlay-color: #999 !default;
+$whirl-base-color: #555 !default;
 
 /* whirl base styling */
 .whirl {
@@ -31,21 +31,21 @@ $base-color: #555;
   display: block;
   height: 100%;
   width: 100%;
-  background-color: $overlay-color;
+  background-color: $whirl-overlay-color;
   opacity: 0.6;
 }
 .whirl:after {
   z-index: 2;
   content: "";
-  height: $height;
-  width: $width;
+  height: $whirl-height;
+  width: $whirl-width;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: (-$width / 2) 0 0 (-$width / 2);
+  margin: (-$whirl-width / 2) 0 0 (-$whirl-width / 2);
   transition: all .75s ease 0s;
   border-radius: 100%;
-  border-top: $border-width solid $base-color;
+  border-top: $whirl-border-width solid $whirl-base-color;
   animation: standard .75s infinite linear;
 }
 .whirl.no-overlay:before {

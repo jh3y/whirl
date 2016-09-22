@@ -89,4 +89,4 @@ Any suggestions, improvements or issues are welcome. :)
 
 MIT
 
-Copyright 2014 [@jh3y](https://github.com/jh3y)
+Copyright 2016 [@jh3y](https://github.com/jh3y)
