@@ -1,9 +1,14 @@
-#whirl
+# whirl
 
 
-###Pure CSS loading animations with minimal effort!
+### Pure CSS loading animations with minimal effort!
 
 ![alt tag](https://raw.github.com/jh3y/pics/master/whirl/whirl.gif)
+
+### NOTE
+A large rework of `whirl` is currently underway to add new whirls etc.
+
+A preview is available on the `rework` branch :wink:
 
 #### Basic usage
 1. Include the [stylesheet](https://raw2.github.com/jh3y/whirl/master/whirl.css) (tweaking where necessary).
@@ -18,7 +23,7 @@ That's it!
   </div>
 ```
 
-####Options
+#### Options
 From using the demo you can work out which classes you need to add to your elements in order to show the loading animation you want.
 
 By default, you will always need `whirl`.
