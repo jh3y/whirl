@@ -67,7 +67,7 @@ gulp.task('less:watch', function(event) {
             .pipe(plumber())
             .pipe(concat(pkg.name + '.less'))
             .pipe(less())
-            .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
+            .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4', 'Safari 5', 'ie 9']))
             .pipe(gulp.dest(destinations.build));
     });
 });
@@ -78,7 +78,7 @@ gulp.task('scss:watch', function(event) {
             .pipe(plumber())
             .pipe(concat(pkg.name + '.scss'))
             .pipe(sass())
-            .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
+            .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4', 'Safari 5', 'ie 9']))
             .pipe(gulp.dest(destinations.build));
     });
 });
@@ -102,7 +102,7 @@ gulp.task('less:build', function(event) {
         .pipe(plumber())
         .pipe(concat(pkg.name + '.less'))
         .pipe(less())
-        .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
+        .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4', 'Safari 5', 'ie 9']))
         .pipe(gulp.dest(destinations.build))
         .pipe(concat(pkg.name + '.min.less'))
         .pipe(less({
@@ -117,7 +117,7 @@ gulp.task('scss:build', function(event) {
         .pipe(plumber())
         .pipe(concat(pkg.name + '.scss'))
         .pipe(sass())
-        .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4']))
+        .pipe(prefix(['last 3 versions', 'Blackberry 10', 'Android 3', 'Android 4', 'Safari 5', 'ie 9']))
         .pipe(gulp.dest(destinations.build))
         .pipe(concat(pkg.name + '.min.scss'))
         .pipe(sass({
