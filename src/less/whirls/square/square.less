@@ -1,0 +1,11 @@
+/*whirl square spinner*/
+@square-color-one: hsl(0, 80%, 60%);
+@square-color-two: hsl(60, 80%, 60%);
+@square-color-three: hsl(120, 80%, 60%);
+@square-color-four: hsl(180, 80%, 60%);
+
+.whirl.square:after{
+  border-radius: 0%;
+  border-style: double dashed;
+  border-color: @square-color-one @square-color-two @square-color-three @square-color-four;
+}

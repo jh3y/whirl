@@ -46,6 +46,8 @@ Then there are;
 * `ringed`
 * `blade`
 * `helicopter`
+* `square`
+* `square-in-circle`
 
 There is also `no-overlay` which will hide the overlay which is added by default.
 
