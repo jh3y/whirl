@@ -19,7 +19,7 @@ That's it!
 
 ```html
   <div class="whirl duo">
-    This content is taking ages to load.
+    This content is taking ages to load. But works excellent. :P
   </div>
 ```
 
