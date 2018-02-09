@@ -1,18 +1,29 @@
 {
   "name": "@jh3y/whirl",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "whirl - pure CSS loading animations",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jh3y/whirl.git"
+    "url": "git+https://github.com/jh3y/whirl.git"
   },
-  "license": "(MIT)",
+  "keywords": [
+    "progress",
+    "whirl",
+    "css",
+    "ui",
+    "ux",
+    "loader"
+  ],
   "engines": {
     "node": "0.10",
     "npm": "1.3"
   },
-  "dependencies": {
+  "author": "jh3y <jh3y@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jh3y/whirl/issues"
   },
+  "homepage": "https://jh3y.github.io/whirl",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-plumber": "^0.6.0",
