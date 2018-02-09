@@ -1,6 +1,6 @@
 {
-  "name": "whirl",
-  "version": "1.0.3",
+  "name": "@jh3y/whirl",
+  "version": "1.0.4",
   "description": "whirl - pure CSS loading animations",
   "repository": {
     "type": "git",
