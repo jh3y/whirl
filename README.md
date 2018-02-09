@@ -10,6 +10,15 @@ A large rework of `whirl` is currently underway to add new whirls etc.
 
 A preview is available on the `rework` branch :wink:
 
+#### Install
+
+```shell
+npm i @jh3y/whirl
+```
+```shell
+yarn add @jh3y/whirl
+```
+
 #### Basic usage
 1. Include the [stylesheet](https://raw2.github.com/jh3y/whirl/master/whirl.css) (tweaking where necessary).
 2. Add and remove appropriate classes to your elements when necessary to show loading (using js).
