@@ -1,0 +1,20 @@
+@import 'common/spin';
+
+/**
+  * Traditional
+  *
+  * @author jh3y
+*/
+
+$size: 50px;
+.traditional {
+  &:before {
+    animation: spin .5s infinite linear;
+    border-radius: 100%;
+    box-shadow: inset -2px 0 0 0px var(--primary);
+    content: '';
+    height: $size;
+    position: absolute;
+    width: $size;
+  }
+}

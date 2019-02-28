@@ -1,0 +1,132 @@
+/**
+  * pong
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$duration: 6s;
+$size: 100px;
+$line: 2px;
+$color: var(--primary);
+
+// 850 is the limit width ways and 950 height in percentage
+$xLimit: 850;
+$yLimit: 950;
+@function generateRandomPosition($pos) {
+  $x: $xLimit;
+  $y: random($yLimit * 2);
+  @if ($pos % 2 == 0) {
+    $x: -$xLimit;
+  }
+  @return ($x ($y - $yLimit));
+}
+
+@function generatePositions($amount) {
+  $positions: ();
+  @for $pos from 0 through $amount {
+    $pos: generateRandomPosition($pos);
+    $positions: append($positions, $pos, comma);
+  }
+  @return $positions;
+}
+$positions: generatePositions(23);
+
+.pong {
+  background: repeating-linear-gradient(180deg, $color 0, $color 4%, transparent 4%, transparent 6%, $color 6%) (($size / 2) - ($line / 2)) 0 / 2px 100% no-repeat;
+  height: $size;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: $size;
+
+  div {
+    // ball
+    content: #{$positions};
+    &:nth-child(1) {
+      animation: play $duration infinite linear alternate;
+      background: $color;
+      height: 5%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 5%;
+      will-change: transform;
+      z-index: 2;
+      content: nth($positions, 1)
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      animation-direction: alternate;
+      animation-duration: $duration;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background: $color;
+      height: 15%;
+      position: absolute;
+      top: 50%;
+      width: 5%;
+      will-change: transform;
+    }
+
+    &:nth-child(2) {
+      animation-name: moveOne;
+      left: 0;
+    }
+    &:nth-child(3) {
+      animation-name: moveTwo;
+      right: 0;
+    }
+  }
+}
+
+@keyframes play {
+  @for $keyframe from 0 through 10 {
+    #{$keyframe * 10%} {
+      $position: 0 0;
+      @if ($keyframe == 0 or $keyframe == 10) {
+        $position: nth($positions, 1);
+      } @else {
+        $position: nth($positions, $keyframe + 1);
+      }
+      transform: translate(-50%, -50%) translate(nth($position, 1) * 1%, nth($position, 2) * 1%);
+    }
+  }
+}
+
+@mixin transformPaddle($pos) {
+  transform: translate(0%, -50%) translate(0%, $pos * ((1 / 3) * 1%));
+}
+
+@keyframes moveOne {
+  @for $keyframe from 0 through 5 {
+    @if ($keyframe == 0 or $keyframe == 5) {
+      #{(($keyframe * 20)) * 1%} {
+        $position: nth($positions, 1);
+        @include transformPaddle(nth($position, 2));
+      }
+    } @else {
+      #{$keyframe * 20%}, #{($keyframe * 20%) + 10%} {
+        $position: nth($positions, ($keyframe * 2) + 1);
+        @include transformPaddle(nth($position, 2));
+      }
+    }
+  }
+}
+
+@keyframes moveTwo {
+  @for $keyframe from 0 through 5 {
+    @if ($keyframe == 0) {
+      #{(($keyframe * 20)) * 1%} {
+        $position: nth($positions, 2);
+        content: $position;
+        @include transformPaddle(nth($position, 2));
+      }
+    } @else {
+      #{(($keyframe * 20)) * 1%}, #{(($keyframe * 20) - 10) * 1%} {
+        $position: nth($positions, ($keyframe * 2));
+        @include transformPaddle(nth($position, 2));
+      }
+    }
+  }
+}

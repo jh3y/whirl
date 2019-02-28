@@ -1,0 +1,75 @@
+/**
+  * Building blocks
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$size: 20px;
+$color: var(--primary);
+$no-of-el: 7;
+$delay: .15s;
+$reset: translate(-50%, -50%);
+
+@keyframes building-blocks {
+  0%,
+  20% {
+    opacity: 0;
+    transform: translateY(-300%);
+  }
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: translateY(300%);
+  }
+}
+
+
+.building-blocks {
+  position: relative;
+  div {
+    height: $size;
+    position: absolute;
+    width: $size;
+
+    &:after {
+      animation: building-blocks (($no-of-el * 2) * $delay) ease infinite backwards;
+      background: $color;
+      content: '';
+      display: block;
+      height: $size;
+      width: $size;
+    }
+
+    &:nth-child(1) {
+      transform: $reset translate(60%, 120%);
+    }
+    &:nth-child(2) {
+      transform: $reset translate(-60%, 120%);
+    }
+    &:nth-child(3) {
+      transform: $reset translate(120%, 0);
+    }
+    &:nth-child(4) {
+      transform: $reset;
+    }
+    &:nth-child(5) {
+      transform: $reset translate(-120%, 0);
+    }
+    &:nth-child(6) {
+      transform: $reset translate(60%, -120%);
+    }
+    &:nth-child(7) {
+      transform: $reset translate(-60%, -120%);
+    }
+
+  }
+  @for $el from 1 through $no-of-el {
+    div:nth-child(#{$el}):after {
+      animation-delay: $el * $delay;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "8"
+install:
+  - yarn
+script:
+  - yarn test
+before_deploy: yarn publish-css
+deploy:
+  provider: pages
+  target-branch: $TRAVIS_TAG
+  github_token: $GITHUB_TOKEN
+  local-dir: ./dist
+  skip_cleanup: true
+  on:
+    tags: true

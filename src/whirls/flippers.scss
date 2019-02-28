@@ -1,0 +1,41 @@
+/**
+  * Flippers
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$margin: 5px;
+$no-of-el: 5;
+$offset: .25;
+$size: 20px;
+$perspective: 2 * $size;
+
+@keyframes flippers {
+  0% {
+    transform: perspective($perspective) rotateY(-180deg);
+  }
+  50% {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+}
+
+.flippers {
+  height: $size;
+  display: grid;
+  grid-template-columns: repeat($no-of-el, $size);
+  grid-gap: $margin;
+
+  div {
+    animation: flippers calc(#{($no-of-el * $offset)} * 1s) calc(var(--delay) * 1s) infinite ease;
+    background-color: $color;
+
+    @for $el from 1 through $no-of-el {
+      &:nth-of-type(#{$el}) {
+        --delay: #{$el * $offset};
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,130 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+$bg: #663399;
+$white: #fafafa;
+
+:root {
+  --bg: $bg;
+  --primary: #fafafa;
+  --secondary: #f9690e;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  align-items: center;
+  background-color: $bg;
+  color: #fff;
+  display: flex;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 16px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+}
+
+header {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+a {
+  color: $white;
+}
+
+h1,
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+select {
+  background: $white;
+  border: 2px solid darken($bg, 50%);
+  appearance: none;
+  padding: 15px 25px 15px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  max-width: 150px;
+
+  @media(min-width: 768px) {
+    max-width: none;
+  }
+}
+
+select,
+button {
+  border: 2px solid darken($bg, 50%);
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  background: $white;
+  font-size: 1rem;
+  margin: 0 0 0 10px;
+  padding: 15px;
+
+  &:hover {
+    background: lighten($bg, 50%);
+  }
+
+  &:active {
+    color: $white;
+    background: $bg;
+  }
+
+}
+
+#root {
+  display: grid;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.actions {
+  display: flex;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 175px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+}
+
+.select-wrapper {
+  position: relative;
+  &:after {
+    border: 6px solid transparent;
+    border-top-color: darken(#663399, 50%);
+    border-top-width: 8px;
+    content: '';
+    height: 0;
+    margin-top: -4px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 0;
+  }
+}

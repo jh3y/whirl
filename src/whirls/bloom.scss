@@ -1,0 +1,58 @@
+/**
+  * Bloom
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 30px;
+$ring-thickness: 4px;
+
+.bloom {
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &:before,
+  &:after {
+    border-radius: 100%;
+    content: '';
+    display: block;
+    height: $size;
+    width: $size;
+  }
+
+  &:before {
+    background-color: var(--primary);
+    animation: scale-up 1s infinite ease;
+  }
+
+  &:after {
+    animation: scale 1s infinite;
+    border: $ring-thickness solid var(--primary);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale {
+  0%, 50% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}

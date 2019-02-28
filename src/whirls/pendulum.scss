@@ -1,0 +1,33 @@
+/**
+  * Pendulum
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 30px;
+$color: var(--primary);
+$swing: 50deg;
+@keyframes pendulum {
+  from {
+    transform: rotate($swing);
+  }
+  to {
+    transform: rotate(-$swing);
+  }
+}
+
+.pendulum:after {
+  background: $color;
+  border-radius: 100%;
+  bottom: 0;
+  content: '';
+  height: $size;
+  width: $size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -$size / 2;
+  transform-origin: 50% -200%;
+  transform: translate(-50%, 0);
+  animation: pendulum 1s infinite alternate ease-in-out;
+}

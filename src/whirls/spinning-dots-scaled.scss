@@ -1,0 +1,33 @@
+@import 'common/utils';
+@import 'common/spin';
+/**
+  * Spinning dots - scaled
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size: 8px;
+$no-of-dots: 7;
+$color: var(--primary);
+$radius: 20px;
+$scales: (-4px -4px -3px -2px -1px 1px 2px);
+
+@function genShadow() {
+  $shadows: ();
+  @for $dot from 1 through $no-of-dots {
+    $angle: (360 / $no-of-dots) * ($dot - 1);
+    $xy: getPosition($angle, $radius);
+    $scale: nth($scales, $dot);
+    $shad-props: $xy 0 $scale $color;
+    $shadows: append($shadows, $shad-props, comma);
+  }
+  @return $shadows;
+}
+
+.spinning-dots-scaled:before {
+  animation: spin 1.5s infinite linear;
+  border-radius: $size;
+  box-shadow: genShadow();
+  content: '';
+  height: $size;
+  width: $size;
+}

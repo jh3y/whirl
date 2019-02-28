@@ -1,0 +1,33 @@
+/**
+  * Fly by
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$size: 40px;
+
+@keyframes fly-by {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200%) scale(0);
+  }
+}
+
+.fly-by:before {
+  animation: fly-by 1s infinite ease;
+  background-color: $color;
+  border-radius: 100%;
+  display: block;
+  content: '';
+  height: $size;
+  width: $size;
+}

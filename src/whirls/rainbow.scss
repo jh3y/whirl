@@ -1,0 +1,99 @@
+@import 'common/spin';
+/**
+  * Rainbow
+  *
+  * @author jh3y
+*/
+
+$violet: #bf55ec;
+$indigo: #663399;
+$blue: #19b5fe;
+$green: #2ecc71;
+$yellow: #f9bf3b;
+$orange: #f89406;
+$red: #f22613;
+$cloud: #ffffff;
+$color-set: ($red $orange $yellow $green $blue $indigo $violet);
+$band-size: 4px;
+
+@function generateRainbow() {
+  $shadows: ();
+  @for $color from 1 through length($color-set) {
+    $props: 0 0 0 (($color) * $band-size) nth($color-set, $color) inset;
+    $shadows: append($shadows, $props, comma);
+  }
+  @return $shadows;
+}
+
+$rainbow-size: 80px;
+$cloud-segment-size: 10px;
+// Cloud shadow Y positions
+$y1: -($cloud-segment-size * .2);
+$y2: $y1;
+$y3: -($cloud-segment-size * .6);
+$y4: -($cloud-segment-size * .8);
+// Cloud shadow X positions
+$x0: $rainbow-size / 2;
+$x1: $x0 - ($cloud-segment-size / 2);
+$x2: $x1 - ($cloud-segment-size / 2);
+$x3: $x2 - ($cloud-segment-size / 2);
+$x4: $x3 - ($cloud-segment-size / 2);
+$x5: $x4 - ($cloud-segment-size / 2);
+
+$size: 100px;
+
+.rainbow {
+  border-radius: 100%;
+  $clip: inset(0 0 50% 0);
+  -webkit-clip-path: $clip;
+  clip-path: $clip;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $size;
+  position: absolute;
+  width: $size;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+
+  &:after {
+    content: '';
+    height: $cloud-segment-size;
+    width: $cloud-segment-size;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: -($x0) $y1 0 1px $cloud,
+      -($x1) $y3 0 1px $cloud,
+      -($x2) $y2 0 1px $cloud,
+      -($x2) $y4 0 1px $cloud,
+      -($x3) $y2 0 1px $cloud,
+      -($x3) $y4 0 1px $cloud,
+      -($x4) $y3 0 1px $cloud,
+      -($x5) $y1 0 1px $cloud,
+      $x0 $y1 0 1px $cloud,
+      $x1 $y3 0 1px $cloud,
+      $x2 $y2 0 1px $cloud,
+      $x2 $y4 0 1px $cloud,
+      $x3 $y2 0 1px $cloud,
+      $x3 $y4 0 1px $cloud,
+      $x4 $y3 0 1px $cloud,
+      $x5 $y1 0 1px $cloud;
+  }
+
+
+  &:before {
+    content: '';
+    height: $rainbow-size;
+    width: $rainbow-size;
+    animation: spin 1.5s infinite;
+    border-radius: 100%;
+    box-shadow: generateRainbow();
+    $clip: inset(0 0 50% 0);
+    -webkit-clip-path: $clip;
+    clip-path: $clip;
+    overflow: hidden;
+    position: absolute;
+  }
+
+}

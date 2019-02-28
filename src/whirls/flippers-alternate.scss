@@ -1,0 +1,55 @@
+/**
+  * Flippers alternate
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$margin: 5px;
+$no-of-el: 5;
+$offset: .25s;
+$size: 20px;
+$perspective: 2 * $size;
+
+@keyframes flippers {
+  0% {
+    transform: perspective($perspective) rotateY(-180deg);
+  }
+  50% {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+}
+
+@keyframes flippers-alternate {
+  0% {
+    transform: perspective($perspective) rotateY(180deg);
+  }
+  50% {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+}
+
+
+.flippers-alternate {
+  height: $size;
+  display: grid;
+  grid-template-columns: repeat($no-of-el, $size);
+  grid-gap: $margin;
+
+  div {
+    background-color: $color;
+
+    @for $el from 1 through $no-of-el {
+      &:nth-of-type(#{$el}) {
+        @if $el % 2 > 0 {
+          animation: flippers-alternate ($no-of-el * $offset) ($el * $offset) infinite ease;
+        }
+        @else {
+          animation: flippers ($no-of-el * $offset) ($el * $offset) infinite ease;
+        }
+
+      }
+    }
+  }
+
+}

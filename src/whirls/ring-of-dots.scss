@@ -1,0 +1,46 @@
+@import 'common/utils';
+/**
+  * Ring of dots
+  *
+  * @author jh3y
+*/
+
+$scale-radius: 20px;
+$size: 10px;
+$no-of-dots: 7;
+
+$color: #663399;
+$color-one: lighten($color, 33%);
+$color-two: lighten($color, 66%);
+$color-three: lighten($color, 99%);
+
+$dot-colors: ($color $color-three $color-three $color-three $color-three $color-two $color-one);
+
+@function genShadow($pos, $color-set) {
+  $shadows: ();
+  @for $dot from 1 through $no-of-dots {
+    $angle: (360 / $no-of-dots) * ($dot - 1);
+    $xy: getPosition($angle, $scale-radius);
+    $color-idx: ($dot + $pos) % $no-of-dots;
+    $shad-props: $xy 0 0 nth($dot-colors, $color-idx + 1);
+    $shadows: append($shadows, $shad-props, comma);
+  }
+  @return $shadows;
+}
+
+@keyframes ring-of-dots {
+  @for $per from 0 through $no-of-dots {
+    #{($per * (100 / $no-of-dots)) * 1%} {
+      box-shadow: genShadow($per, $dot-colors);
+    }
+  }
+}
+
+.ring-of-dots:before {
+  animation: ring-of-dots 1s infinite linear reverse;
+  border-radius: $size;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+}

@@ -1,0 +1,244 @@
+/**
+  * Snake
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$dot-size: 10px;
+$dot-margin: 5px;
+$first: $dot-size + $dot-margin;
+$second: (2 * $dot-size) + (2 * $dot-margin);
+$third: (3 * $dot-size) + (3 * $dot-margin);
+$fourth: (4 * $dot-size) + (4 * $dot-margin);
+$fifth: (5 * $dot-size) + (5 * $dot-margin);
+$hide: -1 * $dot-size;
+
+.snake {
+  &:after {
+    animation: snake 2s infinite both ease;
+    border-radius: 100%;
+    content: '';
+    height: $dot-size;
+    left: 50%;
+    margin-left: -(($third / 2) + $dot-size);
+    margin-top: -($dot-size / 2);
+    position: absolute;
+    top: 50%;
+    width: $dot-size;
+  }
+}
+
+@keyframes snake {
+  0%,
+  5% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  10% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  15% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  20% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  25% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  30% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  35% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  40% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+  45% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 $hide $color;
+  }
+  50% {
+    box-shadow: $first $first 0 0 $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  55% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 0 $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  60% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 0 $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  65% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 0 $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  70% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 0 $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  75% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 0 $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  80% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 0 $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  85% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 0 $color,
+      $second 0 0 0 $color;
+  }
+  90% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 0 $color;
+  }
+  95%,
+  100% {
+    box-shadow: $first $first 0 $hide $color,
+      $second $first 0 $hide $color,
+      $third $first 0 $hide $color,
+      $third 0 0 $hide $color,
+      $third (-$first) 0 $hide $color,
+      $second (-$first) 0 $hide $color,
+      $first (-$first) 0 $hide $color,
+      $first 0 0 $hide $color,
+      $second 0 0 $hide $color;
+  }
+}

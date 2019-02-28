@@ -1,0 +1,61 @@
+@import 'common/spin';
+/**
+  * Ring of stars
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$no-of-stars: 7;
+$radius: 400%;
+$star-size: 16px;
+$size: 50px;
+
+@mixin genStar($size, $color) {
+  border-bottom: ($size * 3 / 5) solid $color;
+  border-left: ($size * .2) solid transparent;
+  border-right: ($size * .2) solid transparent;
+  height: 0;
+  position: relative;
+  width: 0;
+
+  &:after,
+  &:before {
+    border-bottom: ($size * 2 / 5) solid $color;
+    border-left: ($size * 3 / 5) solid transparent;
+    border-right: ($size * 3 / 5) solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+  }
+
+  &:after {
+    transform: translate(-($size * 3 / 5), ($size * 2 / 5)) rotate(-35deg);
+  }
+
+  &:before {
+    transform: translate(-($size * 3 / 5), ($size * 2 / 5)) rotate(35deg);
+  }
+
+}
+
+.ring-of-stars {
+  animation: spin 1.25s infinite linear;
+  height: $size;
+  position: relative;
+  width: $size;
+  div {
+    @include genStar($star-size, $color);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: center ($star-size * 3 / 5);
+    @for $star from 1 through $no-of-stars {
+      &:nth-child(#{$star}) {
+        transform: translate(-50%, -($star-size * 3 / 5)) rotate(((360 / $no-of-stars) * $star) * 1deg) translate(0, $radius);
+      }
+    }
+  }
+}

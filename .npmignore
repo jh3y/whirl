@@ -1,0 +1,15 @@
+# REMOVES CLUTTER AS USERS ONLY WANT DIST
+.github
+node_modules
+public
+src
+utils
+.env
+.eslintrc
+.browserslistrc
+.gitignore
+.postcssrc
+.prettierrc
+.travis.yml
+netlify.toml
+yarn.lock

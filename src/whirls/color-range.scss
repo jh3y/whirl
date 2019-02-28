@@ -1,0 +1,48 @@
+/**
+  * Color range
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$no-of-slots: 5;
+$color      : #9a12b3;
+$bar-height : 20px;
+$bar-width  : 10px;
+$bar-margin : 5px;
+
+
+@mixin genShadow($pos, $color) {
+  $color-set: ();
+  @for $dot from 0 through ($no-of-slots - 1) {
+    $color-set: append($color-set, lighten($color, (100% / $no-of-slots) * $dot), space);
+  }
+  $shadows: ();
+  @for $dot from 0 through ($no-of-slots - 1) {
+    $xy           : ($dot * 10px + $dot * $bar-margin) $bar-height;
+    $dots         : $no-of-slots;
+    $true-pos     : $dot + $pos;
+    $color-index  : $true-pos % $dots;
+    $shadow-props : $xy 0 0 nth($color-set, $color-index + 1);
+    $shadows: append($shadows, $shadow-props, comma);
+  }
+  box-shadow: $shadows;
+}
+
+
+@keyframes whirl-color-range {
+  @for $pc from 0 through $no-of-slots {
+    #{($pc * (100 / $no-of-slots)) * 1%} {
+      @include genShadow($pc, $color);
+    }
+  }
+}
+
+
+.color-range:before {
+  animation: whirl-color-range .5s infinite ease;
+  content: '';
+  height:  $bar-height;
+  $half: floor($no-of-slots / 2);
+  transform: translate(-(($bar-width * $half) + ($half * $bar-margin)), -($bar-height));
+  width: $bar-width;
+}

@@ -1,0 +1,39 @@
+/**
+  * Fidget
+  *
+  * @author jh3y
+*/
+
+@keyframes fidget {
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0);
+  }
+}
+
+$size: 40px;
+$color: var(--primary);
+
+.fidget:before {
+  animation: fidget 1s infinite ease;
+  background-color: $color;
+  border-radius: 100%;
+  display: block;
+  content: '';
+  height: $size;
+  width: $size;
+}
