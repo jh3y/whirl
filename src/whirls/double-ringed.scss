@@ -1,0 +1,36 @@
+/**
+  * Double ringed
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$ring-size: 40px;
+$ring-thickness: 2px;
+$radius: ($ring-size / 2) - ($ring-thickness / 2);
+$size: 15px;
+
+.double-ringed {
+  &:after,
+  &:before {
+    border-radius: 100%;
+    display: block;
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
+    height: $size;
+    width: $size;
+    animation: spin 1s infinite linear;
+    box-shadow: $radius 0 0 0 $color-two, -($radius) 0 0 0 $color-two;
+  }
+
+  &:before {
+    height: $ring-size;
+    width: $ring-size;
+    border: $ring-thickness solid $color-one;
+  }
+}
+
+@import 'common/spin';

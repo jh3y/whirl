@@ -1,0 +1,654 @@
+{
+  "whirls": [
+    {
+      "className": "arc",
+      "name": "arc",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "bar-spin",
+      "name": "bar-spin",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "basic",
+      "name": "basic",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "blades",
+      "name": "blades",
+      "requiredElements": [
+        1,
+        5
+      ],
+      "active": true
+    },
+    {
+      "className": "bloom",
+      "name": "bloom",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "book",
+      "name": "book",
+      "requiredElements": [
+        1,
+        5
+      ],
+      "active": true
+    },
+    {
+      "className": "borders",
+      "name": "borders",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "bounce",
+      "name": "bounce",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "name": "box-spin",
+      "className": "box-spin",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "breakout",
+      "name": "breakout",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "building-blocks",
+      "name": "building-blocks",
+      "requiredElements": [
+        1,
+        7
+      ],
+      "active": true
+    },
+    {
+      "className": "cascade",
+      "name": "cascade",
+      "requiredElements": [
+        1,
+        5
+      ],
+      "active": true
+    },
+    {
+      "className": "chase",
+      "name": "chase",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "circle-path",
+      "name": "circle-path",
+      "requiredElements": [
+        1,
+        11
+      ],
+      "active": true
+    },
+    {
+      "className": "coffee",
+      "name": "coffee",
+      "requiredElements": [
+        1,
+        3
+      ],
+      "active": true
+    },
+    {
+      "className": "color-arc",
+      "name": "color-arc",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "color-bridge",
+      "name": "color-bridge",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "color-range",
+      "name": "color-range",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "color-wheel",
+      "name": "color-wheel",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "combine",
+      "name": "combine",
+      "requiredElements": [
+        1,
+        4
+      ],
+      "active": true
+    },
+    {
+      "className": "combine-two",
+      "name": "combine-two",
+      "requiredElements": [
+        1,
+        4
+      ],
+      "active": true
+    },
+    {
+      "className": "cube",
+      "name": "cube",
+      "requiredElements": [
+        1,
+        6
+      ],
+      "active": true
+    },
+    {
+      "className": "cyclical",
+      "name": "cyclical",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
+      "className": "different-directions",
+      "name": "different-directions",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "dominoes",
+      "name": "dominoes",
+      "requiredElements": [
+        1,
+        5
+      ],
+      "active": true
+    },
+    {
+      "className": "dots",
+      "name": "dots",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "dots-fade",
+      "name": "dots-fade",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "dots-flow",
+      "name": "dots-flow",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "double-ringed",
+      "name": "double-ringed",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "double-up",
+      "name": "double-up",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "duo",
+      "name": "duo",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "eclipse",
+      "name": "eclipse",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "eight",
+      "name": "eight",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "name": "equalizer",
+      "className": "equalizer",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "className": "feeder",
+      "name": "feeder",
+      "requiredElements": [1, 3],
+      "active": true
+    },
+    {
+      "className": "fidget",
+      "name": "fidget",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "flickering-pentagon",
+      "name": "flickering-pentagon",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "flip-square",
+      "name": "flip-square",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "name": "flip-square-travel",
+      "className": "flip-square-travel",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "flip-to-square",
+      "name": "flip-to-square",
+      "requiredElements": [1, 9],
+      "active": true
+    },
+    {
+      "className": "flip-to-square-random",
+      "name": "flip-to-square-random",
+      "requiredElements": [1, 9],
+      "active": true
+    },
+    {
+      "className": "flippers",
+      "name": "flippers",
+      "requiredElements": [1,5],
+      "active": true
+    },
+    {
+      "name": "flippers-alternate",
+      "className": "flippers-alternate",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "className": "fly-by",
+      "name": "fly-by",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "follow-the-leader",
+      "name": "follow-the-leader",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "name": "follow-the-leader-line",
+      "className": "follow-the-leader-line",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "name": "four-dots",
+      "className": "four-dots",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    },
+    {
+      "className": "gyro",
+      "name": "gyro",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "half-ring",
+      "name": "half-ring",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "honeycomb",
+      "name": "honeycomb",
+      "requiredElements": [1, 7],
+      "active": true
+    },
+    {
+      "className": "hourglass",
+      "name": "hourglass",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "line",
+      "name": "line",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "line-of-dots",
+      "name": "line-of-dots",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "load-man",
+      "name": "load-man",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "meetup",
+      "name": "meetup",
+      "requiredElements": [1, 4],
+      "active": true
+    },
+    {
+      "className": "merge",
+      "name": "merge",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "mexican-wave",
+      "name": "mexican-wave",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "orbit",
+      "name": "orbit",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "outline-square",
+      "name": "outline-square",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "palette",
+      "name": "palette",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "pendulum",
+      "name": "pendulum",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "pill",
+      "name": "pill",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "pong",
+      "name": "pong",
+      "requiredElements": [1, 3],
+      "active": true
+    },
+    {
+      "className": "radial",
+      "name": "radial",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "rainbow",
+      "name": "rainbow",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "rays",
+      "name": "rays",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "ring-of-dots",
+      "name": "ring-of-dots",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "ring-of-stars",
+      "name": "ring-of-stars",
+      "requiredElements": [1, 7],
+      "active": true
+    },
+    {
+      "className": "ringed",
+      "name": "ringed",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "rings",
+      "name": "rings",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "rotary",
+      "name": "rotary",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "scale-dots",
+      "name": "scale-dots",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "scale-dots-offset",
+      "name": "scale-dots-offset",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "name": "scaling-dots",
+      "className": "scaling-dots",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "className": "scan",
+      "name": "scan",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "siblings",
+      "name": "siblings",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "side-to-side",
+      "name": "side-to-side",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "slide-in",
+      "name": "slide-in",
+      "requiredElements": [1, 3],
+      "active": true
+    },
+    {
+      "className": "sliding-tiles",
+      "name": "sliding-tiles",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "sliding-tiles-bordered",
+      "name": "sliding-tiles-bordered",
+      "requiredElements": [1],
+      "active": true
+    },
+    {
+      "className": "snake",
+      "name": "snake",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "spinning-coin",
+      "name": "spinning-coin",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "spinning-coin-fall",
+      "name": "spinning-coin-fall",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "spinning-dots",
+      "name": "spinning-dots",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "spinning-dots-scaled",
+      "name": "spinning-dots-scaled",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "split",
+      "name": "split",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "square-of-dots",
+      "name": "square-of-dots",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "stop-and-go",
+      "name": "stop-and-go",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "swap",
+      "name": "swap",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "throw",
+      "name": "throw",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "tornado",
+      "name": "tornado",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "className": "traditional",
+      "name": "traditional",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "trigger",
+      "name": "trigger",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "tumble",
+      "name": "tumble",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "waterfall",
+      "name": "waterfall",
+      "requiredElements": [1, 5],
+      "active": true
+    },
+    {
+      "className": "whirl",
+      "name": "whirl",
+      "requiredElements": [0],
+      "active": true
+    },
+    {
+      "className": "wind-up",
+      "name": "wind-up",
+      "requiredElements": [
+        0
+      ],
+      "active": true
+    }
+  ]
+}

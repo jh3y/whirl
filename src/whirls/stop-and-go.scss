@@ -1,0 +1,32 @@
+/**
+  * Stop and go
+  *
+  * @author jh3y
+*/
+
+@keyframes stop-and-go {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+$size: 50px;
+$color-one: var(--primary);
+$color-two: transparent;
+
+.stop-and-go:before {
+  animation: stop-and-go 1s infinite;
+  border: ($size / 2) solid $color-one;
+  border-left-color: $color-two;
+  border-radius: 100%;
+  border-right-color: $color-two;
+  content: '';
+  height: $size;
+  width: $size;
+}

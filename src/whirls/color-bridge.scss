@@ -1,0 +1,37 @@
+/**
+  * Color bridge
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size: 50px;
+$thickness: 6px;
+$primary: var(--primary);
+$secondary: var(--secondary);
+
+.color-bridge {
+  clip-path: inset(-2% 0% 50% 0);
+  height: $size;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -25%);
+  width: $size;
+
+  &:before {
+    animation: spin 1.25s infinite linear;
+    border-bottom-color: $primary;
+    border-left-color: $secondary;
+    border-radius: 100%;
+    border-right-color: $secondary;
+    border-style: solid;
+    border-top-color: $primary;
+    border-width: $thickness;
+    content: '';
+    display: block;
+    height: $size;
+    width: $size;
+  }
+}
+
+@import 'common/spin';

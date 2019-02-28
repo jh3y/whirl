@@ -1,0 +1,39 @@
+/**
+  * Chase
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 30px;
+$radius: -40px;
+$thickness: 5px;
+$color: var(--primary);
+
+.chase {
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    height: $size;
+    width: $size;
+    display: block;
+    animation: out .5s backwards, spin 1.25s .5s infinite ease;
+    border: $thickness solid $color;
+    border-radius: 100%;
+    box-shadow: 0 $radius 0 -5px $color;
+    position: absolute;
+  }
+
+  &:after {
+    animation-delay: 0s, 1.25s;
+  }
+}
+
+@keyframes out {
+  from {
+    box-shadow: 0 0 0 -5px $color;
+  }
+}
+
+@import 'common/spin';

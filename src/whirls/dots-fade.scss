@@ -1,0 +1,63 @@
+/**
+  * Dots fade
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$color: var(--primary);
+$color-two: var(--secondary);
+$size: 20px;
+$travel: 175%;
+
+@keyframes dots-fade {
+  0% {
+    background: $color;
+    opacity: 0;
+    transform: translateX(-($travel));
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-($travel));
+  }
+  20% {
+    background: $color;
+    opacity: 0;
+    transform: translateX(-($travel));
+  }
+  30% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    background: $color-two;
+    opacity: 0;
+    transform: translateX(0);
+  }
+  60% {
+    background-color: $color;
+    opacity: 0;
+    transform: translateX($travel);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX($travel);
+  }
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateX($travel);
+  }
+}
+
+.dots-fade:before {
+  animation: dots-fade 2s infinite;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+}

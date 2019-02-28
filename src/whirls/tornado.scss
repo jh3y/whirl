@@ -1,0 +1,36 @@
+@import 'common/spin';
+/**
+  * Tornado
+  *
+  * @author jh3y
+*/
+$color: var(--primary);
+$no-of-el: 5;
+
+@keyframes tornado {
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tornado {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  div {
+    border: 6px solid $color;
+    border-radius: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    @for $el from 1 through $no-of-el {
+      &:nth-child(#{$el}) {
+        height: $el * 15px;
+        width: $el * 15px;
+      }
+    }
+  }
+}
+

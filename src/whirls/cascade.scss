@@ -1,0 +1,44 @@
+/**
+  * Cascade
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$no-of-el: 5;
+$size: 20px;
+$delay: .15s;
+$color: var(--primary);
+
+@keyframes cascade {
+  0% {
+    opacity: 0;
+    transform: translateY(-250%);
+  }
+  30%,
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(250%);
+  }
+}
+
+.cascade {
+  height: $size;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat($no-of-el, $size);
+  grid-gap: 5px;
+
+  div {
+    background: $color;
+    @for $el from 1 through $no-of-el {
+      &:nth-child(#{$el}) {
+        animation: cascade (($no-of-el * 2) * $delay) ($el * $delay) ease infinite backwards;
+      }
+    }
+  }
+
+}

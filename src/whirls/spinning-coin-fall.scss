@@ -1,0 +1,44 @@
+/**
+  * Spinning coin fall
+  *
+  * @author jh3y
+*/
+
+
+$color: var(--primary);
+$size: 40px;
+$perspective: $size * 4;
+$reset: translate(-50%, -50%);
+
+@keyframes spinning-coin-fall {
+  0% {
+    transform: $reset perspective($perspective) rotateY(0deg) rotateX(0deg);
+  }
+  10% {
+    opacity: 1;
+    transform: $reset perspective($perspective) rotateY(-65deg) rotateX(0deg);
+  }
+  70% {
+    opacity: 1;
+    transform: $reset perspective($perspective) rotateY(1440deg) rotateX(0deg);
+  }
+  90%,
+  100% {
+    opacity: 1;
+    transform: $reset perspective($perspective) rotateY(2880deg) rotateX(90deg);
+  }
+}
+
+.spinning-coin-fall:before {
+  animation: spinning-coin-fall 3s infinite;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform-origin: center;
+  width: $size;
+}

@@ -1,0 +1,50 @@
+/**
+  * flip-square-travel
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$duration: 2s;
+$size: 50px;
+
+.flip-square-travel {
+  animation: flip-square-travel-switch $duration infinite linear;
+  height: $size;
+  perspective: $size * 3;
+  position: relative;
+  width: $size;
+
+  &:before {
+    animation: flip-square-travel ($duration / 2) infinite;
+    background-color: $color;
+    content: '';
+    display: block;
+    height: $size;
+    width: $size;
+    position: absolute;
+    transform-origin: bottom;
+  }
+}
+
+@keyframes flip-square-travel-switch {
+  0%, 50% {
+    transform: rotate(45deg);
+  }
+  50.001%, 100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes flip-square-travel {
+  0% {
+    transform: translate(0, 0) rotateX(0deg);
+  }
+  50% {
+    transform: translate(0, -100%) rotateX(0deg);
+  }
+  100% {
+    transform: translate(0, -100%) rotateX(-180deg);
+  }
+
+}

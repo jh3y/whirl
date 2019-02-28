@@ -1,0 +1,34 @@
+@import 'common/spin';
+
+$color: var(--primary);
+$border: 6px;
+$size: 50px;
+
+/**
+  * Siblings
+  *
+  * @author jh3y
+*/
+.siblings {
+  &:after,
+  &:before {
+    border: $border solid $color;
+    border-radius: 100%;
+    content: '';
+  }
+
+  &:after {
+    animation: spin 1.5s infinite linear;
+    border-right-color: transparent;
+    height: $size;
+    width: $size;
+  }
+
+  &:before {
+    animation: spin .75s infinite linear reverse;
+    border-left-color: transparent;
+    height: $size / 2;
+    width: $size / 2;
+  }
+}
+

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "8"
+install:
+  - yarn
+script:
+  - yarn test
+before_deploy: yarn publish-css
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: css/*
+  skip_cleanup: true
+  on:
+    tags: true

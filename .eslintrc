@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "react",
+    "react-hooks"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.8.3"
+    }
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "prettier/prettier": 2,
+    "no-unused-vars": 2,
+    "no-console": 2,
+    "no-restricted-syntax": 2
+  }
+}

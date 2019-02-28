@@ -1,0 +1,30 @@
+/**
+  * Throw
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$distance: 250%;
+$size: 20px;
+
+@keyframes throw {
+  0% {
+    transform: scale(.75) translateX(-($distance));
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(.75) translateX($distance);
+  }
+}
+
+.throw:before {
+  animation: throw .75s infinite alternate ease-in-out;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  width: $size;
+}

@@ -1,0 +1,10 @@
+// Include mathsass for trigonometry goodies 👍
+@import '~mathsass/dist/math';
+
+// Function to return XY position of a shadow
+// on a circle path
+@function getPosition($a, $r) {
+  $x: #{$r * cos($a * ($PI / 180))};
+  $y: #{$r * sin($a * ($PI / 180))};
+  @return ($x $y);
+}

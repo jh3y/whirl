@@ -1,0 +1,37 @@
+/**
+  * Color arc
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 50px;
+$depth: 6px;
+$primary: var(--primary);
+$secondary: var(--secondary);
+
+.color-arc {
+  clip-path: inset(0% 50% 50% 0%);
+  height: $size;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-25%, -25%);
+  width: $size;
+
+  &:before {
+    animation: spin 1.25s infinite linear reverse;
+    border-width: $depth;
+    border-style: solid;
+    border-top-color: $primary;
+    border-bottom-color: $primary;
+    border-left-color: $secondary;
+    border-radius: 100%;
+    border-right-color: $secondary;
+    content: '';
+    display: block;
+    height: $size;
+    width: $size;
+  }
+}
+
+@import 'common/spin';

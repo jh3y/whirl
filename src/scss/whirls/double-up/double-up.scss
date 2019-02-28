@@ -1,8 +1,0 @@
-/*whirl double up - a doubling up standard animation spinner*/
-$whirl-double-up-color-one: #E74C3C !default;
-.whirl.double-up:after {
-  border-right: $whirl-border-width solid $whirl-double-up-color-one;
-  border-top: $whirl-border-width double $whirl-double-up-color-one;
-  border-left: $whirl-border-width double $whirl-double-up-color-one;
-  border-bottom: $whirl-border-width double $whirl-double-up-color-one;
-}

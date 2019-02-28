@@ -1,0 +1,27 @@
+/**
+  * Duo
+  *
+  * @author jh3y - jhey.dev
+*/
+
+$size: 50px;
+$thickness: 6px;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+
+.duo:before {
+  height: $size;
+  width: $size;
+  content: '';
+  display: block;
+  animation: spin .5s infinite linear;
+  border-width: $thickness;
+  border-style: solid;
+  border-bottom-color: $color-one;
+  border-top-color: $color-one;
+  border-left-color: $color-two;
+  border-radius: 100%;
+  border-right-color: $color-two;
+}
+
+@import 'common/spin';

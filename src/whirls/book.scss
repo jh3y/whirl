@@ -1,0 +1,48 @@
+/**
+  * Book
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 30px;
+$color: var(--primary);
+$no-of-el: 5;
+
+@keyframes whirl-book {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50%,
+  80% {
+    transform: rotateY(-180deg);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-180deg);
+  }
+}
+
+.book {
+  height: $size;
+  position: relative;
+  width: $size;
+  perspective: ($size * 2);
+
+  div {
+    animation: whirl-book 2s infinite;
+    background: $color;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform-origin: left;
+    width: 100%;
+  }
+
+  @for $el from 1 through $no-of-el {
+    div:nth-child(#{$el}) {
+      animation-delay: $el * .15s;
+    }
+  }
+
+}
