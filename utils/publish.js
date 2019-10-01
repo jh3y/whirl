@@ -9,7 +9,7 @@ const processStyles = name => {
       file: `${process.cwd()}/src/whirls/${name}.scss`,
     },
     (err, result) => {
-      if (err) return
+      if (err) throw Error(err)
       postcss([autoprefixer])
         // Necessary to pass "undefined" to avoid warnings
         .process(result.css.toString(), { from: undefined })
@@ -27,7 +27,6 @@ const processStyles = name => {
     }
   )
 }
-
 for (const whirl of config.whirls) {
   if (whirl.active) processStyles(whirl.name)
 }
