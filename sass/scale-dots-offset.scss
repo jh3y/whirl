@@ -1,0 +1,51 @@
+/**
+  * Scale dots offset
+  *
+  * @author jh3y
+*/
+
+$size: 30px;
+$margin: 10px;
+$color: var(--primary);
+$distance: $size + $margin;
+
+@keyframes scale-dots-offset {
+  0% {
+    transform: translateX(-($distance)) scale(0);
+  }
+  10% {
+    transform: translateX(-($distance)) scale(1);
+  }
+  20% {
+    transform: translateX(-($distance)) scale(0);
+  }
+  30% {
+    transform: translateX(0) scale(0);
+  }
+  40% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(0) scale(0);
+  }
+  60% {
+    transform: translateX($distance) scale(0);
+  }
+  70% {
+    transform: translateX($distance) scale(1);
+  }
+  80%,
+  100% {
+    transform: translateX($distance) scale(0);
+  }
+
+}
+
+.scale-dots-offset:before {
+  animation: scale-dots-offset 3s infinite;
+  background: $color;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  width: $size;
+}

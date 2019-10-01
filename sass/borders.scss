@@ -1,0 +1,47 @@
+/**
+  * Borders
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$border: 6px;
+
+$size-one: 50px;
+$size-two: 30px;
+
+.borders {
+  align-items: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 50px;
+
+  &:after,
+  &:before {
+    border: $border solid $color;
+    border-radius: 100%;
+    position: absolute;
+    content: '';
+    display: block;
+  }
+
+  &:before {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    animation: spin .75s infinite linear reverse;
+    height: $size-two;
+    width: $size-two;
+  }
+
+  &:after {
+    animation: spin .5s infinite linear;
+    height: $size-one;
+    width: $size-one;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+}
+
+@import 'common/spin';

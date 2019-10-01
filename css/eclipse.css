@@ -1,0 +1,30 @@
+/**
+  * Eclipse
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.eclipse:before {
+  display: block;
+  content: '';
+  height: 50px;
+  width: 50px;
+  -webkit-animation: eclipse 1s infinite ease;
+          animation: eclipse 1s infinite ease;
+  background-color: var(--bg);
+  border-radius: 100%; }
+
+@-webkit-keyframes eclipse {
+  from {
+    -webkit-box-shadow: inset 50px 0 0 0 var(--primary);
+            box-shadow: inset 50px 0 0 0 var(--primary); }
+  to {
+    -webkit-box-shadow: inset -50px 0 0 0 var(--primary);
+            box-shadow: inset -50px 0 0 0 var(--primary); } }
+
+@keyframes eclipse {
+  from {
+    -webkit-box-shadow: inset 50px 0 0 0 var(--primary);
+            box-shadow: inset 50px 0 0 0 var(--primary); }
+  to {
+    -webkit-box-shadow: inset -50px 0 0 0 var(--primary);
+            box-shadow: inset -50px 0 0 0 var(--primary); } }

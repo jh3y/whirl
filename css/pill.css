@@ -1,0 +1,60 @@
+/**
+  * Pill
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes pill {
+  0% {
+    background-position: 0 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  25% {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    background-position: 0 100%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  75% {
+    background-position: 0 200%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    background-position: 0 200%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes pill {
+  0% {
+    background-position: 0 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  25% {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    background-position: 0 100%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  75% {
+    background-position: 0 200%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    background-position: 0 200%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.pill:before {
+  content: '';
+  height: 60px;
+  width: 30px;
+  -webkit-animation: pill 2s infinite backwards;
+          animation: pill 2s infinite backwards;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--secondary)), color-stop(50%, var(--secondary)), color-stop(50%, transparent), to(transparent));
+  background: linear-gradient(0deg, var(--secondary), var(--secondary) 50%, transparent 50%, transparent);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  border: 6px solid var(--primary);
+  border-radius: 15px; }

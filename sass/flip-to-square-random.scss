@@ -1,0 +1,43 @@
+/**
+  * Flip to square (Random)
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$size: 20px;
+
+@keyframes flip-to-square-random {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  50%,
+  75% {
+    transform: rotateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateX(0);
+  }
+}
+
+
+.flip-to-square-random {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: (3 * $size);
+  width: (3 * $size);
+
+  div {
+    animation: flip-to-square-random 1.5s calc(var(--delay) * 1s) infinite backwards;
+    background-color: $color;
+
+    @for $e from 1 through 9 {
+      &:nth-child(#{$e}) {
+        --delay: #{random(10) / 50};
+      }
+    }
+  }
+}
+

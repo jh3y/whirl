@@ -1,0 +1,53 @@
+@import 'common/utils';
+/**
+  * Palette
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$scale-radius: 20px;
+$size: 12px;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$color-three: var(--primary);
+$color-four: var(--secondary);
+$color-five: var(--primary);
+
+$no-of-dots: 5;
+$dot-colors: ($color-one $color-two $color-three $color-four $color-five);
+
+@function genShadow($pos) {
+  $shadows: ();
+  @for $dot from 1 through $no-of-dots {
+    $angle: (360 / $no-of-dots) * ($dot - 1);
+    $xy: getPosition($angle, $scale-radius);
+    $dots: $no-of-dots;
+    $true-pos: $dot + $pos;
+    $color-idx: $true-pos % $dots;
+    $shad-props: $xy 0 0 nth($dot-colors, $color-idx + 1);
+    $shadows: append($shadows, $shad-props, comma);
+  }
+  @return $shadows;
+}
+
+@keyframes palette {
+  @for $per from 0 through $no-of-dots {
+    #{($per * (100 / $no-of-dots)) * 1%} {
+      color: nth($dot-colors, 1);
+      box-shadow: genShadow($per);
+      @if $per == $no-of-dots {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+}
+
+.palette:before {
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+  animation: palette 2s infinite linear;
+  border-radius: 100%;
+}

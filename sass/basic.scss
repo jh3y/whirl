@@ -1,0 +1,20 @@
+/**
+  * Basic
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$thickness: 6px;
+$size: 50px;
+.basic:before {
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+  animation: spin .5s infinite linear;
+  border: $thickness var(--primary) solid;
+  border-left-color: var(--secondary);
+  border-radius: 100%;
+}
+
+@import 'common/spin.scss';

@@ -1,0 +1,29 @@
+/**
+  * Bounce
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$distance: 300%;
+$size: 20px;
+
+@keyframes whirl-bounce {
+  0% {
+    transform: translate(0, -($distance / 2)) scaleX(1) scaleY(1);
+  }
+  100% {
+    transform: translate(0, ($distance / 2)) scaleX(1.1) scaleY(0.9);
+  }
+}
+
+.bounce:before {
+  animation: whirl-bounce .5s cubic-bezier(.6, .3, .8, .5) alternate infinite;
+  background: $color;
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+  transform-origin: bottom center;
+}

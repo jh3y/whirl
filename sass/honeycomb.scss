@@ -1,0 +1,71 @@
+/**
+  * Honeycomb
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$size: 24px;
+$color: var(--primary);
+$delay: .1s;
+$no-of-el: 7;
+$margin: 4px;
+
+$xPos: (-(($size * 1) + (1 * $margin))) (-(($size * .5) + (.5 * $margin))) (($size * .5) + (.5 * $margin)) (($size * 1) + (1 * $margin)) (($size * .5) + (.5 * $margin)) (-(($size * .5) + (.5 * $margin))) 0;
+$yPos: 0 ($margin + ($size / 2) + ($size / 4)) ($margin + ($size / 2) + ($size / 4)) 0 (-($margin + ($size / 2) + ($size / 4))) (-($margin + ($size / 2) + ($size / 4))) 0;
+
+@keyframes honeycomb {
+  0%,
+  20%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  30%,
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.honeycomb {
+  height: $size;
+  position: relative;
+  width: $size;
+
+  div {
+    animation: honeycomb (($no-of-el * 3) * $delay) infinite backwards;
+    background: $color;
+    height: ($size / 2);
+    margin-top: ($size / 4);
+    position: absolute;
+    width: $size;
+
+    &:after,
+    &:before {
+      content: '';
+      border-left: ($size / 2) solid transparent;
+      border-right: ($size / 2) solid transparent;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    &:after {
+      top: -($size / 4);
+      border-bottom: ($size / 4) solid $color;
+    }
+
+    &:before {
+      bottom: -($size / 4);
+      border-top: ($size / 4) solid $color;
+    }
+
+    @for $el from 1 through $no-of-el {
+      &:nth-child(#{$el}) {
+        animation-delay: ($el - 1) * $delay;
+        left: nth($xPos, $el);
+        top: nth($yPos, $el);
+      }
+    }
+  }
+}

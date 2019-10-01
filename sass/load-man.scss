@@ -1,0 +1,79 @@
+/**
+  * Load man - gaming inspired loader
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$chomp-angle: 45;
+$chomp-speed: .35s;
+$dot-color: var(--secondary);
+$head-color: var(--primary);
+$track-height: 10px;
+$track-length: 200px;
+$track-speed: 1.2s;
+$load-size: 5 * $track-height;
+
+.load-man {
+  animation: load-man-travel $track-speed infinite linear;
+  background: repeating-linear-gradient(90deg, $dot-color, $dot-color 5%, transparent 5%, transparent 35%);
+  height: $track-height;
+  left: 50%;
+  margin-top: -($track-height / 2);
+  position: absolute;
+  top: 50%;
+  width: $track-length;
+
+  /**
+    * Our pseudo elements create the head pieces
+    *
+    * They are near identical minus subtle differences in animation and border
+    * styling
+  */
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: -($load-size / 2);
+    top: 50%;
+    border: ($load-size / 2) solid $head-color;
+    border-radius: 100%;
+    margin-top: -($load-size / 2);
+  }
+  /**
+  * The top head piece
+  */
+  &:before {
+    --close: #{$chomp-angle * -2};
+    animation: load-man-chomp $chomp-speed infinite linear;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  /**
+  * The bottom head piece
+  */
+  &:after {
+    --close: 0;
+    animation: load-man-chomp $chomp-speed infinite linear;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+}
+
+
+@keyframes load-man-travel {
+  to {
+    background-position: -($track-length) 0;
+  }
+}
+
+@keyframes load-man-chomp {
+  0% {
+    transform: rotate($chomp-angle * -1deg);
+  }
+  50% {
+    transform: rotate(calc(var(--close) * 1deg));
+  }
+  100% {
+    transform: rotate($chomp-angle * -1deg);
+  }
+}

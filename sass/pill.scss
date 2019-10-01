@@ -1,0 +1,44 @@
+/**
+  * Pill
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$border: 6px;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$size: 60px;
+
+@keyframes pill {
+  0% {
+    background-position: 0 0;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-position: 0 100%;
+    transform: rotate(0deg);
+  }
+  50% {
+    background-position: 0 100%;
+    transform: rotate(180deg);
+  }
+  75% {
+    background-position: 0 200%;
+    transform: rotate(180deg);
+  }
+  100% {
+    background-position: 0 200%;
+    transform: rotate(360deg);
+  }
+}
+
+.pill:before {
+  content: '';
+  height: $size;
+  width: $size / 2;
+  animation: pill 2s infinite backwards;
+  background: linear-gradient(0deg, $color-two, $color-two 50%, transparent 50%, transparent);
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  border: $border solid $color-one;
+  border-radius: $border * 2.5;
+}

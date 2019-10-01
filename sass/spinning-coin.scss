@@ -1,0 +1,31 @@
+/**
+  * Spinning coin
+  *
+  * @author jh3y
+*/
+
+$size: 40px;
+$perspective: $size * 4;
+
+@keyframes spinning-coin {
+  0% {
+    transform: perspective($perspective) rotateY(0deg);
+  }
+  10% {
+    transform: perspective($perspective) rotateY(-65deg);
+  }
+  90%,
+  100% {
+    transform: perspective($perspective) rotateY(2880deg);
+  }
+}
+
+.spinning-coin:before {
+  animation: spinning-coin 3s infinite;
+  border-radius: 100%;
+  background-color: var(--primary);
+  transform-origin: center;
+  content: '';
+  height: $size;
+  width: $size;
+}

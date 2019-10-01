@@ -1,0 +1,33 @@
+/**
+  * Orbit
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$color: var(--primary);
+$distance: 300%;
+$size: 50px;
+
+@keyframes orbit {
+  0% {
+    opacity: 0;
+    transform: scale(0) translateX(-($distance));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.25) translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translateX($distance);
+  }
+}
+
+.orbit:before {
+  animation: orbit 1s infinite;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  width: $size;
+  display: block;
+}

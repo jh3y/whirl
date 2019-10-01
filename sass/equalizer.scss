@@ -1,0 +1,42 @@
+/**
+  * equalizer
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$no-of-bars: 5;
+$height: 50px;
+$width: 10px;
+
+.equalizer {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat($no-of-bars, $width);
+  height: $height;
+
+  div {
+    background: linear-gradient(0deg, green, yellow, red);
+    height: 100%;
+    animation: equalize 2s infinite;
+    @for $bar from 1 through 5 {
+      &:nth-child(#{$bar}) {
+        animation-delay: ((random(50) + 10) / 60) * -1s;
+      }
+    }
+  }
+}
+
+@keyframes equalize {
+  @for $keyframe from 0 through 9 {
+    @if $keyframe == 0 {
+      0%, 100% {
+        clip-path: inset((random(80)* 1%) 0 0 0);
+      }
+    } @else {
+      #{100 * $keyframe/10 * 1%} {
+        clip-path: inset((random(80) * 1%) 0 0 0)
+      }
+    }
+  }
+
+}

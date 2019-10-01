@@ -1,0 +1,80 @@
+@import 'common/utils';
+/**
+  * zonal
+  *
+  * @author jh3y
+*/
+@keyframes zonal-flash {
+  0% {
+    transform: scale(0) translate(calc(var(--x1) * 1%), calc(var(--y1) * 1%));
+  }
+  10% {
+    transform: scale(1) translate(calc(var(--x1) * 1%), calc(var(--y1) * 1%));
+  }
+  20% {
+    transform: scale(0) translate(calc(var(--x2) * 1%), calc(var(--y2) * 1%));
+  }
+  30% {
+    transform: scale(1) translate(calc(var(--x2) * 1%), calc(var(--y2) * 1%));
+  }
+  40% {
+    transform: scale(0) translate(calc(var(--x3) * 1%), calc(var(--y3) * 1%));
+  }
+  50% {
+    transform: scale(1) translate(calc(var(--x3) * 1%), calc(var(--y3) * 1%));
+  }
+  60% {
+    transform: scale(0) translate(calc(var(--x4) * 1%), calc(var(--y4) * 1%));
+  }
+  70% {
+    transform: scale(1) translate(calc(var(--x4) * 1%), calc(var(--y4) * 1%));
+  }
+  80% {
+    transform: scale(0) translate(calc(var(--x5) * 1%), calc(var(--y5) * 1%));
+  }
+  90% {
+    transform: scale(1) translate(calc(var(--x5) * 1%), calc(var(--y5) * 1%));
+  }
+  100% {
+    transform: scale(0) translate(calc(var(--x1) * 1%), calc(var(--y1) * 1%));
+  }
+}
+
+@mixin positions() {
+  --x1: #{random(500) - 250};
+  --x2: #{random(500) - 250};
+  --x3: #{random(500) - 250};
+  --x4: #{random(500) - 250};
+  --x5: #{random(500) - 250};
+  --y1: #{random(500) - 250};
+  --y2: #{random(500) - 250};
+  --y3: #{random(500) - 250};
+  --y4: #{random(500) - 250};
+  --y5: #{random(500) - 250};
+}
+
+.zonal {
+  --size: 20;
+  @include sizeCSS(size);
+  position: absolute;
+
+  &:after,
+  &:before {
+    animation: zonal-flash 4s infinite ease;
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+  }
+  &:after {
+    background-color: var(--primary);
+    @include positions();
+  }
+  &:before {
+    animation-delay: -2s;
+    background-color: var(--secondary);
+    @include positions();
+  }
+}

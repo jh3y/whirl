@@ -1,0 +1,39 @@
+/**
+  * Color bridge
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+.color-bridge {
+  -webkit-clip-path: inset(-2% 0% 50% 0);
+          clip-path: inset(-2% 0% 50% 0);
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+  width: 50px; }
+  .color-bridge:before {
+    -webkit-animation: spin 1.25s infinite linear;
+            animation: spin 1.25s infinite linear;
+    border-bottom-color: var(--primary);
+    border-left-color: var(--secondary);
+    border-radius: 100%;
+    border-right-color: var(--secondary);
+    border-style: solid;
+    border-top-color: var(--primary);
+    border-width: 6px;
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50px; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

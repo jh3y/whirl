@@ -1,0 +1,72 @@
+/**
+  * Scale dots
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes scale-dots {
+  0% {
+    -webkit-transform: scale(0) translateX(-40px);
+            transform: scale(0) translateX(-40px); }
+  10% {
+    -webkit-transform: scale(1) translateX(-40px);
+            transform: scale(1) translateX(-40px); }
+  20% {
+    -webkit-transform: scale(0) translateX(-40px);
+            transform: scale(0) translateX(-40px); }
+  30% {
+    -webkit-transform: scale(0) translateX(0);
+            transform: scale(0) translateX(0); }
+  40% {
+    -webkit-transform: scale(1.25) translateX(0);
+            transform: scale(1.25) translateX(0); }
+  50% {
+    -webkit-transform: scale(0) translateX(0);
+            transform: scale(0) translateX(0); }
+  60% {
+    -webkit-transform: scale(0) translateX(40px);
+            transform: scale(0) translateX(40px); }
+  70% {
+    -webkit-transform: scale(1) translateX(40px);
+            transform: scale(1) translateX(40px); }
+  80%,
+  100% {
+    -webkit-transform: scale(0) translateX(40px);
+            transform: scale(0) translateX(40px); } }
+@keyframes scale-dots {
+  0% {
+    -webkit-transform: scale(0) translateX(-40px);
+            transform: scale(0) translateX(-40px); }
+  10% {
+    -webkit-transform: scale(1) translateX(-40px);
+            transform: scale(1) translateX(-40px); }
+  20% {
+    -webkit-transform: scale(0) translateX(-40px);
+            transform: scale(0) translateX(-40px); }
+  30% {
+    -webkit-transform: scale(0) translateX(0);
+            transform: scale(0) translateX(0); }
+  40% {
+    -webkit-transform: scale(1.25) translateX(0);
+            transform: scale(1.25) translateX(0); }
+  50% {
+    -webkit-transform: scale(0) translateX(0);
+            transform: scale(0) translateX(0); }
+  60% {
+    -webkit-transform: scale(0) translateX(40px);
+            transform: scale(0) translateX(40px); }
+  70% {
+    -webkit-transform: scale(1) translateX(40px);
+            transform: scale(1) translateX(40px); }
+  80%,
+  100% {
+    -webkit-transform: scale(0) translateX(40px);
+            transform: scale(0) translateX(40px); } }
+
+.scale-dots:before {
+  -webkit-animation: scale-dots 3s infinite;
+          animation: scale-dots 3s infinite;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  height: 30px;
+  width: 30px; }

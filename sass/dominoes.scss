@@ -1,0 +1,51 @@
+/**
+  * Dominoes
+  *
+  * @author jh3y
+*/
+$color: var(--primary);
+$delay: .2s;
+$height: 40px;
+$no-of-el: 5;
+$width: 10px;
+
+@keyframes dominoes {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(calc(var(--rotation) * 1deg));
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: rotate(calc(var(--rotation) * 1deg));
+  }
+}
+
+.dominoes {
+  display: grid;
+  grid-gap: $width * 2;
+  grid-template-columns: repeat($no-of-el, $width);
+  height: $height;
+
+  div {
+    --rotation: 68;
+    background-color: $color;
+    opacity: 0;
+    transform-origin: bottom right;
+
+    @for $el from 1 through $no-of-el {
+      &:nth-child(#{$el}) {
+        animation: dominoes ($no-of-el * $delay) ($el * $delay) infinite ease;
+        @if $el == $no-of-el {
+          --rotation: 90;
+        }
+      }
+    }
+  }
+}

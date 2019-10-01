@@ -1,0 +1,25 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+  * Traditional
+  *
+  * @author jh3y
+*/
+.traditional:before {
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
+  border-radius: 100%;
+  -webkit-box-shadow: inset -2px 0 0 0px var(--primary);
+          box-shadow: inset -2px 0 0 0px var(--primary);
+  content: '';
+  height: 50px;
+  position: absolute;
+  width: 50px; }

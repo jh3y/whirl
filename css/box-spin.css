@@ -1,0 +1,34 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+  * Box spin
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.box-spin {
+  -webkit-animation: spin 3s infinite linear;
+          animation: spin 3s infinite linear;
+  height: 50px;
+  position: relative;
+  width: 50px; }
+  .box-spin:before {
+    content: '';
+    display: block;
+    height: 25px;
+    width: 25px;
+    -webkit-animation: spin .5s infinite;
+            animation: spin .5s infinite;
+    background: var(--primary, #fff);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25pxpx; }

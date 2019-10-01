@@ -1,0 +1,29 @@
+/**
+  * Line
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$height: 20px;
+$width: 60px;
+
+@keyframes line {
+  from {
+    background-position: -($width) 0;
+  }
+  to {
+    background-position: $width 0;
+  }
+}
+
+.line:before {
+  animation: line .75s infinite alternate ease-in-out;
+  background: linear-gradient(90deg, $color, $color);
+  background-repeat: no-repeat;
+  background-size: $width $height;
+  content: '';
+  display: block;
+  height: $height;
+  width: $width;
+}

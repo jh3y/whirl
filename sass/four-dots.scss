@@ -1,0 +1,25 @@
+/**
+  * four-dots
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$secondary: var(--secondary);
+$radius: 20px;
+$size: 5px;
+
+.four-dots:before {
+  display: block;
+  height: $size;
+  width: $size;
+  content: '';
+  animation: spin 1s infinite;
+  border-radius: 100%;
+  box-shadow: $radius 0 0 $size $color,
+    0 $radius 0 $size $secondary,
+    0 ($radius * -1) 0 $size $secondary,
+    -($radius) 0 0 $size $color;
+}
+
+@import 'common/spin';

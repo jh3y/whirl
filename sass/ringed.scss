@@ -1,0 +1,41 @@
+/**
+  * Ringed
+  *
+  * @author jh3y
+*/
+
+$band-size: 50px;
+$band-thickness: 6px;
+$band-color: var(--primary);
+$color: var(--secondary);
+$size: 16px;
+$pos: -(($band-size / 2) - ($band-thickness / 2));
+
+@keyframes ringed {
+  to {
+    transform: rotate(360deg) translateY($pos);
+  }
+}
+
+.ringed {
+  &:after,
+  &:before {
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
+    animation: ringed .75s infinite linear both;
+    background: $color;
+    height: $size;
+    transform: rotate(0deg) translateY($pos);
+    width: $size;
+  }
+
+  &:before {
+    border: $band-thickness solid $band-color;
+    height: $band-size;
+    width: $band-size;
+  }
+}

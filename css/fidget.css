@@ -1,0 +1,53 @@
+/**
+  * Fidget
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes fidget {
+  10% {
+    -webkit-transform: skewX(60deg);
+            transform: skewX(60deg); }
+  20% {
+    -webkit-transform: skewX(-60deg);
+            transform: skewX(-60deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  40% {
+    -webkit-transform: skewY(60deg);
+            transform: skewY(60deg); }
+  50% {
+    -webkit-transform: skewY(-60deg);
+            transform: skewY(-60deg); }
+  60% {
+    -webkit-transform: skewY(0);
+            transform: skewY(0); } }
+@keyframes fidget {
+  10% {
+    -webkit-transform: skewX(60deg);
+            transform: skewX(60deg); }
+  20% {
+    -webkit-transform: skewX(-60deg);
+            transform: skewX(-60deg); }
+  30% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg); }
+  40% {
+    -webkit-transform: skewY(60deg);
+            transform: skewY(60deg); }
+  50% {
+    -webkit-transform: skewY(-60deg);
+            transform: skewY(-60deg); }
+  60% {
+    -webkit-transform: skewY(0);
+            transform: skewY(0); } }
+
+.fidget:before {
+  -webkit-animation: fidget 1s infinite ease;
+          animation: fidget 1s infinite ease;
+  background-color: var(--primary);
+  border-radius: 100%;
+  display: block;
+  content: '';
+  height: 40px;
+  width: 40px; }

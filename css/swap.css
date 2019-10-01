@@ -1,0 +1,37 @@
+/**
+  * Split
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes swap {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes swap {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.swap:after, .swap:before {
+  border-radius: 100%;
+  content: '';
+  height: 50px;
+  opacity: .5;
+  position: absolute;
+  width: 50px; }
+
+.swap:after {
+  -webkit-animation: swap 1.5s -0.75s infinite;
+          animation: swap 1.5s -0.75s infinite;
+  background-color: var(--primary); }
+
+.swap:before {
+  -webkit-animation: swap 1.5s infinite;
+          animation: swap 1.5s infinite;
+  background-color: var(--secondary); }

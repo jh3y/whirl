@@ -1,0 +1,49 @@
+/**
+  * Rings
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$border: 6px;
+$color: #fff;
+$color-two: transparentize($color, 0.5);
+$duration: 1s;
+$offset: 2px;
+$size: 30px;
+
+@keyframes rings {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rings {
+  &:after,
+  &:before {
+    animation: rings $duration infinite linear;
+    box-sizing: border-box;
+    border: $border solid $color-two;
+    border-radius: 100%;
+    content: '';
+    height: $size;
+    left: 50%;
+    margin-top: ($size / -2);
+    position: absolute;
+    top: 50%;
+    width: $size;
+  }
+
+  &:after {
+    border-left-color: $color;
+    margin-left: -($offset);
+  }
+
+  &:before {
+    animation-direction: reverse;
+    border-right-color: $color;
+    margin-left: -($size - $offset);
+  }
+}

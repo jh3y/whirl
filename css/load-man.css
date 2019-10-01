@@ -1,0 +1,77 @@
+/**
+  * Load man - gaming inspired loader
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.load-man {
+  -webkit-animation: load-man-travel 1.2s infinite linear;
+          animation: load-man-travel 1.2s infinite linear;
+  background: repeating-linear-gradient(90deg, var(--secondary), var(--secondary) 5%, transparent 5%, transparent 35%);
+  height: 10px;
+  left: 50%;
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  width: 200px;
+  /**
+    * Our pseudo elements create the head pieces
+    *
+    * They are near identical minus subtle differences in animation and border
+    * styling
+  */
+  /**
+  * The top head piece
+  */
+  /**
+  * The bottom head piece
+  */ }
+  .load-man:after, .load-man:before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    border: 25px solid var(--primary);
+    border-radius: 100%;
+    margin-top: -25px; }
+  .load-man:before {
+    --close: -90;
+    -webkit-animation: load-man-chomp 0.35s infinite linear;
+            animation: load-man-chomp 0.35s infinite linear;
+    border-bottom-color: transparent;
+    border-left-color: transparent; }
+  .load-man:after {
+    --close: 0;
+    -webkit-animation: load-man-chomp 0.35s infinite linear;
+            animation: load-man-chomp 0.35s infinite linear;
+    border-right-color: transparent;
+    border-top-color: transparent; }
+
+@-webkit-keyframes load-man-travel {
+  to {
+    background-position: -200px 0; } }
+
+@keyframes load-man-travel {
+  to {
+    background-position: -200px 0; } }
+
+@-webkit-keyframes load-man-chomp {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  50% {
+    -webkit-transform: rotate(calc(var(--close) * 1deg));
+            transform: rotate(calc(var(--close) * 1deg)); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
+@keyframes load-man-chomp {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  50% {
+    -webkit-transform: rotate(calc(var(--close) * 1deg));
+            transform: rotate(calc(var(--close) * 1deg)); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }

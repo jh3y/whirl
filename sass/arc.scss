@@ -1,0 +1,21 @@
+/**
+  * Arc
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$thickness: 6px;
+$color: var(--primary, #fff);
+$size: 50px;
+
+.arc:before {
+  animation: spin 0.5s infinite linear;
+  border-radius: 100%;
+  border-top: $thickness solid $color;
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
+@import 'common/spin.scss'

@@ -1,0 +1,33 @@
+/**
+  * Scan
+  *
+  * @author jh3y
+*/
+
+$border-width: 5px;
+$color: var(--primary);
+$size: 50px;
+
+@keyframes scan {
+  0% {
+    background-position: -($border-width) 0;
+  }
+  50% {
+    background-position: ($size - ($border-width * 2)) 0;
+  }
+  100% {
+    background-position: ($size - ($border-width * 2)) $size;
+  }
+}
+
+.scan:before {
+  animation: scan 1s infinite;
+  background: linear-gradient(90deg, $color 20%, transparent 20%, transparent),
+    linear-gradient(0deg, $color 20%, transparent 20%, transparent);
+  background-size: $size $size;
+  border: $border-width solid $color;
+  content: '';
+  height: $size;
+  transform: rotate(45deg);
+  width: $size;
+}

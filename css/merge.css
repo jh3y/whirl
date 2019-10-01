@@ -1,0 +1,52 @@
+/**
+  * Merge
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes grow {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25); } }
+@keyframes grow {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25); } }
+
+.merge {
+  -webkit-animation: spin 1.33333s infinite linear;
+          animation: spin 1.33333s infinite linear;
+  height: 30px;
+  position: relative;
+  width: 30px; }
+  .merge:after, .merge:before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    -webkit-animation: grow 2s infinite ease backwards;
+            animation: grow 2s infinite ease backwards;
+    border-radius: 100%;
+    background: var(--primary);
+    opacity: .75;
+    position: absolute;
+    -webkit-transform-origin: -200% -80%;
+            transform-origin: -200% -80%; }
+  .merge:before {
+    background: var(--secondary);
+    -webkit-transform-origin: 200% 80%;
+            transform-origin: 200% 80%; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

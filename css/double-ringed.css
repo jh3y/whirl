@@ -1,0 +1,33 @@
+/**
+  * Double ringed
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.double-ringed:after, .double-ringed:before {
+  border-radius: 100%;
+  display: block;
+  content: '';
+  position: absolute; }
+
+.double-ringed:after {
+  height: 15px;
+  width: 15px;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  -webkit-box-shadow: 19px 0 0 0 var(--secondary), -19px 0 0 0 var(--secondary);
+          box-shadow: 19px 0 0 0 var(--secondary), -19px 0 0 0 var(--secondary); }
+
+.double-ringed:before {
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--primary); }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

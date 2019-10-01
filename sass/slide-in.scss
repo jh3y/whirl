@@ -1,0 +1,57 @@
+/**
+  * Slide in
+  *
+  * @author jh3y
+*/
+
+$no-of-el: 3;
+$size: 20px;
+$margin: 5px;
+$diff: $size + $margin;
+$start: -((floor($no-of-el / 2)) * $diff + ($size / 2));
+$offset: .5s;
+$color: var(--primary);
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-300%);
+  }
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(300%);
+  }
+
+}
+
+
+
+.slide-in {
+  div {
+    animation: slide-in 1.5s infinite;
+    background-color: $color;
+    height: $size;
+    left: 50%;
+    margin-top: -($size / 2);
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    width: $size;
+
+    @for $el from 1 through $no-of-el {
+      &:nth-of-type(#{$el}) {
+        animation-delay: $el * $offset;
+        margin-left: $start + (($el - 1) * $diff);
+      }
+    }
+  }
+
+
+}
+
+

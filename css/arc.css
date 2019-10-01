@@ -1,0 +1,24 @@
+/**
+  * Arc
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.arc:before {
+  -webkit-animation: spin 0.5s infinite linear;
+          animation: spin 0.5s infinite linear;
+  border-radius: 100%;
+  border-top: 6px solid var(--primary, #fff);
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

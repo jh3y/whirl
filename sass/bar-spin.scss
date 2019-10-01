@@ -1,0 +1,28 @@
+/**
+  * Bar spin
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 50px;
+
+.bar-spin {
+  animation: spin 3s infinite linear;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 50px;
+    width: 10px;
+    animation: spin .5s infinite;
+    background: var(--primary, #fff);
+    position: absolute;
+    left: 50%;
+    margin-left: -($size / 10);
+  }
+}
+
+@import 'common/spin.scss'

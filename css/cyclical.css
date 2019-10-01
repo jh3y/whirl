@@ -1,0 +1,55 @@
+/**
+  * Cyclical
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes grow {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0); } }
+@keyframes grow {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0); } }
+
+.cyclical {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+  height: 50px;
+  position: relative;
+  width: 50px; }
+  .cyclical:after, .cyclical:before {
+    -webkit-animation: grow 1.25s infinite ease;
+            animation: grow 1.25s infinite ease;
+    background: var(--primary);
+    border-radius: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    content: ''; }
+  .cyclical:after {
+    height: 50%;
+    width: 50%;
+    -webkit-transform-origin: 40% 80%;
+            transform-origin: 40% 80%; }
+  .cyclical:before {
+    height: 75%;
+    width: 75%;
+    -webkit-transform-origin: -40% -80%;
+            transform-origin: -40% -80%; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

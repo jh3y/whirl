@@ -1,0 +1,31 @@
+/**
+  * Scan
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$size: 30px;
+
+@keyframes side-to-side {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+
+.side-to-side:before {
+  animation: side-to-side .5s infinite alternate ease-in-out;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  width: $size;
+}

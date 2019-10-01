@@ -1,0 +1,78 @@
+/**
+  * Mexican wave
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$size: 10px;
+$dot-margin: 5px;
+$first: -((2 * $size) + (2 * $dot-margin));
+$second: -($size + $dot-margin);
+$third: 0;
+$fourth: ($size + $dot-margin);
+$fifth: ((2 * $size) + (2 * $dot-margin));
+$bounce: -(2 * $size);
+
+.mexican-wave:before {
+  animation: mexican-wave .75s infinite ease backwards;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  position: absolute;
+  transform: translateY($size);
+  width: $size;
+}
+
+@keyframes mexican-wave {
+  0% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+  15% {
+    box-shadow: $first $bounce 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+  30% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second $bounce 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+  45% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third $bounce 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+  60% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth $bounce 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+  75% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth $bounce 0 0 $color;
+  }
+  100% {
+    box-shadow: $first (-($size)) 0 0 $color,
+      $second (-($size)) 0 0 $color,
+      $third (-($size)) 0 0 $color,
+      $fourth (-($size)) 0 0 $color,
+      $fifth (-($size)) 0 0 $color;
+  }
+
+}

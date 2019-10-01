@@ -1,0 +1,42 @@
+/**
+  * Outline square
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 30px;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+
+@keyframes outline-square {
+  0% {
+    background: $color-one;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    background: $color-two;
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    background: $color-one;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    background: $color-two;
+    transform: translate(100%, -100%);
+  }
+  100% {
+    background: $color-one;
+    transform: translate(-100%, -100%);
+  }
+
+}
+
+.outline-square:before {
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+  animation: outline-square 1.5s infinite;
+  border-radius: 100%;
+}
