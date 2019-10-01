@@ -112,7 +112,7 @@ const App = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={`https://raw.githubusercontent.com/jh3y/whirl/v${
+        href={`https://github.com/jh3y/whirl/blob/v${
           process.env.REACT_APP_VERSION
         }/css/${className}.css`}>
         Grab the CSS on Github!
