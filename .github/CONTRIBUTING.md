@@ -70,7 +70,7 @@ By default, your new animation will be `active` and added to the config file at 
 ```
 Feel free to change this file if you wish to apply a different class name or switch animations on or off 👍
 
-Once you're ready to open a PR for your new animation, be sure to publish the CSS first with `yarn run publish-css`.
+Once you're ready to open a PR with your new animation, be sure to bump the version number in `package.json`. A patch bump is fine 👍
 
 Open a PR following the PR template. Your commit message needn't be complex;
 
