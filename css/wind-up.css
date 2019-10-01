@@ -1,0 +1,60 @@
+/**
+  * Wind up
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes wind-up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  10%,
+  15% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  20%,
+  25% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  30%,
+  35% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg); }
+  40%,
+  50% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg); } }
+@keyframes wind-up {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  10%,
+  15% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  20%,
+  25% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  30%,
+  35% {
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg); }
+  40%,
+  50% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg); } }
+
+.wind-up:before {
+  -webkit-animation: wind-up 3s infinite;
+          animation: wind-up 3s infinite;
+  border: 6px solid var(--primary);
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px; }

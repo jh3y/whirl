@@ -1,0 +1,33 @@
+/**
+  * Rotary
+  *
+  * @author jh3y
+*/
+
+@keyframes rotary {
+  0% {
+    transform: rotate(0deg) translateX(150%) scale(1);
+  }
+  25% {
+    transform: rotate(360 * .25deg) translateX(150%) scale(0);
+  }
+  75% {
+    transform: rotate(360 * .75deg) translateX(150%) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) scale(1);
+  }
+}
+
+$size: 25px;
+$color: var(--primary);
+
+.rotary:before {
+  animation: rotary 1s infinite linear;
+  background-color: $color;
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+}

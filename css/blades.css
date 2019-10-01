@@ -1,0 +1,46 @@
+/**
+  * Blades
+  *
+  * @author jh3y - jheytompkins.com
+  *
+*/
+.blades {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  height: 20px;
+  width: 20px; }
+  .blades div {
+    border: 4px solid transparent;
+    border-left-color: var(--primary);
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    width: 20px; }
+  .blades div:nth-child(1) {
+    -webkit-transform: rotate(72deg) translateY(5px);
+            transform: rotate(72deg) translateY(5px); }
+  .blades div:nth-child(2) {
+    -webkit-transform: rotate(144deg) translateY(5px);
+            transform: rotate(144deg) translateY(5px); }
+  .blades div:nth-child(3) {
+    -webkit-transform: rotate(216deg) translateY(5px);
+            transform: rotate(216deg) translateY(5px); }
+  .blades div:nth-child(4) {
+    -webkit-transform: rotate(288deg) translateY(5px);
+            transform: rotate(288deg) translateY(5px); }
+  .blades div:nth-child(5) {
+    -webkit-transform: rotate(360deg) translateY(5px);
+            transform: rotate(360deg) translateY(5px); }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

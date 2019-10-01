@@ -1,0 +1,103 @@
+/**
+  * Feeder
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes fed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(0) scale(2.5);
+            transform: translateX(0) scale(2.5); }
+  40%,
+  60% {
+    -webkit-transform: translateX(0) scale(1.5);
+            transform: translateX(0) scale(1.5); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+@keyframes fed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  30%,
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    -webkit-transform: translateX(0) scale(2.5);
+            transform: translateX(0) scale(2.5); }
+  40%,
+  60% {
+    -webkit-transform: translateX(0) scale(1.5);
+            transform: translateX(0) scale(1.5); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+@-webkit-keyframes feed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+@keyframes feed {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-500%);
+            transform: translateX(-500%); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(500%);
+            transform: translateX(500%); } }
+
+.feeder {
+  height: 20px;
+  position: relative;
+  width: 20px; }
+  .feeder div {
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: fed;
+            animation-name: fed;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-delay: calc(var(--delay) * 1s);
+            animation-delay: calc(var(--delay) * 1s);
+    background-color: var(--primary);
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%; }
+    .feeder div:nth-child(2), .feeder div:nth-child(3) {
+      -webkit-animation-name: feed;
+              animation-name: feed; }
+    .feeder div:nth-child(2) {
+      --delay: .25; }
+    .feeder div:nth-child(3) {
+      --delay: .5; }

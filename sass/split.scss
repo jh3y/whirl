@@ -1,0 +1,34 @@
+@import 'common/spin';
+/**
+  * Split
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$core-size: 14px;
+$outer-size: 50px;
+$outer-width: 10px;
+
+.split {
+  &:after,
+  &:before {
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+  }
+  &:after {
+    animation: spin 1s infinite linear;
+    border: $outer-width solid $color;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    height: $outer-size;
+    width: $outer-size;
+  }
+  &:before {
+    background: $color;
+    height: $core-size;
+    width: $core-size;
+  }
+}
+

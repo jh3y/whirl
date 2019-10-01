@@ -1,0 +1,36 @@
+/**
+  * Scan
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes side-to-side {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%); } }
+@keyframes side-to-side {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%); } }
+
+.side-to-side:before {
+  -webkit-animation: side-to-side .5s infinite alternate ease-in-out;
+          animation: side-to-side .5s infinite alternate ease-in-out;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  height: 30px;
+  width: 30px; }

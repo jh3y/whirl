@@ -1,0 +1,52 @@
+/**
+  * Eight
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes eight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom; }
+  50% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  51% {
+    -webkit-transform-origin: right top;
+            transform-origin: right top; }
+  100% {
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+@keyframes eight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom; }
+  50% {
+    -webkit-transform-origin: left bottom;
+            transform-origin: left bottom;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  51% {
+    -webkit-transform-origin: right top;
+            transform-origin: right top; }
+  100% {
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+.eight:before {
+  -webkit-animation: eight 1.5s infinite ease;
+          animation: eight 1.5s infinite ease;
+  background-color: var(--primary);
+  display: block;
+  height: 30px;
+  width: 30px;
+  content: ''; }

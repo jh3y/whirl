@@ -1,0 +1,36 @@
+/**
+  * Eight
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$size: 30px;
+
+@keyframes eight {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform-origin: left bottom;
+    transform: rotate(360deg);
+  }
+  51% {
+    transform-origin: right top;
+
+  }
+  100% {
+    transform-origin: right top;
+    transform: rotate(0deg);
+  }
+}
+
+.eight:before {
+  animation: eight 1.5s infinite ease;
+  background-color: $color;
+  display: block;
+  height: $size;
+  width: $size;
+  content: '';
+}

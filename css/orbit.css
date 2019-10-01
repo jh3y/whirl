@@ -1,0 +1,41 @@
+/**
+  * Orbit
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes orbit {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-300%);
+            transform: scale(0) translateX(-300%); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.25) translateX(0);
+            transform: scale(1.25) translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(300%);
+            transform: scale(0) translateX(300%); } }
+@keyframes orbit {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(-300%);
+            transform: scale(0) translateX(-300%); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.25) translateX(0);
+            transform: scale(1.25) translateX(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateX(300%);
+            transform: scale(0) translateX(300%); } }
+
+.orbit:before {
+  -webkit-animation: orbit 1s infinite;
+          animation: orbit 1s infinite;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  height: 50px;
+  width: 50px;
+  display: block; }

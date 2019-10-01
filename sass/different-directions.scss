@@ -1,0 +1,54 @@
+/**
+  * Different directions
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@import 'common/utils';
+@import 'common/spin';
+
+$radius-one: 20px;
+$radius-two: 35px;
+$size: 8px;
+$no-of-dots: 7;
+$duration: 1s;
+$color: var(--primary);
+$reset: translate(-50%, -50%);
+
+@function genShadow($radius) {
+  $shadows: ();
+  @for $dot from 1 through $no-of-dots {
+    $angle: (360 / $no-of-dots) * ($dot - 1);
+    $xy: getPosition($angle, $radius);
+    $shad-props: $xy 0 0 $color;
+    $shadows: append($shadows, $shad-props, comma);
+  }
+  @return $shadows;
+}
+
+.different-directions {
+  position: relative;
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    border-radius: 100%;
+    height: $size;
+    width: $size;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: $size / -2;
+    margin-left: $size / -2;
+  }
+
+  &:after {
+    animation: spin $duration infinite linear reverse;
+    box-shadow: genShadow($radius-one);
+  }
+
+  &:before {
+    animation: spin $duration infinite linear;
+    box-shadow: genShadow($radius-two);
+  }
+}

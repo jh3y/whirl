@@ -1,0 +1,24 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+  * Spinning dots - scaled
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+.spinning-dots-scaled:before {
+  -webkit-animation: spin 1.5s infinite linear;
+          animation: spin 1.5s infinite linear;
+  border-radius: 8px;
+  -webkit-box-shadow: 20px 0px 0 -4px var(--primary), 12.4698px 15.63663px 0 -4px var(--primary), -4.45042px 19.49856px 0 -3px var(--primary), -18.01938px 8.67767px 0 -2px var(--primary), -18.01938px -8.67767px 0 -1px var(--primary), -4.45042px -19.49856px 0 1px var(--primary), 12.4698px -15.63663px 0 2px var(--primary);
+          box-shadow: 20px 0px 0 -4px var(--primary), 12.4698px 15.63663px 0 -4px var(--primary), -4.45042px 19.49856px 0 -3px var(--primary), -18.01938px 8.67767px 0 -2px var(--primary), -18.01938px -8.67767px 0 -1px var(--primary), -4.45042px -19.49856px 0 1px var(--primary), 12.4698px -15.63663px 0 2px var(--primary);
+  content: '';
+  height: 8px;
+  width: 8px; }

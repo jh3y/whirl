@@ -1,0 +1,29 @@
+/**
+  * Eclipse
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+
+$size: 50px;
+$color-one: var(--primary);
+$color-two: var(--bg);
+
+.eclipse:before {
+  display: block;
+  content: '';
+  height: $size;
+  width: $size;
+  animation: eclipse 1s infinite ease;
+  background-color: $color-two;
+  border-radius: 100%;
+}
+
+@keyframes eclipse {
+  from {
+    box-shadow: inset $size 0 0 0 $color-one;
+  }
+  to {
+    box-shadow: inset ($size * -1) 0 0 0 $color-one;
+  }
+}

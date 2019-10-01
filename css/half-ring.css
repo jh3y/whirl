@@ -1,0 +1,25 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+  * Half ring
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.half-ring:before {
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+  border-radius: 10px;
+  -webkit-box-shadow: 25px 0px 0 0 rgba(255, 255, 255, 0.2), 20.22542px 14.69463px 0 0 rgba(255, 255, 255, 0.4), 7.72542px 23.77641px 0 0 rgba(255, 255, 255, 0.6), -7.72542px 23.77641px 0 0 rgba(255, 255, 255, 0.8), -20.22542px 14.69463px 0 0 white;
+          box-shadow: 25px 0px 0 0 rgba(255, 255, 255, 0.2), 20.22542px 14.69463px 0 0 rgba(255, 255, 255, 0.4), 7.72542px 23.77641px 0 0 rgba(255, 255, 255, 0.6), -7.72542px 23.77641px 0 0 rgba(255, 255, 255, 0.8), -20.22542px 14.69463px 0 0 white;
+  height: 10px;
+  width: 10px;
+  display: block;
+  content: ''; }

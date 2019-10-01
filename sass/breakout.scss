@@ -1,0 +1,41 @@
+/**
+  * Breakout
+  *
+  * @author jh3y - jheytompkins.com
+*/
+$size: 50px;
+$thickness: 6px;
+$color: var(--primary);
+
+@keyframes breakout {
+  0%,
+  40% {
+    border-width: $size / 2;
+  }
+  60% {
+    border-color: $color;
+    border-width: $thickness;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    border-color: var(--secondary);
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.breakout {
+  position: relative;
+  height: $size;
+  width: $size;
+  &:before {
+    animation: breakout 1.5s infinite;
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: $thickness solid $color;
+    border-radius: 100%;
+  }
+}

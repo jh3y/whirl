@@ -1,0 +1,50 @@
+/**
+  * Combine 2
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes combine-two {
+  25% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); }
+  50% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); }
+  75% {
+    -webkit-transform: translate(0, 150%);
+            transform: translate(0, 150%); } }
+@keyframes combine-two {
+  25% {
+    -webkit-transform: translate(0, -100%);
+            transform: translate(0, -100%); }
+  50% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); }
+  75% {
+    -webkit-transform: translate(0, 150%);
+            transform: translate(0, 150%); } }
+
+.combine-two {
+  height: 30px;
+  position: relative;
+  width: 30px; }
+  .combine-two div {
+    --rotation: 45;
+    position: absolute;
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg));
+            transform: rotate(calc(var(--rotation) * 1deg)); }
+    .combine-two div:after {
+      -webkit-animation: combine-two 1.5s infinite ease;
+              animation: combine-two 1.5s infinite ease;
+      border: 15px solid transparent;
+      border-top-color: var(--primary);
+      content: '';
+      display: block;
+      height: 30px;
+      width: 30px; }
+    .combine-two div:nth-child(2) {
+      --rotation: 135; }
+    .combine-two div:nth-child(3) {
+      --rotation: 225; }
+    .combine-two div:nth-child(4) {
+      --rotation: 315; }

@@ -1,0 +1,76 @@
+/**
+  * Hourglass spin
+  *
+  * A little trickier to implement. Requires a little though about
+  * animation timings and when things should happen etc.
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$duration: 4s;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$size: 40px;
+$border: 4px;
+
+@keyframes hourglass-spin {
+  0%, 10% {
+    background-position: 0 90%;
+  }
+  40%,
+  60% {
+    background-position: 0 10%;
+  }
+  90%,
+  100% {
+    background-position: 0 -70%;
+  }
+}
+
+@keyframes hourglass-container-spin {
+  0%,
+  40% {
+    transform: rotate(-180deg);
+  }
+  50%,
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
+.hourglass {
+  animation: hourglass-container-spin $duration infinite;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &:after,
+  &:before {
+    background-size: 100% 300%;
+    border-radius: 100%;
+    border: $border solid $color-one;
+    height: $size;
+    width: $size;
+    animation-name: hourglass-spin;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, $color-two 50%, $color-two);
+  }
+
+  &:after {
+    transform: translateY($size / -2);
+  }
+
+  &:before {
+    animation-delay: ($duration / -2);
+    animation-direction: reverse;
+    transform: translateY($size / 2);
+  }
+}

@@ -1,0 +1,37 @@
+/**
+  * Pendulum
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes pendulum {
+  from {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg); }
+  to {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg); } }
+@keyframes pendulum {
+  from {
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg); }
+  to {
+    -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg); } }
+
+.pendulum:after {
+  background: var(--primary);
+  border-radius: 100%;
+  bottom: 0;
+  content: '';
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  -webkit-transform-origin: 50% -200%;
+          transform-origin: 50% -200%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: pendulum 1s infinite alternate ease-in-out;
+          animation: pendulum 1s infinite alternate ease-in-out; }

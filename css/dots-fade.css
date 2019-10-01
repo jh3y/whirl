@@ -1,0 +1,99 @@
+/**
+  * Dots fade
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes dots-fade {
+  0% {
+    background: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  20% {
+    background: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    background: var(--secondary);
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  60% {
+    background-color: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); }
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); } }
+@keyframes dots-fade {
+  0% {
+    background: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  20% {
+    background: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(-175%);
+            transform: translateX(-175%); }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  40% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  50% {
+    background: var(--secondary);
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  60% {
+    background-color: var(--primary);
+    opacity: 0;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); }
+  80%,
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); } }
+
+.dots-fade:before {
+  -webkit-animation: dots-fade 2s infinite;
+          animation: dots-fade 2s infinite;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px; }

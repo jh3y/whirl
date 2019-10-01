@@ -1,0 +1,32 @@
+/**
+  * Ringed
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes ringed {
+  to {
+    -webkit-transform: rotate(360deg) translateY(-22px);
+            transform: rotate(360deg) translateY(-22px); } }
+@keyframes ringed {
+  to {
+    -webkit-transform: rotate(360deg) translateY(-22px);
+            transform: rotate(360deg) translateY(-22px); } }
+
+.ringed:after, .ringed:before {
+  border-radius: 100%;
+  content: '';
+  position: absolute; }
+
+.ringed:after {
+  -webkit-animation: ringed .75s infinite linear both;
+          animation: ringed .75s infinite linear both;
+  background: var(--secondary);
+  height: 16px;
+  -webkit-transform: rotate(0deg) translateY(-22px);
+          transform: rotate(0deg) translateY(-22px);
+  width: 16px; }
+
+.ringed:before {
+  border: 6px solid var(--primary);
+  height: 50px;
+  width: 50px; }

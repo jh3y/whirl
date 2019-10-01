@@ -1,0 +1,45 @@
+/**
+  * Sliding tiles
+  *
+  * @author jh3y
+*/
+$reset: translate(-50%, -50%);
+@keyframes sliding-tile {
+  0% {
+    transform: $reset translate(-50%, -50%);
+  }
+  25% {
+    transform: $reset translate(50%, -50%);
+  }
+  50% {
+    transform: $reset translate(50%, 50%);
+  }
+  75% {
+    transform: $reset translate(-50%, 50%);
+  }
+  100% {
+    transform: $reset translate(-50%, -50%);
+  }
+}
+
+$color: var(--primary);
+$duration: 1.25s;
+$size: 20px;
+.sliding-tiles {
+  &:after,
+  &:before {
+    animation: sliding-tile $duration infinite linear;
+    background-color: $color;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: $size;
+    width: $size;
+  }
+
+  &:after {
+    animation: sliding-tile $duration ($duration / -2) infinite linear;
+  }
+}
+

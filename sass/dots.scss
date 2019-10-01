@@ -1,0 +1,22 @@
+/**
+  * Dots
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$radius: 20px;
+$size: 5px;
+
+.dots:before {
+  display: block;
+  height: $size;
+  width: $size;
+  content: '';
+  animation: spin 1s infinite;
+  border-radius: 100%;
+  box-shadow: $radius 0 0 $size $color,
+    -($radius) 0 0 $size $color;
+}
+
+@import 'common/spin';

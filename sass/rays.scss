@@ -1,0 +1,43 @@
+/**
+  * Rays
+  *
+  * @author jh3y
+*/
+
+$color: var(--primary);
+$ray-thickness: 10px;
+$size: 20px;
+$ray-size: $size * 5;
+
+@keyframes rays {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.rays {
+  &:after,
+  &:before {
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
+    animation: rays 1.5s infinite;
+    border: $ray-thickness solid $color;
+    height: $ray-size;
+    width: $ray-size;
+  }
+
+  &:before {
+    background: $color;
+    height: $size;
+    width: $size;
+  }
+}

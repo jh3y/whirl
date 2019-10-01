@@ -1,0 +1,41 @@
+@import 'common/utils';
+/**
+  * scaling-circle
+  *
+  * @author jh3y
+*/
+$children: 8;
+
+@keyframes scaling-circle {
+  0%, 30%, 50%, 100% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+  }
+  40% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(0);
+  }
+}
+
+.scaling-circle {
+  --radius: 25;
+  --size: 10;
+  @include sizeCSS(size);
+  position: absolute;
+
+  div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 100%;
+    background: var(--primary);
+    animation: scaling-circle .8s calc(var(--delay) * 1s) infinite ease;
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px));
+
+    @for $c from 1 through $children {
+      &:nth-child(#{$c}) {
+        --angle: #{(360 / $children) * $c};
+        --delay: #{$c * 0.1};
+      }
+    }
+  }
+
+}

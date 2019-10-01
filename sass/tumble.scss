@@ -1,0 +1,46 @@
+/**
+  * Tumble
+  *
+  * @author jh3y
+*/
+
+$size: 50px;
+$tumble-size: 16px;
+$tumble-width: 6px;
+$tumble-pos: $tumble-size / 2;
+$radius: ($size - $tumble-size) / 2;
+$color: var(--primary);
+$color-two: var(--secondary);
+
+@keyframes tumble {
+  0% {
+    transform: rotate(180deg) translateY(-($radius));
+  }
+  100% {
+    transform: rotate(540deg) translateY(-($radius));
+  }
+}
+
+.tumble {
+  &:after,
+  &:before {
+    border-radius: 100%;
+    content: '';
+    position: absolute;
+  }
+
+  &:after {
+    animation: tumble 1s infinite;
+    background-color: $color;
+    box-shadow: $tumble-pos $tumble-width 0 0 $color-two,
+      (-($tumble-pos)) $tumble-width 0 0 $color-two;
+    height: $tumble-size;
+    width: $tumble-size;
+  }
+
+  &:before {
+    border: $tumble-width solid $color;
+    height: $size;
+    width: $size;
+  }
+}

@@ -1,0 +1,46 @@
+/**
+  * Merge
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$duration: 2s;
+$size: 30px;
+
+@keyframes grow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.25);
+  }
+}
+
+.merge {
+  animation: spin ($duration / 1.5) infinite linear;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &:after,
+  &:before {
+    content: '';
+    height: $size;
+    width: $size;
+    animation: grow $duration infinite ease backwards;
+    border-radius: 100%;
+    background: $color-one;
+    opacity: .75;
+    position: absolute;
+    transform-origin: -200% -80%;
+  }
+
+  &:before {
+    background: $color-two;
+    transform-origin: 200% 80%;
+  }
+}
+
+@import 'common/spin';

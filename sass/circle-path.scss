@@ -1,0 +1,51 @@
+/**
+  * circle-path
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 10px;
+$color: var(--primary);
+$color-two: var(--secondary);
+$no-of-dots: 11;
+$radius: 30px;
+$scale: 5px;
+
+.circle-path {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: $size;
+  width: $size;
+  transform: translate(-50%, -50%);
+
+  div {
+    background: $color;
+    border-radius: 100%;
+    height: $size;
+    position: absolute;
+    width: $size;
+    transform: rotate(calc(var(--rotation) * 1deg)) translate(0, $radius);
+
+    &:nth-child(11) {
+      background: $color-two;
+      animation: path .5s infinite steps($no-of-dots - 1);
+    }
+
+    @for $c from 1 through ($no-of-dots - 1) {
+      &:nth-child(#{$c}) {
+        $rotation: (360 / ($no-of-dots - 1)) * $c;
+        --rotation: #{$rotation};
+      }
+    }
+  }
+}
+
+@keyframes path {
+  from {
+    transform: rotate(0deg) translate(0, $radius) scale(1.5);
+  }
+  to {
+    transform: rotate(360deg) translate(0, $radius) scale(1.5);
+  }
+}
