@@ -5,7 +5,9 @@ install:
   - yarn
 script:
   - yarn test
-before_deploy: yarn publish-css
+before_deploy:
+  - yarn publish-css
+  - git tag -a $TRAVIS_TAG -m 'whirl $TRAVIS_TAG'
 deploy:
   provider: pages
   target-branch: $TRAVIS_TAG
