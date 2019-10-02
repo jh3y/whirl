@@ -1,0 +1,49 @@
+/**
+  * battery
+  * a stepped battery indicator
+  * @author jh3y
+*/
+
+$width: 40px;
+$height: $width * 1.5;
+.battery {
+  height: $height;
+  width: $width;
+  background: transparent;
+  border-radius: 2px;
+  border: 5px solid var(--primary);
+  position: relative;
+
+  &:before {
+    content: '';
+    height: $width / 2px * 0.6px;
+    width: $width / 2px * 1px;
+    background: var(--primary);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 2px;
+  }
+
+  &:after {
+    animation: battery-charge 1s infinite steps(6);
+    background: linear-gradient(0deg, transparent, transparent 5%, var(--primary) 5%, var(--primary) 19%, transparent 19%, transparent 24%, var(--primary) 24%, var(--primary) 38%, transparent 38%, transparent 43%, var(--primary) 43%, var(--primary) 57%, transparent 57%, transparent 62%, var(--primary) 62%, var(--primary) 76%, transparent 76%, transparent 81%, var(--primary) 81%, var(--primary) 95%, transparent 95%);
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: $width * 0.6;
+  }
+}
+
+@keyframes battery-charge {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(-18% 0 0 0);
+  }
+}

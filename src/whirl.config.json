@@ -25,6 +25,14 @@
       "active": true
     },
     {
+      "name": "battery",
+      "className": "battery",
+      "requiredElements": [
+        1
+      ],
+      "active": true
+    },
+    {
       "className": "blades",
       "name": "blades",
       "requiredElements": [
