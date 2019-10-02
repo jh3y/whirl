@@ -1,6 +1,6 @@
 {
   "name": "@jh3y/whirl",
-  "version": "2.1.1",
+  "version": "2.0.2",
   "description": "CSS loading animations with minimal effort",
   "author": "jh3y <jhey.dev>",
   "license": "MIT",
@@ -34,8 +34,7 @@
     "publish-package": "export FOR_PACKAGE=true && mkdir -pv css && cp -rf src/whirls sass && node utils/publish",
     "publish-css": "export FOR_PACKAGE=false && mkdir -pv dist/css && cp -rf src/whirls dist/sass && cp README.md dist/README.md && node utils/publish",
     "precommit": "lint-staged",
-    "lint": "eslint src",
-    "deploy": "git tag -a v$npm_package_version -m 'whirl v$npm_package_version' && git push origin v$npm_package_version"
+    "lint": "eslint src"
   },
   "lint-staged": {
     "src/**/*.js": [
