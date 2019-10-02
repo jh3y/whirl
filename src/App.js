@@ -112,7 +112,7 @@ const App = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={`https://github.com/jh3y/whirl/blob/v${process.env.REACT_APP_VERSION}/css/${className}.css`}>
+        href={`https://github.com/jh3y/whirl/blob/dist/css/${className}.css`}>
         Grab the CSS on Github!
       </a>
       <footer>{whirls.length} whirls and counting!</footer>

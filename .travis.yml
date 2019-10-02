@@ -8,9 +8,9 @@ script:
 before_deploy: yarn publish-css
 deploy:
   provider: pages
-  target-branch: $TRAVIS_TAG
+  target-branch: dist
   github_token: $GITHUB_TOKEN
   local-dir: ./dist
   skip_cleanup: true
   on:
-    tags: true
+    branch: master
