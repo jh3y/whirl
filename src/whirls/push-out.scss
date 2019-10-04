@@ -1,11 +1,11 @@
 
 /**
-  * push-pop
-  * lil push pop effect, push one side out and one side in
+  * push-out
+  * lil push out effect, push one side out and one side in
   * @author jh3y
 */
 
-.push-pop {
+.push-out {
   --duration: .85;
   height: 100px;
   width: 100px;
@@ -17,13 +17,13 @@
     height: 20px;
     width: 20px;
     position: absolute;
-    animation: push-pop-slide calc(var(--duration) * 1s) infinite alternate ease-in-out;
+    animation: push-out-slide calc(var(--duration) * 1s) infinite alternate ease-in-out;
     transform: translate(0, -100%);
     top: 100%;
     left: 0;
 
     &:after {
-      animation: push-pop-flip calc(var(--duration) * 1s) infinite alternate ease-in-out;
+      animation: push-out-flip calc(var(--duration) * 1s) infinite alternate ease-in-out;
       background: var(--primary);
       content: '';
       height: 100%;
@@ -46,10 +46,9 @@
   // Use the pseudo elements for the shifting pillars
   &:after,
   &:before {
-    animation-name: push-pop-pushed;
-    animation-duration: calc(var(--duration) * 1s);
-    animation-iteration-count: infinite;
     animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: calc(var(--duration) * 4s);
     background: var(--primary);
     bottom: 0;
     content: '';
@@ -58,27 +57,39 @@
     width: 20px;
   }
 
+  &:after {
+    animation-name: push-out-pushed-1;
+    right: 0;
+  }
+
   &:before {
-    animation-direction: alternate-reverse;
+    animation-name: push-out-pushed-2;
     left: 0;
   }
 
-  &:after {
-    animation-direction: alternate;
-    right: 0;
-  }
 }
 
-@keyframes push-pop-pushed {
-  0%, 72.5% {
+@keyframes push-out-pushed-1 {
+  0%, 18.125%, 50%, 68.125%, 100% {
     transform: translate(0, 0);
   }
-  100% {
+  25%, 43.125%, 75%, 93.125% {
     transform: translate(0, 100%);
   }
+
 }
 
-@keyframes push-pop-flip {
+@keyframes push-out-pushed-2 {
+  0%, 18.125%, 50%, 68.125%, 100% {
+    transform: translate(0, 100%);
+  }
+  25%, 43.125%, 75%, 93.125% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes push-out-flip {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
@@ -90,7 +101,7 @@
   }
 }
 
-@keyframes push-pop-slide {
+@keyframes push-out-slide {
   to {
     transform: translate(0, -100%) translate(80px, 0);
   }
