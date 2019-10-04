@@ -553,6 +553,15 @@
       "active": true
     },
     {
+      "name": "push-pop",
+      "className": "push-pop",
+      "requiredElements": [
+        1,
+        2
+      ],
+      "active": true
+    },
+    {
       "className": "radial",
       "name": "radial",
       "requiredElements": [
