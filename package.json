@@ -37,7 +37,8 @@
     "publish-package": "export FOR_PACKAGE=true && mkdir -pv css && cp -rf src/whirls sass && node utils/publish",
     "publish-css": "export FOR_PACKAGE=false && mkdir -pv dist/css && cp -rf src/whirls dist/sass && cp README.md dist/README.md && node utils/publish",
     "precommit": "lint-staged",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "lint:whirls": "stylelint 'src/**/*.scss' --syntax scss"
   },
   "lint-staged": {
     "src/**/*.js": [
