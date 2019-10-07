@@ -21,7 +21,10 @@
     "prettier": "^1.16.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "stylelint": "^11.0.0",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-scss": "^3.11.1"
   },
   "scripts": {
     "prepublish": "yarn publish-package",
@@ -34,12 +37,17 @@
     "publish-package": "export FOR_PACKAGE=true && mkdir -pv css && cp -rf src/whirls sass && node utils/publish",
     "publish-css": "export FOR_PACKAGE=false && mkdir -pv dist/css && cp -rf src/whirls dist/sass && cp README.md dist/README.md && node utils/publish",
     "precommit": "lint-staged",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "lint:whirls": "stylelint 'src/**/*.scss' --syntax scss"
   },
   "lint-staged": {
     "src/**/*.js": [
       "eslint",
       "prettier --write",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint --syntax=scss --fix",
       "git add"
     ]
   }
