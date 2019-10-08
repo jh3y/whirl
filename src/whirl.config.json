@@ -446,6 +446,15 @@
       "active": true
     },
     {
+      "name": "infinity-path",
+      "className": "infinity-path",
+      "requiredElements": [
+        1,
+        2
+      ],
+      "active": true
+    },
+    {
       "className": "line",
       "name": "line",
       "requiredElements": [
