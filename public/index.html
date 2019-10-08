@@ -129,7 +129,7 @@
     -->
     <canvas hidden width="64" height="64" id="favicon-canvas"></canvas>
     <div style="display:none;">
-      <img id="favicon-source" src="/favicon.ico" width="32" height="32"/>
+      <img id="favicon-source" src="/favicon.ico" width="64" height="64"/>
     </div>
     <script>
     var canvas = document.getElementById("favicon-canvas");
@@ -137,19 +137,19 @@
     var image = document.getElementById("favicon-source");
     var favicon = document.querySelector('link[rel*="icon"]');
     image.addEventListener("load", function(e) {
-      context.drawImage(image, 0, 0);
-      favicon.href = canvas.toDataURL("image/png");
       var degrees = 0;
+      window.requestAnimationFrame(function() {
         setInterval(function() {
           context.save();
           context.clearRect(0, 0, canvas.width, canvas.height);
-          context.translate(image.width, image.height);
+          context.translate(image.width/2, image.height/2);
           context.rotate(degrees * Math.PI/180);
           context.drawImage(image, -image.width/2, -image.height/2, image.width, image.height);
           context.restore();
           favicon.href = canvas.toDataURL("image/png");         
           degrees+=5;
         }, 50);
+      });
     });
     </script>
   </body>
