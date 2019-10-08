@@ -1,0 +1,31 @@
+/**
+  * Bounce
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes whirl-bounce {
+  0% {
+    -webkit-transform: translate(0, -150%) scaleX(1) scaleY(1);
+            transform: translate(0, -150%) scaleX(1) scaleY(1); }
+  100% {
+    -webkit-transform: translate(0, 150%) scaleX(1.1) scaleY(0.9);
+            transform: translate(0, 150%) scaleX(1.1) scaleY(0.9); } }
+@keyframes whirl-bounce {
+  0% {
+    -webkit-transform: translate(0, -150%) scaleX(1) scaleY(1);
+            transform: translate(0, -150%) scaleX(1) scaleY(1); }
+  100% {
+    -webkit-transform: translate(0, 150%) scaleX(1.1) scaleY(0.9);
+            transform: translate(0, 150%) scaleX(1.1) scaleY(0.9); } }
+
+.bounce:before {
+  -webkit-animation: whirl-bounce 0.5s cubic-bezier(0.6, 0.3, 0.8, 0.5) alternate infinite;
+          animation: whirl-bounce 0.5s cubic-bezier(0.6, 0.3, 0.8, 0.5) alternate infinite;
+  background: var(--primary);
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 20px;
+  width: 20px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center; }

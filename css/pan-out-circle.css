@@ -1,0 +1,60 @@
+/**
+  * pan-out-circle
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes pan-out-circle {
+  0%, 30%, 50%, 100% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0);
+            transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0); }
+  40% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+            transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1); } }
+@keyframes pan-out-circle {
+  0%, 30%, 50%, 100% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0);
+            transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0); }
+  40% {
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+            transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1); } }
+
+.pan-out-circle {
+  --radius: 30;
+  --size: 15;
+  height: calc(var(--size) * 1px);
+  width: calc(var(--size) * 1px);
+  position: absolute; }
+  .pan-out-circle div {
+    -webkit-animation: pan-out-circle 1.5s calc(var(--delay) * 1s) infinite ease;
+            animation: pan-out-circle 1.5s calc(var(--delay) * 1s) infinite ease;
+    background: var(--primary);
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px));
+            transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px));
+    width: 100%; }
+    .pan-out-circle div:nth-child(1) {
+      --angle: 45;
+      --delay: 0.1; }
+    .pan-out-circle div:nth-child(2) {
+      --angle: 90;
+      --delay: 0.2; }
+    .pan-out-circle div:nth-child(3) {
+      --angle: 135;
+      --delay: 0.3; }
+    .pan-out-circle div:nth-child(4) {
+      --angle: 180;
+      --delay: 0.4; }
+    .pan-out-circle div:nth-child(5) {
+      --angle: 225;
+      --delay: 0.5; }
+    .pan-out-circle div:nth-child(6) {
+      --angle: 270;
+      --delay: 0.6; }
+    .pan-out-circle div:nth-child(7) {
+      --angle: 315;
+      --delay: 0.7; }
+    .pan-out-circle div:nth-child(8) {
+      --angle: 360;
+      --delay: 0.8; }

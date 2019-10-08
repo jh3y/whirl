@@ -1,0 +1,41 @@
+/**
+  * Meetup
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 10px;
+$color: var(--primary);
+$no-of-dots: 4;
+
+@keyframes meetup {
+  0%, 100% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translateY(0);
+  }
+  50% {
+    transform: rotate(calc(var(--rotation) * 1deg)) translateY(300%);
+  }
+}
+
+.meetup {
+  animation: spin 1s infinite linear;
+  height: $size;
+  width: $size;
+
+  div {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    animation: meetup 1.25s infinite ease;
+    background: $color;
+    border-radius: 100%;
+
+    @for $el from 1 through $no-of-dots {
+      &:nth-child(#{$el}) {
+        --rotation: #{(360 / $no-of-dots) * $el};
+      }
+    }
+  }
+}
+
+@import 'common/spin';

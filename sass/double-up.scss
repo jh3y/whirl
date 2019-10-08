@@ -1,0 +1,22 @@
+/**
+  * Double up
+  *
+  * @author jh3y - jhey.dev
+*/
+
+$color: var(--primary);
+$size: 50px;
+$thickness: 10px;
+
+.double-up:before {
+  display: block;
+  content: '';
+  height: $size;
+  width: $size;
+  animation: spin .5s infinite linear;
+  border: $thickness $color double;
+  border-left-style: solid;
+  border-radius: 100%;
+}
+
+@import 'common/spin';

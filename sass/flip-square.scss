@@ -1,0 +1,29 @@
+/**
+  * Flip square
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$color: var(--primary);
+$size: 50px;
+
+.flip-square:before {
+  animation: flip-square 1.5s infinite;
+  background-color: $color;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+}
+
+@keyframes flip-square {
+  0% {
+    transform: perspective($size) rotate(45deg) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective($size) rotate(45deg) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective($size) rotate(45deg) rotateX(-180deg) rotateY(-180deg);
+  }
+}

@@ -1,0 +1,38 @@
+/**
+  * Tumble
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes tumble {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(-17px);
+            transform: rotate(180deg) translateY(-17px); }
+  100% {
+    -webkit-transform: rotate(540deg) translateY(-17px);
+            transform: rotate(540deg) translateY(-17px); } }
+@keyframes tumble {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(-17px);
+            transform: rotate(180deg) translateY(-17px); }
+  100% {
+    -webkit-transform: rotate(540deg) translateY(-17px);
+            transform: rotate(540deg) translateY(-17px); } }
+
+.tumble:after, .tumble:before {
+  border-radius: 100%;
+  content: '';
+  position: absolute; }
+
+.tumble:after {
+  -webkit-animation: tumble 1s infinite;
+          animation: tumble 1s infinite;
+  background-color: var(--primary);
+  -webkit-box-shadow: 8px 6px 0 0 var(--secondary), -8px 6px 0 0 var(--secondary);
+          box-shadow: 8px 6px 0 0 var(--secondary), -8px 6px 0 0 var(--secondary);
+  height: 16px;
+  width: 16px; }
+
+.tumble:before {
+  border: 6px solid var(--primary);
+  height: 50px;
+  width: 50px; }

@@ -1,0 +1,196 @@
+/**
+  * Square of dots
+  *
+  * @author jh3y
+*/
+
+$dot-color: var(--primary);
+$dot-size: 10px;
+$dot-margin: 5px;
+$first: $dot-size + $dot-margin;
+$second: (2 * $dot-size) + (2 * $dot-margin);
+$third: (3 * $dot-size) + (3 * $dot-margin);
+$fourth: (4 * $dot-size) + (4 * $dot-margin);
+$fifth: (5 * $dot-size) + (5 * $dot-margin);
+$hide: -1 * $dot-size;
+
+.square-of-dots:before {
+  animation: square-of-dots 1s infinite linear;
+  border-radius: 100%;
+  content: '';
+  height: $dot-size;
+  left: 50%;
+  margin-left: -(($fifth / 2) + $dot-size);
+  margin-top: -($dot-size / 2);
+  position: absolute;
+  top: 50%;
+  width: $dot-size;
+}
+
+@keyframes square-of-dots {
+  0% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+  10% {
+    box-shadow: $first 0 0 0 $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+  20% {
+    box-shadow: $first 0 0 0 $dot-color,
+      $second $first 0 0 $dot-color,
+      $second (-1 * $first) 0 0 $dot-color,
+      $second 0 0 0 $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+  30% {
+    box-shadow: $first 0 0 0 $dot-color,
+      $second $first 0 0 $dot-color,
+      $second (-1 * $first) 0 0 $dot-color,
+      $second 0 0 0 $dot-color,
+      $third (-1 * $second) 0 0 $dot-color,
+      $third (-1 * $first) 0 0 $dot-color,
+      $third 0 0 0 $dot-color,
+      $third $first 0 0 $dot-color,
+      $third $second 0 0 $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+  40% {
+    box-shadow: $first 0 0 0 $dot-color,
+      $second $first 0 0 $dot-color,
+      $second (-1 * $first) 0 0 $dot-color,
+      $second 0 0 0 $dot-color,
+      $third (-1 * $second) 0 0 $dot-color,
+      $third (-1 * $first) 0 0 $dot-color,
+      $third 0 0 0 $dot-color,
+      $third $first 0 0 $dot-color,
+      $third $second 0 0 $dot-color,
+      $fourth $first 0 0 $dot-color,
+      $fourth 0 0 0 $dot-color,
+      $fourth (-1 * $first) 0 0 $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+  50% {
+    box-shadow: $first 0 0 0 $dot-color,
+      $second $first 0 0 $dot-color,
+      $second (-1 * $first) 0 0 $dot-color,
+      $second 0 0 0 $dot-color,
+      $third (-1 * $second) 0 0 $dot-color,
+      $third (-1 * $first) 0 0 $dot-color,
+      $third 0 0 0 $dot-color,
+      $third $first 0 0 $dot-color,
+      $third $second 0 0 $dot-color,
+      $fourth $first 0 0 $dot-color,
+      $fourth 0 0 0 $dot-color,
+      $fourth (-1 * $first) 0 0 $dot-color,
+      $fifth 0 0 0 $dot-color;
+  }
+  60% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 0 $dot-color,
+      $second (-1 * $first) 0 0 $dot-color,
+      $second 0 0 0 $dot-color,
+      $third (-1 * $second) 0 0 $dot-color,
+      $third (-1 * $first) 0 0 $dot-color,
+      $third 0 0 0 $dot-color,
+      $third $first 0 0 $dot-color,
+      $third $second 0 0 $dot-color,
+      $fourth $first 0 0 $dot-color,
+      $fourth 0 0 0 $dot-color,
+      $fourth (-1 * $first) 0 0 $dot-color,
+      $fifth 0 0 0 $dot-color;
+  }
+  70% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 0 $dot-color,
+      $third (-1 * $first) 0 0 $dot-color,
+      $third 0 0 0 $dot-color,
+      $third $first 0 0 $dot-color,
+      $third $second 0 0 $dot-color,
+      $fourth $first 0 0 $dot-color,
+      $fourth 0 0 0 $dot-color,
+      $fourth (-1 * $first) 0 0 $dot-color,
+      $fifth 0 0 0 $dot-color;
+  }
+  80% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 0 $dot-color,
+      $fourth 0 0 0 $dot-color,
+      $fourth (-1 * $first) 0 0 $dot-color,
+      $fifth 0 0 0 $dot-color;
+  }
+  90% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 0 $dot-color;
+  }
+  100% {
+    box-shadow: $first 0 0 $hide $dot-color,
+      $second $first 0 $hide $dot-color,
+      $second (-1 * $first) 0 $hide $dot-color,
+      $second 0 0 $hide $dot-color,
+      $third (-1 * $second) 0 $hide $dot-color,
+      $third (-1 * $first) 0 $hide $dot-color,
+      $third 0 0 $hide $dot-color,
+      $third $first 0 $hide $dot-color,
+      $third $second 0 $hide $dot-color,
+      $fourth $first 0 $hide $dot-color,
+      $fourth 0 0 $hide $dot-color,
+      $fourth (-1 * $first) 0 $hide $dot-color,
+      $fifth 0 0 $hide $dot-color;
+  }
+}

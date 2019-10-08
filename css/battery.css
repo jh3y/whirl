@@ -1,0 +1,52 @@
+/**
+  * battery
+  * a stepped battery indicator
+  * @author jh3y
+*/
+.battery {
+  height: 60px;
+  width: 40px;
+  background: transparent;
+  border-radius: 2px;
+  border: 5px solid var(--primary);
+  position: relative; }
+  .battery:before {
+    content: '';
+    height: 12px;
+    width: 20px;
+    background: var(--primary);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    border-radius: 2px; }
+  .battery:after {
+    -webkit-animation: battery-charge 1s infinite steps(6);
+            animation: battery-charge 1s infinite steps(6);
+    background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(5%, transparent), color-stop(5%, var(--primary)), color-stop(19%, var(--primary)), color-stop(19%, transparent), color-stop(24%, transparent), color-stop(24%, var(--primary)), color-stop(38%, var(--primary)), color-stop(38%, transparent), color-stop(43%, transparent), color-stop(43%, var(--primary)), color-stop(57%, var(--primary)), color-stop(57%, transparent), color-stop(62%, transparent), color-stop(62%, var(--primary)), color-stop(76%, var(--primary)), color-stop(76%, transparent), color-stop(81%, transparent), color-stop(81%, var(--primary)), color-stop(95%, var(--primary)), color-stop(95%, transparent));
+    background: linear-gradient(0deg, transparent, transparent 5%, var(--primary) 5%, var(--primary) 19%, transparent 19%, transparent 24%, var(--primary) 24%, var(--primary) 38%, transparent 38%, transparent 43%, var(--primary) 43%, var(--primary) 57%, transparent 57%, transparent 62%, var(--primary) 62%, var(--primary) 76%, transparent 76%, transparent 81%, var(--primary) 81%, var(--primary) 95%, transparent 95%);
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 24px; }
+
+@-webkit-keyframes battery-charge {
+  0% {
+    -webkit-clip-path: inset(100% 0 0 0);
+            clip-path: inset(100% 0 0 0); }
+  100% {
+    -webkit-clip-path: inset(-18% 0 0 0);
+            clip-path: inset(-18% 0 0 0); } }
+
+@keyframes battery-charge {
+  0% {
+    -webkit-clip-path: inset(100% 0 0 0);
+            clip-path: inset(100% 0 0 0); }
+  100% {
+    -webkit-clip-path: inset(-18% 0 0 0);
+            clip-path: inset(-18% 0 0 0); } }

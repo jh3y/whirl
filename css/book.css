@@ -1,0 +1,63 @@
+/**
+  * Book
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes whirl-book {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  50%,
+  80% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); }
+  90%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); } }
+@keyframes whirl-book {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); }
+  50%,
+  80% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); }
+  90%,
+  100% {
+    opacity: 0;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg); } }
+
+.book {
+  height: 30px;
+  position: relative;
+  width: 30px;
+  -webkit-perspective: 60px;
+          perspective: 60px; }
+  .book div {
+    -webkit-animation: whirl-book 2s infinite;
+            animation: whirl-book 2s infinite;
+    background: var(--primary);
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    width: 100%; }
+  .book div:nth-child(1) {
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s; }
+  .book div:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .book div:nth-child(3) {
+    -webkit-animation-delay: 0.45s;
+            animation-delay: 0.45s; }
+  .book div:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; }
+  .book div:nth-child(5) {
+    -webkit-animation-delay: 0.75s;
+            animation-delay: 0.75s; }

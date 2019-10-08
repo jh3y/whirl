@@ -1,0 +1,32 @@
+/**
+  * Scan
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes scan {
+  0% {
+    background-position: -5px 0; }
+  50% {
+    background-position: 40px 0; }
+  100% {
+    background-position: 40px 50px; } }
+@keyframes scan {
+  0% {
+    background-position: -5px 0; }
+  50% {
+    background-position: 40px 0; }
+  100% {
+    background-position: 40px 50px; } }
+
+.scan:before {
+  -webkit-animation: scan 1s infinite;
+          animation: scan 1s infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, var(--primary)), color-stop(20%, transparent), to(transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(20%, var(--primary)), color-stop(20%, transparent), to(transparent));
+  background: linear-gradient(90deg, var(--primary) 20%, transparent 20%, transparent), linear-gradient(0deg, var(--primary) 20%, transparent 20%, transparent);
+  background-size: 50px 50px;
+  border: 5px solid var(--primary);
+  content: '';
+  height: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 50px; }

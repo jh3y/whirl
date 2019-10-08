@@ -1,0 +1,38 @@
+/**
+  * Spinning coin
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes spinning-coin {
+  0% {
+    -webkit-transform: perspective(160px) rotateY(0deg);
+            transform: perspective(160px) rotateY(0deg); }
+  10% {
+    -webkit-transform: perspective(160px) rotateY(-65deg);
+            transform: perspective(160px) rotateY(-65deg); }
+  90%,
+  100% {
+    -webkit-transform: perspective(160px) rotateY(2880deg);
+            transform: perspective(160px) rotateY(2880deg); } }
+@keyframes spinning-coin {
+  0% {
+    -webkit-transform: perspective(160px) rotateY(0deg);
+            transform: perspective(160px) rotateY(0deg); }
+  10% {
+    -webkit-transform: perspective(160px) rotateY(-65deg);
+            transform: perspective(160px) rotateY(-65deg); }
+  90%,
+  100% {
+    -webkit-transform: perspective(160px) rotateY(2880deg);
+            transform: perspective(160px) rotateY(2880deg); } }
+
+.spinning-coin:before {
+  -webkit-animation: spinning-coin 3s infinite;
+          animation: spinning-coin 3s infinite;
+  border-radius: 100%;
+  background-color: var(--primary);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  content: '';
+  height: 40px;
+  width: 40px; }

@@ -1,0 +1,29 @@
+/**
+  * Color wheel
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.color-wheel:before {
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
+  content: '';
+  display: block;
+  height: 50px;
+  width: 50px;
+  border-width: 25px;
+  border-style: solid;
+  border-left-color: var(--primary);
+  border-bottom-color: var(--secondary);
+  border-radius: 100%;
+  border-right-color: var(--primary);
+  border-top-color: var(--secondary); }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

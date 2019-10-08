@@ -1,0 +1,56 @@
+/**
+  * Outline square
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes outline-square {
+  0% {
+    background: var(--primary);
+    -webkit-transform: translate(-100%, -100%);
+            transform: translate(-100%, -100%); }
+  25% {
+    background: var(--secondary);
+    -webkit-transform: translate(-100%, 100%);
+            transform: translate(-100%, 100%); }
+  50% {
+    background: var(--primary);
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); }
+  75% {
+    background: var(--secondary);
+    -webkit-transform: translate(100%, -100%);
+            transform: translate(100%, -100%); }
+  100% {
+    background: var(--primary);
+    -webkit-transform: translate(-100%, -100%);
+            transform: translate(-100%, -100%); } }
+@keyframes outline-square {
+  0% {
+    background: var(--primary);
+    -webkit-transform: translate(-100%, -100%);
+            transform: translate(-100%, -100%); }
+  25% {
+    background: var(--secondary);
+    -webkit-transform: translate(-100%, 100%);
+            transform: translate(-100%, 100%); }
+  50% {
+    background: var(--primary);
+    -webkit-transform: translate(100%, 100%);
+            transform: translate(100%, 100%); }
+  75% {
+    background: var(--secondary);
+    -webkit-transform: translate(100%, -100%);
+            transform: translate(100%, -100%); }
+  100% {
+    background: var(--primary);
+    -webkit-transform: translate(-100%, -100%);
+            transform: translate(-100%, -100%); } }
+
+.outline-square:before {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 30px;
+  -webkit-animation: outline-square 1.5s infinite;
+          animation: outline-square 1.5s infinite;
+  border-radius: 100%; }

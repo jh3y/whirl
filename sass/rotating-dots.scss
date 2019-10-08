@@ -1,0 +1,70 @@
+/**
+  * rotating-dots
+  *
+  * @author jh3y
+*/
+
+@keyframes rotating-dots {
+  0% {
+    transform: translate(calc(var(--translate) * 1%), 0) rotateY(calc(var(--rotation, 0) * 1deg)) rotate(0deg);
+  }
+  50%, 100% {
+    transform: translate(calc(var(--translate) * 1%), 0) rotateY(calc(var(--rotation, 0) * 1deg)) rotate(180deg);
+  }
+}
+
+@keyframes rotating-dots-flash {
+  0%, 50% {
+    visibility: visible;
+  }
+  50.0001%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+.rotating-dots {
+  --duration: 1;
+  --size: 20;
+
+  height: calc(var(--size) * 1px);
+  position: absolute;
+  width: calc(var(--size) * 1px);
+
+  div {
+    animation: rotating-dots calc(var(--duration) * 1s) calc(var(--delay, 0) * 1s) infinite;
+    height: 100%;
+    position: absolute;
+    transform: translate(calc(var(--translate) * 1%), 0);
+    width: 100%;
+
+    &:after,
+    &:before {
+      background: var(--primary);
+      border-radius: 100%;
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:after {
+      animation: rotating-dots-flash calc(var(--duration) * 1s) calc(var(--delay, 0) * 1s) infinite steps(2);
+      transform: translate(-100%, 0);
+    }
+
+    &:before {
+      transform: translate(100%, 0);
+    }
+
+    &:nth-of-type(1) {
+      --translate: -100;
+    }
+    &:nth-of-type(2) {
+      --delay: calc((var(--duration) / 2) * -1);
+      --rotation: 180;
+      --translate: 100;
+    }
+  }
+
+}

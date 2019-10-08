@@ -1,0 +1,68 @@
+/**
+  * Palette
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes palette {
+  0% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary); }
+  20% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary); }
+  40% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary); }
+  60% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary); }
+  80% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary); }
+  100% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes palette {
+  0% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary); }
+  20% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary); }
+  40% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary); }
+  60% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--secondary); }
+  80% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--primary), 6.18034px 19.02113px 0 0 var(--secondary), -16.18034px 11.75571px 0 0 var(--primary), -16.18034px -11.75571px 0 0 var(--secondary), 6.18034px -19.02113px 0 0 var(--primary); }
+  100% {
+    color: var(--primary);
+    -webkit-box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+            box-shadow: 20px 0px 0 0 var(--secondary), 6.18034px 19.02113px 0 0 var(--primary), -16.18034px 11.75571px 0 0 var(--secondary), -16.18034px -11.75571px 0 0 var(--primary), 6.18034px -19.02113px 0 0 var(--primary);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.palette:before {
+  content: '';
+  display: block;
+  height: 12px;
+  width: 12px;
+  -webkit-animation: palette 2s infinite linear;
+          animation: palette 2s infinite linear;
+  border-radius: 100%; }

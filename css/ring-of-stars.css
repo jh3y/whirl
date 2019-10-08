@@ -1,0 +1,69 @@
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+/**
+  * Ring of stars
+  *
+  * @author jh3y
+*/
+.ring-of-stars {
+  -webkit-animation: spin 1.25s infinite linear;
+          animation: spin 1.25s infinite linear;
+  height: 50px;
+  position: relative;
+  width: 50px; }
+  .ring-of-stars div {
+    border-bottom: 9.6px solid var(--primary);
+    border-left: 3.2px solid transparent;
+    border-right: 3.2px solid transparent;
+    height: 0;
+    position: relative;
+    width: 0;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform-origin: center 9.6px;
+            transform-origin: center 9.6px; }
+    .ring-of-stars div:after, .ring-of-stars div:before {
+      border-bottom: 6.4px solid var(--primary);
+      border-left: 9.6px solid transparent;
+      border-right: 9.6px solid transparent;
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      width: 0; }
+    .ring-of-stars div:after {
+      -webkit-transform: translate(-9.6px, 6.4px) rotate(-35deg);
+              transform: translate(-9.6px, 6.4px) rotate(-35deg); }
+    .ring-of-stars div:before {
+      -webkit-transform: translate(-9.6px, 6.4px) rotate(35deg);
+              transform: translate(-9.6px, 6.4px) rotate(35deg); }
+    .ring-of-stars div:nth-child(1) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(51.42857deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(51.42857deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(2) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(102.85714deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(102.85714deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(3) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(154.28571deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(154.28571deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(4) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(205.71429deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(205.71429deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(5) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(257.14286deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(257.14286deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(6) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(308.57143deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(308.57143deg) translate(0, 400%); }
+    .ring-of-stars div:nth-child(7) {
+      -webkit-transform: translate(-50%, -9.6px) rotate(360deg) translate(0, 400%);
+              transform: translate(-50%, -9.6px) rotate(360deg) translate(0, 400%); }

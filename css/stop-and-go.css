@@ -1,0 +1,36 @@
+/**
+  * Stop and go
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes stop-and-go {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  60% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg); }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg); } }
+@keyframes stop-and-go {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  60% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg); }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg); } }
+
+.stop-and-go:before {
+  -webkit-animation: stop-and-go 1s infinite;
+          animation: stop-and-go 1s infinite;
+  border: 25px solid var(--primary);
+  border-left-color: transparent;
+  border-radius: 100%;
+  border-right-color: transparent;
+  content: '';
+  height: 50px;
+  width: 50px; }

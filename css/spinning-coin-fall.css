@@ -1,0 +1,54 @@
+/**
+  * Spinning coin fall
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes spinning-coin-fall {
+  0% {
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(0deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(0deg) rotateX(0deg); }
+  10% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(-65deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(-65deg) rotateX(0deg); }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(1440deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(1440deg) rotateX(0deg); }
+  90%,
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(2880deg) rotateX(90deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(2880deg) rotateX(90deg); } }
+@keyframes spinning-coin-fall {
+  0% {
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(0deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(0deg) rotateX(0deg); }
+  10% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(-65deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(-65deg) rotateX(0deg); }
+  70% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(1440deg) rotateX(0deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(1440deg) rotateX(0deg); }
+  90%,
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) perspective(160px) rotateY(2880deg) rotateX(90deg);
+            transform: translate(-50%, -50%) perspective(160px) rotateY(2880deg) rotateX(90deg); } }
+
+.spinning-coin-fall:before {
+  -webkit-animation: spinning-coin-fall 3s infinite;
+          animation: spinning-coin-fall 3s infinite;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 40px; }

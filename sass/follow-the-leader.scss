@@ -1,0 +1,45 @@
+/**
+  * follow-the-leader
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 14px;
+$no-of-el: 5;
+$delay: .25s;
+$color: #ffffff;
+$duration: $no-of-el * ($delay * 1.5);
+$radius: -200%;
+
+
+@keyframes follow-the-leader {
+  0% {
+    transform: rotate(0deg) translateY($radius);
+  }
+  60%,
+  100% {
+    transform: rotate(360deg) translateY($radius);
+  }
+}
+
+.follow-the-leader {
+  height: $size;
+  position: relative;
+  width: $size;
+
+  div {
+    animation: follow-the-leader $duration infinite backwards;
+    background-color: $color;
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    @for $el from 1 through $no-of-el {
+      &:nth-child(#{$el}) {
+        animation-delay: #{$el * .15s};
+        background-color: transparentize($color, (($el / 2) * 20) / 100);
+      }
+    }
+  }
+}

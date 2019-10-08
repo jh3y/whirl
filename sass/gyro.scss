@@ -1,0 +1,42 @@
+/**
+  * Gyro
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$duration : 2s;
+$radius-lg: 250;
+$size: 20px;
+
+@keyframes gyro {
+  0% {
+    transform: scale(1) rotate(0deg) translateY(calc(var(--radius) * 1%));
+  }
+  50% {
+    transform: scale(.5) rotate(1440deg) translateY(0);
+  }
+  100% {
+    transform: scale(1) rotate(2920deg) translateY(calc(var(--radius) * 1%));
+  }
+}
+
+.gyro {
+  &:after,
+  &:before {
+    --radius: #{$radius-lg};
+    animation: gyro $duration infinite linear;
+    background: $color-one;
+    border-radius: 100%;
+    content: '';
+    height: $size;
+    width: $size;
+    position: absolute;
+  }
+
+  &:before {
+    --radius: #{-$radius-lg};
+    background: $color-two;
+  }
+}

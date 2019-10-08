@@ -1,0 +1,44 @@
+/**
+  * Combine
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes combine {
+  25% {
+    -webkit-transform: translate(0, -80%);
+            transform: translate(0, -80%); }
+  75% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); } }
+@keyframes combine {
+  25% {
+    -webkit-transform: translate(0, -80%);
+            transform: translate(0, -80%); }
+  75% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%); } }
+
+.combine {
+  height: 30px;
+  position: relative;
+  width: 30px; }
+  .combine div {
+    --rotation: 45;
+    position: absolute;
+    -webkit-transform: rotate(calc(var(--rotation) * 1deg));
+            transform: rotate(calc(var(--rotation) * 1deg)); }
+    .combine div:after {
+      -webkit-animation: combine .85s infinite ease;
+              animation: combine .85s infinite ease;
+      border: 15px solid transparent;
+      border-top-color: var(--primary);
+      content: '';
+      display: block;
+      height: 30px;
+      width: 30px; }
+    .combine div:nth-child(2) {
+      --rotation: 135; }
+    .combine div:nth-child(3) {
+      --rotation: 225; }
+    .combine div:nth-child(4) {
+      --rotation: 315; }

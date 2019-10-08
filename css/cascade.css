@@ -1,0 +1,57 @@
+/**
+  * Cascade
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes cascade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%); }
+  30%,
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
+@keyframes cascade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%); }
+  30%,
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
+
+.cascade {
+  height: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-gap: 5px; }
+  .cascade div {
+    background: var(--primary); }
+    .cascade div:nth-child(1) {
+      -webkit-animation: cascade 1.5s 0.15s ease infinite backwards;
+              animation: cascade 1.5s 0.15s ease infinite backwards; }
+    .cascade div:nth-child(2) {
+      -webkit-animation: cascade 1.5s 0.3s ease infinite backwards;
+              animation: cascade 1.5s 0.3s ease infinite backwards; }
+    .cascade div:nth-child(3) {
+      -webkit-animation: cascade 1.5s 0.45s ease infinite backwards;
+              animation: cascade 1.5s 0.45s ease infinite backwards; }
+    .cascade div:nth-child(4) {
+      -webkit-animation: cascade 1.5s 0.6s ease infinite backwards;
+              animation: cascade 1.5s 0.6s ease infinite backwards; }
+    .cascade div:nth-child(5) {
+      -webkit-animation: cascade 1.5s 0.75s ease infinite backwards;
+              animation: cascade 1.5s 0.75s ease infinite backwards; }

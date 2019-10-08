@@ -1,0 +1,39 @@
+/**
+  * Flippers
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes flippers {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(-180deg);
+            transform: perspective(40px) rotateY(-180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+@keyframes flippers {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(-180deg);
+            transform: perspective(40px) rotateY(-180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+
+.flippers {
+  height: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-gap: 5px; }
+  .flippers div {
+    -webkit-animation: flippers calc(1.25 * 1s) calc(var(--delay) * 1s) infinite ease;
+            animation: flippers calc(1.25 * 1s) calc(var(--delay) * 1s) infinite ease;
+    background-color: var(--primary); }
+    .flippers div:nth-of-type(1) {
+      --delay: 0.25; }
+    .flippers div:nth-of-type(2) {
+      --delay: 0.5; }
+    .flippers div:nth-of-type(3) {
+      --delay: 0.75; }
+    .flippers div:nth-of-type(4) {
+      --delay: 1; }
+    .flippers div:nth-of-type(5) {
+      --delay: 1.25; }

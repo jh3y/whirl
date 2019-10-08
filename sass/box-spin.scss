@@ -1,0 +1,29 @@
+@import 'common/spin';
+/**
+  * Box spin
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 50px;
+
+.box-spin {
+  animation: spin 3s infinite linear;
+  height: $size;
+  position: relative;
+  width: $size;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 25px;
+    width: 25px;
+    animation: spin .5s infinite;
+    background: var(--primary, #fff);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+}

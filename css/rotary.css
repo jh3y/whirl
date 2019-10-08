@@ -1,0 +1,41 @@
+/**
+  * Rotary
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes rotary {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(150%) scale(1);
+            transform: rotate(0deg) translateX(150%) scale(1); }
+  25% {
+    -webkit-transform: rotate(90deg) translateX(150%) scale(0);
+            transform: rotate(90deg) translateX(150%) scale(0); }
+  75% {
+    -webkit-transform: rotate(270deg) translateX(150%) scale(1.5);
+            transform: rotate(270deg) translateX(150%) scale(1.5); }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(150%) scale(1);
+            transform: rotate(360deg) translateX(150%) scale(1); } }
+@keyframes rotary {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(150%) scale(1);
+            transform: rotate(0deg) translateX(150%) scale(1); }
+  25% {
+    -webkit-transform: rotate(90deg) translateX(150%) scale(0);
+            transform: rotate(90deg) translateX(150%) scale(0); }
+  75% {
+    -webkit-transform: rotate(270deg) translateX(150%) scale(1.5);
+            transform: rotate(270deg) translateX(150%) scale(1.5); }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(150%) scale(1);
+            transform: rotate(360deg) translateX(150%) scale(1); } }
+
+.rotary:before {
+  -webkit-animation: rotary 1s infinite linear;
+          animation: rotary 1s infinite linear;
+  background-color: var(--primary);
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 25px;
+  width: 25px; }

@@ -1,0 +1,28 @@
+/**
+  * Color wheel
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 50px;
+$color-one: var(--primary);
+$color-two: var(--secondary);
+$color-three: var(--primary);
+$color-four: var(--secondary);
+
+.color-wheel:before {
+  animation: spin .5s infinite linear;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+  border-width: $size / 2;
+  border-style: solid;
+  border-left-color: $color-one;
+  border-bottom-color: $color-two;
+  border-radius: 100%;
+  border-right-color: $color-three;
+  border-top-color: $color-four;
+}
+
+@import 'common/spin';

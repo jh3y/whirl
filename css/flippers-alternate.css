@@ -1,0 +1,58 @@
+/**
+  * Flippers alternate
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes flippers {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(-180deg);
+            transform: perspective(40px) rotateY(-180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+@keyframes flippers {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(-180deg);
+            transform: perspective(40px) rotateY(-180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+
+@-webkit-keyframes flippers-alternate {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(180deg);
+            transform: perspective(40px) rotateY(180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+
+@keyframes flippers-alternate {
+  0% {
+    -webkit-transform: perspective(40px) rotateY(180deg);
+            transform: perspective(40px) rotateY(180deg); }
+  50% {
+    -webkit-transform: perspective(40px) rotateY(0deg);
+            transform: perspective(40px) rotateY(0deg); } }
+
+.flippers-alternate {
+  height: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  grid-gap: 5px; }
+  .flippers-alternate div {
+    background-color: var(--primary); }
+    .flippers-alternate div:nth-of-type(1) {
+      -webkit-animation: flippers-alternate 1.25s 0.25s infinite ease;
+              animation: flippers-alternate 1.25s 0.25s infinite ease; }
+    .flippers-alternate div:nth-of-type(2) {
+      -webkit-animation: flippers 1.25s 0.5s infinite ease;
+              animation: flippers 1.25s 0.5s infinite ease; }
+    .flippers-alternate div:nth-of-type(3) {
+      -webkit-animation: flippers-alternate 1.25s 0.75s infinite ease;
+              animation: flippers-alternate 1.25s 0.75s infinite ease; }
+    .flippers-alternate div:nth-of-type(4) {
+      -webkit-animation: flippers 1.25s 1s infinite ease;
+              animation: flippers 1.25s 1s infinite ease; }
+    .flippers-alternate div:nth-of-type(5) {
+      -webkit-animation: flippers-alternate 1.25s 1.25s infinite ease;
+              animation: flippers-alternate 1.25s 1.25s infinite ease; }

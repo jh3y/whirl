@@ -1,0 +1,76 @@
+/**
+  * Feeder
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 20px;
+$color: var(--primary);
+
+@keyframes fed {
+  0% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0) scale(2.5);
+  }
+  40%,
+  60% {
+    transform: translateX(0) scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(500%);
+  }
+}
+
+@keyframes feed {
+  0% {
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(500%);
+  }
+}
+
+.feeder {
+  height: $size;
+  position: relative;
+  width: $size;
+
+  div {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: fed;
+    animation-fill-mode: backwards;
+    animation-delay: calc(var(--delay) * 1s);
+    background-color: $color;
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      animation-name: feed;
+    }
+    &:nth-child(2) {
+      --delay: .25;
+    }
+    &:nth-child(3) {
+      --delay: .5;
+    }
+  }
+}

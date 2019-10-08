@@ -1,0 +1,62 @@
+/**
+  * flip-square-travel
+  *
+  * @author jh3y - jheytompkins.com
+*/
+.flip-square-travel {
+  -webkit-animation: flip-square-travel-switch 2s infinite linear;
+          animation: flip-square-travel-switch 2s infinite linear;
+  height: 50px;
+  -webkit-perspective: 150px;
+          perspective: 150px;
+  position: relative;
+  width: 50px; }
+  .flip-square-travel:before {
+    -webkit-animation: flip-square-travel 1s infinite;
+            animation: flip-square-travel 1s infinite;
+    background-color: var(--primary);
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom; }
+
+@-webkit-keyframes flip-square-travel-switch {
+  0%, 50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50.001%, 100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
+@keyframes flip-square-travel-switch {
+  0%, 50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  50.001%, 100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
+@-webkit-keyframes flip-square-travel {
+  0% {
+    -webkit-transform: translate(0, 0) rotateX(0deg);
+            transform: translate(0, 0) rotateX(0deg); }
+  50% {
+    -webkit-transform: translate(0, -100%) rotateX(0deg);
+            transform: translate(0, -100%) rotateX(0deg); }
+  100% {
+    -webkit-transform: translate(0, -100%) rotateX(-180deg);
+            transform: translate(0, -100%) rotateX(-180deg); } }
+
+@keyframes flip-square-travel {
+  0% {
+    -webkit-transform: translate(0, 0) rotateX(0deg);
+            transform: translate(0, 0) rotateX(0deg); }
+  50% {
+    -webkit-transform: translate(0, -100%) rotateX(0deg);
+            transform: translate(0, -100%) rotateX(0deg); }
+  100% {
+    -webkit-transform: translate(0, -100%) rotateX(-180deg);
+            transform: translate(0, -100%) rotateX(-180deg); } }

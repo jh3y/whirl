@@ -1,0 +1,36 @@
+/**
+  * Radial
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes radial {
+  0% {
+    -webkit-transform: rotate(calc(var(--base) * 1deg)) translateY(150%);
+            transform: rotate(calc(var(--base) * 1deg)) translateY(150%); }
+  100% {
+    -webkit-transform: rotate(calc((var(--base) + 1440) * 1deg)) translateY(150%);
+            transform: rotate(calc((var(--base) + 1440) * 1deg)) translateY(150%); } }
+@keyframes radial {
+  0% {
+    -webkit-transform: rotate(calc(var(--base) * 1deg)) translateY(150%);
+            transform: rotate(calc(var(--base) * 1deg)) translateY(150%); }
+  100% {
+    -webkit-transform: rotate(calc((var(--base) + 1440) * 1deg)) translateY(150%);
+            transform: rotate(calc((var(--base) + 1440) * 1deg)) translateY(150%); } }
+
+.radial:after, .radial:before {
+  background-color: var(--color);
+  -webkit-animation: radial 0.75s infinite linear;
+          animation: radial 0.75s infinite linear;
+  content: '';
+  display: block;
+  height: 10px;
+  width: 5px; }
+
+.radial:after {
+  --color: var(--secondary);
+  --base: 0; }
+
+.radial:before {
+  --base: 180;
+  --color: var(--primary); }

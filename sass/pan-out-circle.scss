@@ -1,0 +1,41 @@
+@import 'common/utils';
+/**
+  * pan-out-circle
+  *
+  * @author jh3y
+*/
+$children: 8;
+
+@keyframes pan-out-circle {
+  0%, 30%, 50%, 100% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px)) scale(0);
+  }
+  40% {
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 1px)) scale(1);
+  }
+}
+
+.pan-out-circle {
+  --radius: 30;
+  --size: 15;
+  @include sizeCSS(size);
+  position: absolute;
+
+  div {
+    animation: pan-out-circle 1.5s calc(var(--delay) * 1s) infinite ease;
+    background: var(--primary);
+    border-radius: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotate(calc(var(--angle) * 1deg)) translate(0, calc(var(--radius) * 0px));
+    width: 100%;
+
+    @for $c from 1 through $children {
+      &:nth-child(#{$c}) {
+        --angle: #{(360 / $children) * $c};
+        --delay: #{$c * 0.1};
+      }
+    }
+  }
+
+}

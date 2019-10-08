@@ -1,0 +1,97 @@
+
+/**
+  * push-pop
+  * lil push pop effect, push one side out and one side in
+  * @author jh3y
+*/
+
+.push-pop {
+  --duration: .85;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+
+  // Use the first div for shifting the block from side to side
+  & > div:nth-of-type(1) {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    animation: push-pop-slide calc(var(--duration) * 1s) infinite alternate ease-in-out;
+    transform: translate(0, -100%);
+    top: 100%;
+    left: 0;
+
+    &:after {
+      animation: push-pop-flip calc(var(--duration) * 1s) infinite alternate ease-in-out;
+      background: var(--primary);
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  // Use the second for the staionary pillar
+  & > div:nth-of-type(2) {
+    background: var(--primary);
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -100%);
+    width: 20px;
+  }
+
+  // Use the pseudo elements for the shifting pillars
+  &:after,
+  &:before {
+    animation-name: push-pop-pushed;
+    animation-duration: calc(var(--duration) * 1s);
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    background: var(--primary);
+    bottom: 0;
+    content: '';
+    height: 40px;
+    position: absolute;
+    width: 20px;
+  }
+
+  &:before {
+    animation-direction: alternate-reverse;
+    left: 0;
+  }
+
+  &:after {
+    animation-direction: alternate;
+    right: 0;
+  }
+}
+
+@keyframes push-pop-pushed {
+  0%, 72.5% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes push-pop-flip {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, -80px) rotate(90deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(180deg);
+  }
+}
+
+@keyframes push-pop-slide {
+  to {
+    transform: translate(0, -100%) translate(80px, 0);
+  }
+}

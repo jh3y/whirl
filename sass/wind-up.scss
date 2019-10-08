@@ -1,0 +1,43 @@
+/**
+  * Wind up
+  *
+  * @author jh3y
+*/
+
+$size: 50px;
+$border: 6px;
+$color: var(--primary);
+
+@keyframes wind-up {
+  0% {
+    transform: rotate(0deg);
+  }
+  10%,
+  15% {
+    transform: rotate(-90deg);
+  }
+  20%,
+  25% {
+    transform: rotate(-180deg);
+  }
+  30%,
+  35% {
+    transform: rotate(-270deg);
+  }
+  40%,
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.wind-up:before {
+  animation: wind-up 3s infinite;
+  border: $border solid $color;
+  content: '';
+  display: block;
+  height: $size;
+  width: $size;
+}

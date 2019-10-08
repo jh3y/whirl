@@ -1,0 +1,48 @@
+/**
+  * Dots flow
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 16px;
+$no-of-dots: 3;
+$margin: 10px;
+$y: $size * 2;
+$x2: $margin + $size;
+$x1: -($x2);
+$scale: $size / 4;
+
+.dots-flow:before {
+  animation: dots-flow .85s infinite ease;
+  border-radius: 100%;
+  content: '';
+  height: $size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -($size * 2.5));
+  width: $size;
+}
+
+@keyframes dots-flow {
+  0%, 100% {
+    box-shadow: $x1 $y 0px 0 white,
+      0px $y 0 0 white,
+      $x2 $y 0 0 white;
+  }
+  35% {
+    box-shadow: $x1 $y 0 $scale purple,
+      0px $y 0 0 white,
+      $x2 $y 0 0 white;
+  }
+  50% {
+    box-shadow: $x1 $y 0 0 white,
+      0px $y 0 $scale purple,
+      $x2 $y 0 0 white;
+  }
+  65% {
+    box-shadow: $x1 $y 0px 0 white,
+      0px $y 0 0 white,
+      $x2 $y 0 $scale purple;
+  }
+}

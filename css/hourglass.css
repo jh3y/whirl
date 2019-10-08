@@ -1,0 +1,86 @@
+/**
+  * Hourglass spin
+  *
+  * A little trickier to implement. Requires a little though about
+  * animation timings and when things should happen etc.
+  *
+  * @author jh3y - jheytompkins.com
+*/
+@-webkit-keyframes hourglass-spin {
+  0%, 10% {
+    background-position: 0 90%; }
+  40%,
+  60% {
+    background-position: 0 10%; }
+  90%,
+  100% {
+    background-position: 0 -70%; } }
+@keyframes hourglass-spin {
+  0%, 10% {
+    background-position: 0 90%; }
+  40%,
+  60% {
+    background-position: 0 10%; }
+  90%,
+  100% {
+    background-position: 0 -70%; } }
+
+@-webkit-keyframes hourglass-container-spin {
+  0%,
+  40% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  50%,
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); } }
+
+@keyframes hourglass-container-spin {
+  0%,
+  40% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+  50%,
+  90% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); } }
+
+.hourglass {
+  -webkit-animation: hourglass-container-spin 4s infinite;
+          animation: hourglass-container-spin 4s infinite;
+  height: 40px;
+  position: relative;
+  width: 40px; }
+  .hourglass:after, .hourglass:before {
+    background-size: 100% 300%;
+    border-radius: 100%;
+    border: 4px solid var(--primary);
+    height: 40px;
+    width: 40px;
+    -webkit-animation-name: hourglass-spin;
+            animation-name: hourglass-spin;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    content: '';
+    position: absolute;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(50%, transparent), color-stop(50%, var(--secondary)), to(var(--secondary)));
+    background-image: linear-gradient(0deg, transparent, transparent 50%, var(--secondary) 50%, var(--secondary)); }
+  .hourglass:after {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  .hourglass:before {
+    -webkit-animation-delay: -2s;
+            animation-delay: -2s;
+    animation-direction: reverse;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }

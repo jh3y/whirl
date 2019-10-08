@@ -1,0 +1,40 @@
+/**
+  * Rays
+  *
+  * @author jh3y
+*/
+@-webkit-keyframes rays {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes rays {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.rays:after, .rays:before {
+  border-radius: 100%;
+  content: '';
+  position: absolute; }
+
+.rays:after {
+  -webkit-animation: rays 1.5s infinite;
+          animation: rays 1.5s infinite;
+  border: 10px solid var(--primary);
+  height: 100px;
+  width: 100px; }
+
+.rays:before {
+  background: var(--primary);
+  height: 20px;
+  width: 20px; }

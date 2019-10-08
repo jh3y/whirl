@@ -1,0 +1,29 @@
+/**
+  * Duo
+  *
+  * @author jh3y - jhey.dev
+*/
+.duo:before {
+  height: 50px;
+  width: 50px;
+  content: '';
+  display: block;
+  -webkit-animation: spin .5s infinite linear;
+          animation: spin .5s infinite linear;
+  border-width: 6px;
+  border-style: solid;
+  border-bottom-color: var(--primary);
+  border-top-color: var(--primary);
+  border-left-color: var(--secondary);
+  border-radius: 100%;
+  border-right-color: var(--secondary); }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

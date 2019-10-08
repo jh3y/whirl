@@ -1,0 +1,108 @@
+
+/**
+  * push-out
+  * lil push out effect, push one side out and one side in
+  * @author jh3y
+*/
+
+.push-out {
+  --duration: .85;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  overflow: hidden;
+
+  // Use the first div for shifting the block from side to side
+  & > div:nth-of-type(1) {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    animation: push-out-slide calc(var(--duration) * 1s) infinite alternate ease-in-out;
+    transform: translate(0, -100%);
+    top: 100%;
+    left: 0;
+
+    &:after {
+      animation: push-out-flip calc(var(--duration) * 1s) infinite alternate ease-in-out;
+      background: var(--primary);
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  // Use the second for the staionary pillar
+  & > div:nth-of-type(2) {
+    background: var(--primary);
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -100%);
+    width: 20px;
+  }
+
+  // Use the pseudo elements for the shifting pillars
+  &:after,
+  &:before {
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: calc(var(--duration) * 4s);
+    background: var(--primary);
+    bottom: 0;
+    content: '';
+    height: 40px;
+    position: absolute;
+    width: 20px;
+  }
+
+  &:after {
+    animation-name: push-out-pushed-1;
+    right: 0;
+  }
+
+  &:before {
+    animation-name: push-out-pushed-2;
+    left: 0;
+  }
+
+}
+
+@keyframes push-out-pushed-1 {
+  0%, 18.125%, 50%, 68.125%, 100% {
+    transform: translate(0, 0);
+  }
+  25%, 43.125%, 75%, 93.125% {
+    transform: translate(0, 100%);
+  }
+
+}
+
+@keyframes push-out-pushed-2 {
+  0%, 18.125%, 50%, 68.125%, 100% {
+    transform: translate(0, 100%);
+  }
+  25%, 43.125%, 75%, 93.125% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes push-out-flip {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, -80px) rotate(90deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(180deg);
+  }
+}
+
+@keyframes push-out-slide {
+  to {
+    transform: translate(0, -100%) translate(80px, 0);
+  }
+}
