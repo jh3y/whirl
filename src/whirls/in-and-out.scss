@@ -59,7 +59,6 @@ $duration: 1s;
         animation: in-and-out-children $duration infinite ease;
       }
     }
-
     &:nth-of-type(2) {
       --multiplier: 2;
       animation: in-and-out-two $duration infinite ease both;
@@ -67,6 +66,7 @@ $duration: 1s;
         animation: in-and-out-two-children $duration infinite ease;
       }
     }
+
 
   }
 

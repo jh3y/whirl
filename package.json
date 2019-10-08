@@ -31,13 +31,14 @@
     "postpublish": "rm -rf dist css sass",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npm run lint",
+    "test": "yarn lint",
     "eject": "react-scripts eject",
     "add-whirl": "node utils/add-whirl",
     "publish-package": "export FOR_PACKAGE=true && mkdir -pv css && cp -rf src/whirls sass && node utils/publish",
     "publish-css": "export FOR_PACKAGE=false && mkdir -pv dist/css && cp -rf src/whirls dist/sass && cp README.md dist/README.md && node utils/publish",
     "precommit": "lint-staged",
-    "lint": "eslint src",
+    "lint": "yarn lint:scripts && yarn lint:whirls",
+    "lint:scripts": "eslint src",
     "lint:whirls": "stylelint 'src/**/*.scss' --syntax scss"
   },
   "lint-staged": {
