@@ -8,7 +8,7 @@
 $size: 50px;
 
 .box-spin {
-  animation: spin 3s infinite linear;
+  animation: spin 2s infinite linear;
   height: $size;
   position: relative;
   width: $size;
@@ -18,7 +18,7 @@ $size: 50px;
     display: block;
     height: 25px;
     width: 25px;
-    animation: spin .5s infinite;
+    animation: spin .4s infinite;
     background: var(--primary, #fff);
     position: absolute;
     left: 50%;
