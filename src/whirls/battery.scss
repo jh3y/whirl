@@ -10,7 +10,7 @@ $height: $width * 1.5;
   height: $height;
   width: $width;
   background: transparent;
-  border-radius: 2px;
+  border-radius: 3px;
   border: 5px solid var(--primary);
   position: relative;
 
@@ -23,7 +23,7 @@ $height: $width * 1.5;
     bottom: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    border-radius: 2px;
+    border-radius: 3px;
   }
 
   &:after {
