@@ -70,7 +70,7 @@ By default, your new animation will be `active` and added to the config file at 
 ```
 Feel free to change this file if you wish to apply a different class name or switch animations on or off 👍
 
-Open a PR following the PR template. Your commit message needn't be complex;
+Open a PR following the PR template. Your commit message needn't be complex; Happy Coding :jack_o_lantern:
 
 `feat: add awesome-whirl animation`
 
