@@ -27,7 +27,7 @@ yarn start
 Run `yarn run` to see a list of available commands.
 
 ### Adding a new loading animation 👟
-These are the steps for adding a new loading animation.
+These are the steps for adding a new loading animation. :octocat: 
 
 From the root of the cloned repo run:
 ```shell
