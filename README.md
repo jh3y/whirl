@@ -2,7 +2,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d3e57ac0-62c4-4f24-85a8-70b6468c0245/deploy-status)](https://app.netlify.com/sites/whirl/deploys)
 <!-- DROP SOME TRAVIS AND NETLIFY GOODIES HERE -->
 # Whirl
-## CSS loading animations with minimal effort!
+## CSS loading animations in minimal effort!
 
 [![Whirl](https://raw.github.com/jh3y/pics/master/whirl/whirl.gif)](https://raw.github.com/jh3y/pics/master/whirl/whirl.gif)
 
