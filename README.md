@@ -9,7 +9,7 @@
 `whirl` is a curation of CSS loading animations(whirls! 😅). It started as a drop in `CSS` file to get easy animations using `:pseudo` elements. It's now a collection of loading animations to use, take inspiration from, change and do what you want with 👍
 
 ### No CSS distro?
-It's inefficient. It's likely an app will only use one or two loaders. Pulling them all into an app would be overkill. Most projects use some form of bundling making it possible to import a single loader's styles.
+It's inefficient. It's likely an app will only use one or two loaders. Pulling them all into an app would be overkill. Most projects use some form of bundling making it possible to import a single loader's styles.An animation lets an element gradually change from one style to another. You can change as many CSS properties you want, as many times you want.
 
 ### Usage
 You've got different options here.
