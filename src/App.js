@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef, Fragment } from 'react'
+import favicon from './favicon.js'
 import config from './whirl.config.json'
 const whirls = config.whirls.filter(w => w.active)
+
 /**
  * Create rendering groups for the dropdown
  */
@@ -50,9 +52,21 @@ const App = () => {
     whirls[Math.floor(Math.random() * whirls.length)]
   )
   const select = useRef(null)
+  const faviconDebug = useRef(null)
   const selectRandomWhirl = () => setSelected(getSelection(selected))
   const selectWhirl = () =>
     setSelected(whirls.filter(w => w.name === select.current.value)[0])
+
+  const selectLoadingFavicon = async ev => {
+    faviconDebug.current.title = ev.target.value
+    if (ev.target.value) {
+      const url = await favicon.loading(ev.target.value)
+      faviconDebug.current.style.backgroundImage = `url(${url})`
+    } else {
+      favicon.stop()
+      faviconDebug.current.style.backgroundImage = 'none'
+    }
+  }
 
   // When the selection changes, update the selected whirl
   useEffect(() => {
@@ -108,6 +122,17 @@ const App = () => {
         <button disabled={loading} onClick={selectRandomWhirl}>
           Lucky Dip!
         </button>
+        <div className="select-wrapper">
+          <label>
+            Favicon:&nbsp;
+            <select onChange={selectLoadingFavicon}>
+              <option value="">[ none ]</option>
+              <option>basic</option>
+              <option>ring-of-dots</option>
+            </select>
+          </label>
+        </div>
+        <div id="favicon-debug" ref={faviconDebug}></div>
       </div>
       <a
         target="_blank"
