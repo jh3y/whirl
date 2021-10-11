@@ -31,7 +31,7 @@ const icons = {
     ctx.fillRect(0, 0, 16 * scale, 16 * scale)
 
     for (let i = 0; i < turn; i += turn / 7) {
-      if (floor((i * 7) / turn) == floor(t * 7)) {
+      if (floor((i * 7) / turn) === floor(t * 7)) {
         ctx.fillStyle = primary
       } else {
         ctx.fillStyle = secondary
