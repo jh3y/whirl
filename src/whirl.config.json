@@ -512,6 +512,16 @@
       "active": true
     },
     {
+      "name": "orbit-star",
+      "className": "orbit-star",
+      "requiredElements": [
+        1,
+        2,
+        1
+      ],
+      "active": true
+    },
+    {
       "className": "outline-square",
       "name": "outline-square",
       "requiredElements": [
