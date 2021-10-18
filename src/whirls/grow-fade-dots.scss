@@ -1,0 +1,51 @@
+/**
+  * grow-fade-dots
+  *
+  * @author jh3y - jheytompkins.com
+*/
+
+$size: 25px;
+$color: #F7E014;
+$color-2: #017F7B;
+$b-radius: 50%;
+
+
+
+.grow-fade-dots {
+  animation: mover 1s infinite  alternate;
+  transform-origin: bottom center;
+  div {
+    border-radius: $b-radius;
+    display: inline-block;
+    margin: 5px;
+    height: $size;
+    width: $size;
+    transform: scale(0);
+    animation: grow 1.5s linear infinite;
+    background-color: $color;
+  
+    &:nth-of-type(2), &:nth-of-type(4) {
+          animation-delay: .75s;
+          background-color: $color-2;
+    }
+  }
+}
+
+@keyframes grow {
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+  
