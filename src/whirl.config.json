@@ -395,6 +395,15 @@
       "active": true
     },
     {
+      "name": "grow-fade-dots",
+      "className": "grow-fade-dots",
+      "requiredElements": [
+        1,
+        4
+      ],
+      "active": true
+    },
+    {
       "name": "four-dots",
       "className": "four-dots",
       "requiredElements": [
