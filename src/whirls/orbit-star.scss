@@ -1,0 +1,100 @@
+
+/**
+  * orbit-star
+  *
+  * @author Aurélio A. Heckert - http://aurium.one
+*/
+
+$size: 100px;
+$color: var(--primary);
+$rock: var(--secondary);
+
+@keyframes orbit-star {
+  0% {
+    transform: rotate(0deg) scale(var(--scale));
+  }
+  100% {
+    transform: rotate(-360deg) scale(var(--scale));
+  }
+}
+
+.orbit-star, .orbit-star > div {
+  --scale: 1;
+  height: $size;
+  width: $size;
+  position: relative;
+  animation: linear orbit-star 9s infinite;
+  &:before {
+    content: '';
+    display: block;
+    height: $size;
+    width: $size / 2;
+    background: transparent;
+    border-radius: $size/2 0 0 $size/2;
+    border: none;
+    border-bottom: $size/20 solid $color;
+    border-left: $size/50 solid $color;
+    border-top: 0 solid $color;
+    opacity: 0.3;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: $size * .38;
+    left: $size * .38;
+    height: $size * .24;
+    width: $size * .24;
+    background: $color;
+    border-radius: $size/6;
+  }
+}
+
+.orbit-star > div:nth-child(1) {
+  position: absolute;
+  top: $size * .25;
+  left: $size * .25;
+  width: $size * .5;
+  height: $size * .5;
+  animation: linear orbit-star 7s infinite;
+  &:before {
+    height: $size * .5;
+    width: $size * .25;
+    border-bottom: $size/25 solid $color;
+    border-left: $size/50 solid $color;
+  }
+  &:after {
+    top: $size * .44;
+    left: $size * .22;
+    width: $size / 12;
+    height: $size / 12;
+    background: $rock;
+  }
+}
+
+
+.orbit-star > div:nth-child(2) {
+  --scale: .333;
+  top: -52.5%;
+  &:before {
+    border-bottom: $size/8 solid $color;
+    border-left: $size/30 solid $color;
+  }
+  &:after {
+    top: $size * .29;
+    left: $size * .29;
+    width: $size * .42;
+    height: $size * .42;
+    border-radius: $size * .29;
+    background: $rock;
+  }
+  & > div {
+    position: absolute;
+    background: $rock;
+    width: $size / 5;
+    height: $size / 5;
+    bottom: - $size / 18;
+    left: $size * .4;
+    border-radius: $size/10;
+  }
+}
