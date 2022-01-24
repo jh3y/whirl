@@ -78,7 +78,7 @@ button {
   cursor: pointer;
   background: $white;
   font-size: 1rem;
-  margin: 0 0 0 10px;
+  margin: 0 50px 0 10px;
   padding: 15px;
 
   &:hover {
@@ -90,6 +90,13 @@ button {
     background: $bg;
   }
 
+}
+
+#favicon-debug {
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+  background-size: 32px;
 }
 
 #root {
