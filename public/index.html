@@ -120,12 +120,37 @@
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
+      
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
+        
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
+    <script>
+    var canvas = document.createElement("canvas");
+    var image = document.createElement("img");
+    image.src = "/favicon.ico";
+    canvas.height = canvas.width = image.height = image.width = 64;
+    var context = canvas.getContext("2d");
+    var favicon = document.querySelector('link[rel*="icon"]');
+    var degrees = 0;
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    image.addEventListener("load", function(e) {
+      requestAnimationFrame(setFavicon);
+    });
+
+    function setFavicon() {
+      context.save();
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.translate(image.width/2, image.height/2);
+      context.rotate(degrees * Math.PI/180);
+      context.drawImage(image, -image.width/2, -image.height/2, image.width, image.height);
+      context.restore();
+      favicon.href = canvas.toDataURL("image/png");  
+      degrees += 1;
+      requestAnimationFrame(setFavicon);
+    }
+    </script>
   </body>
 </html>
