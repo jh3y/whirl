@@ -21,7 +21,7 @@
     "prettier": "^1.16.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5",
+    "react-scripts": "5.0.1",
     "stylelint": "^11.0.0",
     "stylelint-config-recommended-scss": "^4.0.0",
     "stylelint-scss": "^3.11.1"
